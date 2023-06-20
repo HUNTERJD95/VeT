@@ -58,7 +58,7 @@
             labelRaçaAnimal = new Label();
             labelTipoAnimal = new Label();
             labelDataNascimentoAnimal = new Label();
-            labelDono = new Label();
+            labelDonoNIF = new Label();
             tabControlRegistoClienteAnimal.SuspendLayout();
             tabPageCliente.SuspendLayout();
             tabPageAnimal.SuspendLayout();
@@ -197,7 +197,7 @@
             tabPageAnimal.Controls.Add(labelRaçaAnimal);
             tabPageAnimal.Controls.Add(labelTipoAnimal);
             tabPageAnimal.Controls.Add(labelDataNascimentoAnimal);
-            tabPageAnimal.Controls.Add(labelDono);
+            tabPageAnimal.Controls.Add(labelDonoNIF);
             tabPageAnimal.Location = new Point(4, 24);
             tabPageAnimal.Name = "tabPageAnimal";
             tabPageAnimal.Padding = new Padding(3);
@@ -224,6 +224,7 @@
             buttonRegistarAnimal.TabIndex = 17;
             buttonRegistarAnimal.Text = "Registar";
             buttonRegistarAnimal.UseVisualStyleBackColor = true;
+            buttonRegistarAnimal.Click += buttonRegistarAnimal_Click;
             // 
             // textBoxFiliacaoPai
             // 
@@ -345,14 +346,14 @@
             labelDataNascimentoAnimal.TabIndex = 1;
             labelDataNascimentoAnimal.Text = "Data de Nascimento:";
             // 
-            // labelDono
+            // labelDonoNIF
             // 
-            labelDono.AutoSize = true;
-            labelDono.Location = new Point(95, 27);
-            labelDono.Name = "labelDono";
-            labelDono.Size = new Size(39, 15);
-            labelDono.TabIndex = 0;
-            labelDono.Text = "Dono:";
+            labelDonoNIF.AutoSize = true;
+            labelDonoNIF.Location = new Point(57, 27);
+            labelDonoNIF.Name = "labelDonoNIF";
+            labelDonoNIF.Size = new Size(77, 15);
+            labelDonoNIF.TabIndex = 0;
+            labelDonoNIF.Text = "NIF do Dono:";
             // 
             // RegistoCliente
             // 
@@ -402,7 +403,7 @@
         private Label labelRaçaAnimal;
         private Label labelTipoAnimal;
         private Label labelDataNascimentoAnimal;
-        private Label labelDono;
+        private Label labelDonoNIF;
         private Button buttonVoltarRegistoCliente;
         private Button buttonVoltarRegistoAnimal;
         private Button buttonRegistarAnimal;

@@ -140,6 +140,55 @@ namespace VeT_Animais_Domésticos.Forms
             // Ao clicar abre a tabPageCliente
             tabControlRegistoClienteAnimal.SelectedTab = tabPageCliente;
         }
+
+        private void buttonRegistarAnimal_Click(object sender, EventArgs e)
+        {
+            string donoNIF = textBoxDono.Text;
+            string dataNascimento = textBoxDataNascimentoAnimal.Text;
+            string tipoAnimal = textBoxTipoAnimal.Text;
+            string raca = textBoxRacaAnimal.Text;
+            string sexo = textBoxSexoAnimal.Text;
+            string peso = textBoxPesoAnimal.Text;
+
+
+            // Validar os campos
+            if (!Cliente.ValidarNIF(donoNIF))
+            {
+                MessageBox.Show("NIF inválido!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+        
+
+            double pesoAnimal;
+            if (!double.TryParse(peso, out pesoAnimal))
+            {
+                MessageBox.Show("Peso inválido!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Verificar se o dono já está registrado
+            if (!Cliente.ClienteJaRegistrado(donoNIF))
+            {
+                MessageBox.Show("O dono com o NIF fornecido não está registrado!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Inserir o novo animal na base de dados
+            Animal.InserirAnimal(donoNIF, dataNascimento, tipoAnimal, raca, sexo, pesoAnimal);
+
+            MessageBox.Show("Animal registrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Limpar os campos do formulário após o registro
+            textBoxDono.Clear();
+            textBoxDataNascimentoAnimal.Clear();
+            textBoxTipoAnimal.Clear();
+            textBoxRacaAnimal.Clear();
+            textBoxSexoAnimal.Clear();
+            textBoxPesoAnimal.Clear();
+        
+       
+        }
     }
 }
 

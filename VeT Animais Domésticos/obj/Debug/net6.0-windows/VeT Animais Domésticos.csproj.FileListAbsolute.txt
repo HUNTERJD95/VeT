@@ -26,3 +26,4 @@ C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésti
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\VeT Animais Domésticos.pdb
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT Animais Domésticos.genruntimeconfig.cache
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\ref\VeT Animais Domésticos.dll
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.FormConsultarAnimais.resources

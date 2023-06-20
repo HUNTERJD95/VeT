@@ -50,6 +50,7 @@
             buttonAnimais.TabIndex = 1;
             buttonAnimais.Text = "Animais";
             buttonAnimais.UseVisualStyleBackColor = true;
+            buttonAnimais.Click += buttonAnimais_Click;
             // 
             // FormPrincipal
             // 

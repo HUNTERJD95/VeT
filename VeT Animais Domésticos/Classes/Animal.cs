@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace VeT_Animais_Domésticos.Classes
 {
     public class Animal
     {
         public int Id { get; set; }
-        public int DonoId { get; set; }
+        public string DonoNIF { get; set; }
         public DateTime DataNascimento { get; set; }
         public DateTime DataFalecimento { get; set; }
         public DateTime DataUltimaConsulta { get; set; }
@@ -24,9 +20,9 @@ namespace VeT_Animais_Domésticos.Classes
 
         private static int proximoNumeroRegistro = 1;
 
-        public Animal(int donoId, DateTime dataNascimento, string tipoAnimal, string raca, string sexo, double peso)
+        public Animal(string donoNIF, DateTime dataNascimento, string tipoAnimal, string raca, string sexo, double peso)
         {
-            DonoId = donoId;
+            DonoNIF = donoNIF;
             DataNascimento = dataNascimento;
             TipoAnimal = tipoAnimal;
             Raca = raca;
@@ -37,20 +33,19 @@ namespace VeT_Animais_Domésticos.Classes
         }
 
         // Inserir Animal na BD
-        public static void InserirAnimal(int donoId, DateTime dataNascimento, string tipoAnimal, string raca, string sexo, double peso)
+        public static void InserirAnimal(string donoNIF, string dataNascimento, string tipoAnimal, string raca, string sexo, double peso)
         {
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {
-                string query = "INSERT INTO Animais (DonoId, DataNascimento, TipoAnimal, Raca, Sexo, Peso, Ativo) VALUES (@DonoId, @DataNascimento, @TipoAnimal, @Raca, @Sexo, @Peso, @Ativo)";
+                string query = "INSERT INTO Animais (dono_NIF, data_nascimento, tipo_animal, raca, sexo, peso) VALUES (@DonoNIF, @DataNascimento, @TipoAnimal, @Raca, @Sexo, @Peso)";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@DonoId", donoId);
+                    cmd.Parameters.AddWithValue("@DonoNIF", donoNIF); // Corrigido para @DonoNIF
                     cmd.Parameters.AddWithValue("@DataNascimento", dataNascimento);
                     cmd.Parameters.AddWithValue("@TipoAnimal", tipoAnimal);
                     cmd.Parameters.AddWithValue("@Raca", raca);
                     cmd.Parameters.AddWithValue("@Sexo", sexo);
                     cmd.Parameters.AddWithValue("@Peso", peso);
-                    cmd.Parameters.AddWithValue("@Ativo", true);
 
                     con.Open();
                     cmd.ExecuteNonQuery();

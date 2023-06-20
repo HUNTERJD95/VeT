@@ -25,5 +25,14 @@ namespace VeT_Animais_Domésticos.Forms
             formConsultarClientes.Show();
             this.Hide();
         }
+
+        private void buttonAnimais_Click(object sender, EventArgs e)
+        {
+            // Abre formConsultarAnimais e fecha o corrente
+            FormConsultarAnimais formConsultarAnimais = new FormConsultarAnimais();
+            formConsultarAnimais.Show();
+            this.Hide();
+
+        }
     }
 }
