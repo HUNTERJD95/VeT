@@ -7,41 +7,50 @@ using System.Threading.Tasks;
 
 namespace VeT_Animais_Domésticos.Classes
 {
-    internal class Animal
+    public class Animal
     {
         public int Id { get; set; }
-        public string dono_id { get; private set; }
-        public string NIF { get; set; }
+        public int DonoId { get; set; }
         public DateTime DataNascimento { get; set; }
-        public string Telemovel { get; set; }
-        public int NumeroCliente { get; set; }
+        public DateTime DataFalecimento { get; set; }
+        public DateTime DataUltimaConsulta { get; set; }
+        public string TipoAnimal { get; set; }
+        public string Raca { get; set; }
+        public string Sexo { get; set; }
+        public double Peso { get; set; }
+        public string FiliaçãoMãe { get; set; }
+        public string FiliaçãoPai { get; set; }
+        public bool Ativo { get; set; }
 
-        private static int proximoNumeroCliente = 1;
+        private static int proximoNumeroRegistro = 1;
 
-        public Cliente(string nome, DateTime dataNascimento, string nif, string telemovel)
+        public Animal(int donoId, DateTime dataNascimento, string tipoAnimal, string raca, string sexo, double peso)
         {
-            Nome = nome;
+            DonoId = donoId;
             DataNascimento = dataNascimento;
-            NIF = nif;
-            Telemovel = telemovel;
-            NumeroCliente = proximoNumeroCliente++;
+            TipoAnimal = tipoAnimal;
+            Raca = raca;
+            Sexo = sexo;
+            Peso = peso;
+            Id = proximoNumeroRegistro++;
+            Ativo = true;
         }
 
-
-
-
-        // Inserir Cliente na BD
-        public static void InserirCliente(string nome, string nif, DateTime dataNascimento, string telemovel)
+        // Inserir Animal na BD
+        public static void InserirAnimal(int donoId, DateTime dataNascimento, string tipoAnimal, string raca, string sexo, double peso)
         {
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {
-                string query = "INSERT INTO Clientes (Nome, NIF, DataNascimento, Telemovel) VALUES (@Nome, @NIF, @DataNascimento, @Telemovel)";
+                string query = "INSERT INTO Animais (DonoId, DataNascimento, TipoAnimal, Raca, Sexo, Peso, Ativo) VALUES (@DonoId, @DataNascimento, @TipoAnimal, @Raca, @Sexo, @Peso, @Ativo)";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@Nome", nome);
-                    cmd.Parameters.AddWithValue("@NIF", nif);
+                    cmd.Parameters.AddWithValue("@DonoId", donoId);
                     cmd.Parameters.AddWithValue("@DataNascimento", dataNascimento);
-                    cmd.Parameters.AddWithValue("@Telemovel", telemovel);
+                    cmd.Parameters.AddWithValue("@TipoAnimal", tipoAnimal);
+                    cmd.Parameters.AddWithValue("@Raca", raca);
+                    cmd.Parameters.AddWithValue("@Sexo", sexo);
+                    cmd.Parameters.AddWithValue("@Peso", peso);
+                    cmd.Parameters.AddWithValue("@Ativo", true);
 
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -49,19 +58,20 @@ namespace VeT_Animais_Domésticos.Classes
             }
         }
 
-        // Atualizar Cliente na BD
-        public static void AtualizarCliente(int Id, string nome, string nif, DateTime dataNascimento, string telemovel)
+        // Atualizar Animal na BD
+        public static void AtualizarAnimal(int id, DateTime dataNascimento, string tipoAnimal, string raca, string sexo, double peso)
         {
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {
-                string query = "UPDATE Clientes SET Nome = @Nome, DataNascimento = @DataNascimento, Telemovel = @Telemovel, NIF = @NIF WHERE Id = @ID";
+                string query = "UPDATE Animais SET DataNascimento = @DataNascimento, TipoAnimal = @TipoAnimal, Raca = @Raca, Sexo = @Sexo, Peso = @Peso WHERE Id = @Id";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@ID", Id);
-                    cmd.Parameters.AddWithValue("@Nome", nome);
-                    cmd.Parameters.AddWithValue("@NIF", nif);
+                    cmd.Parameters.AddWithValue("@Id", id);
                     cmd.Parameters.AddWithValue("@DataNascimento", dataNascimento);
-                    cmd.Parameters.AddWithValue("@Telemovel", telemovel);
+                    cmd.Parameters.AddWithValue("@TipoAnimal", tipoAnimal);
+                    cmd.Parameters.AddWithValue("@Raca", raca);
+                    cmd.Parameters.AddWithValue("@Sexo", sexo);
+                    cmd.Parameters.AddWithValue("@Peso", peso);
 
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -69,93 +79,21 @@ namespace VeT_Animais_Domésticos.Classes
             }
         }
 
-        // Eliminar Cliente
-        public static bool EliminarCliente(int clienteId)
-        {
-            try
-            {
-                using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
-                {
-                    con.Open();
-                    // Definir a query SQL para eliminar o cliente
-                    string query = "DELETE FROM Clientes WHERE Id = @Id";
-
-                    // Executar a query SQL
-                    using (SqlCommand cmd = new SqlCommand(query, con))
-                    {
-                        cmd.Parameters.AddWithValue("@Id", clienteId);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                return true; // Retorna true se a eliminação foi bem-sucedida
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Erro ao eliminar o cliente: " + ex.Message);
-                return false; // Retorna false se ocorrer um erro
-            }
-        }
-
-
-        // verifica em loop dentro do input se cada caracter é uma letra ou se contém um "espaço"
-        public static bool ValidarNome(string nome)
-        {
-            if (string.IsNullOrEmpty(nome)) { return false; }
-            return nome.All(c => char.IsLetter(c) || c == ' ');
-        }
-
-        // Validação de NIF
-        public static bool ValidarNIF(string nif)
-        {
-            return !string.IsNullOrEmpty(nif) && nif.Length == 9;
-        }
-
-        //Verifica se nº telemóvel são apenas números
-        public static string? ValidarTelemovel(string telemovel)
-        {
-            if (!string.IsNullOrEmpty(telemovel) && telemovel.All(char.IsDigit))
-            {
-                return "O número de telefone deve conter apenas números.";
-            }
-            return null;
-        }
-
-        // Função obter nome cliente
-        public static string ObterNomeCliente(int clienteId)
+        // Alterar estado do animal para inativo
+        public static void AlterarEstadoAnimal(int id)
         {
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {
-                string query = "SELECT Nome FROM Clientes WHERE Id = @Id";
+                string query = "UPDATE Animais SET Ativo = @Ativo WHERE Id = @Id";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@Id", clienteId);
+                    cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.Parameters.AddWithValue("@Ativo", false);
 
                     con.Open();
-                    string nome = (string)cmd.ExecuteScalar();
-
-                    return nome;
+                    cmd.ExecuteNonQuery();
                 }
             }
         }
-        public static bool ClienteJaRegistrado(string nif)
-        {
-            using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
-            {
-                string query = "SELECT COUNT(*) FROM Clientes WHERE NIF = @NIF";
-                using (SqlCommand cmd = new SqlCommand(query, con))
-                {
-                    cmd.Parameters.AddWithValue("@NIF", nif);
-
-                    con.Open();
-                    int count = (int)cmd.ExecuteScalar();
-
-                    return count > 0;
-                }
-            }
-        }
-    }
-}
-
-
     }
 }
