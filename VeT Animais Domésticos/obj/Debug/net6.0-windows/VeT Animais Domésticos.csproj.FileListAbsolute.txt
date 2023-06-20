@@ -1,0 +1,28 @@
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\VeT Animais Domésticos.exe
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\VeT Animais Domésticos.dll
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT Animais Domésticos.csproj.AssemblyReference.cache
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.FormConsultarClientes.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.FormModificarCliente.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.FormPrincipal.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.RegistoCliente.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Properties.Resources.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT Animais Domésticos.csproj.GenerateResource.cache
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT Animais Domésticos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT Animais Domésticos.AssemblyInfoInputs.cache
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT Animais Domésticos.AssemblyInfo.cs
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT Animais Domésticos.csproj.CoreCompileInputs.cache
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT Animais Domésticos.csproj.CopyComplete
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT Animais Domésticos.dll
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\refint\VeT Animais Domésticos.dll
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT Animais Domésticos.pdb
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\VeT Animais Domésticos.deps.json
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\VeT Animais Domésticos.runtimeconfig.json
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\VeT Animais Domésticos.pdb
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT Animais Domésticos.genruntimeconfig.cache
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\ref\VeT Animais Domésticos.dll
