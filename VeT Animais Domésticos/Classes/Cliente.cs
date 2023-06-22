@@ -108,7 +108,7 @@ namespace VeT_Animais_Domésticos.Classes
         // Validação de NIF
         public static bool ValidarNIF(string nif)
         {
-            return !string.IsNullOrEmpty(nif) && nif.Length == 9;
+            return (nif == "1" || (!string.IsNullOrEmpty(nif) && nif.Length == 9));
         }
 
         //Verifica se nº telemóvel são apenas números

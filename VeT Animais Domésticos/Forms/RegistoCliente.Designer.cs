@@ -232,6 +232,7 @@
             textBoxFiliacaoPai.Name = "textBoxFiliacaoPai";
             textBoxFiliacaoPai.Size = new Size(436, 23);
             textBoxFiliacaoPai.TabIndex = 15;
+            textBoxFiliacaoPai.TextChanged += textBoxFiliacaoPai_TextChanged;
             // 
             // textBoxFiliacaoMae
             // 
@@ -239,6 +240,7 @@
             textBoxFiliacaoMae.Name = "textBoxFiliacaoMae";
             textBoxFiliacaoMae.Size = new Size(436, 23);
             textBoxFiliacaoMae.TabIndex = 14;
+            textBoxFiliacaoMae.TextChanged += textBoxFiliacaoMae_TextChanged;
             // 
             // textBoxPesoAnimal
             // 
@@ -246,6 +248,7 @@
             textBoxPesoAnimal.Name = "textBoxPesoAnimal";
             textBoxPesoAnimal.Size = new Size(436, 23);
             textBoxPesoAnimal.TabIndex = 13;
+            textBoxPesoAnimal.TextChanged += textBoxPesoAnimal_TextChanged;
             // 
             // textBoxSexoAnimal
             // 
@@ -253,6 +256,7 @@
             textBoxSexoAnimal.Name = "textBoxSexoAnimal";
             textBoxSexoAnimal.Size = new Size(436, 23);
             textBoxSexoAnimal.TabIndex = 12;
+            textBoxSexoAnimal.TextChanged += textBoxSexoAnimal_TextChanged;
             // 
             // textBoxRacaAnimal
             // 
@@ -260,6 +264,7 @@
             textBoxRacaAnimal.Name = "textBoxRacaAnimal";
             textBoxRacaAnimal.Size = new Size(436, 23);
             textBoxRacaAnimal.TabIndex = 11;
+            textBoxRacaAnimal.TextChanged += textBoxRacaAnimal_TextChanged;
             // 
             // textBoxTipoAnimal
             // 
@@ -267,6 +272,7 @@
             textBoxTipoAnimal.Name = "textBoxTipoAnimal";
             textBoxTipoAnimal.Size = new Size(436, 23);
             textBoxTipoAnimal.TabIndex = 10;
+            textBoxTipoAnimal.TextChanged += textBoxTipoAnimal_TextChanged;
             // 
             // textBoxDataNascimentoAnimal
             // 
@@ -274,6 +280,7 @@
             textBoxDataNascimentoAnimal.Name = "textBoxDataNascimentoAnimal";
             textBoxDataNascimentoAnimal.Size = new Size(436, 23);
             textBoxDataNascimentoAnimal.TabIndex = 9;
+            textBoxDataNascimentoAnimal.TextChanged += textBoxDataNascimentoAnimal_TextChanged;
             // 
             // textBoxDono
             // 
@@ -291,6 +298,7 @@
             labelFiliacaoPai.Size = new Size(74, 15);
             labelFiliacaoPai.TabIndex = 7;
             labelFiliacaoPai.Text = "Filiação(Pai):";
+            labelFiliacaoPai.Click += labelFiliacaoPai_Click;
             // 
             // labelFiliacaoMae
             // 
@@ -300,6 +308,7 @@
             labelFiliacaoMae.Size = new Size(81, 15);
             labelFiliacaoMae.TabIndex = 6;
             labelFiliacaoMae.Text = "Filiação(Mãe):";
+            labelFiliacaoMae.Click += labelFiliacaoMae_Click;
             // 
             // labelPesoAnimal
             // 
@@ -309,6 +318,7 @@
             labelPesoAnimal.Size = new Size(35, 15);
             labelPesoAnimal.TabIndex = 5;
             labelPesoAnimal.Text = "Peso:";
+            labelPesoAnimal.Click += labelPesoAnimal_Click;
             // 
             // labelSexoAnimal
             // 
@@ -318,6 +328,7 @@
             labelSexoAnimal.Size = new Size(35, 15);
             labelSexoAnimal.TabIndex = 4;
             labelSexoAnimal.Text = "Sexo:";
+            labelSexoAnimal.Click += labelSexoAnimal_Click;
             // 
             // labelRaçaAnimal
             // 
@@ -327,6 +338,7 @@
             labelRaçaAnimal.Size = new Size(35, 15);
             labelRaçaAnimal.TabIndex = 3;
             labelRaçaAnimal.Text = "Raça:";
+            labelRaçaAnimal.Click += labelRaçaAnimal_Click;
             // 
             // labelTipoAnimal
             // 
@@ -336,6 +348,7 @@
             labelTipoAnimal.Size = new Size(90, 15);
             labelTipoAnimal.TabIndex = 2;
             labelTipoAnimal.Text = "Tipo de Animal:";
+            labelTipoAnimal.Click += labelTipoAnimal_Click;
             // 
             // labelDataNascimentoAnimal
             // 
@@ -345,6 +358,7 @@
             labelDataNascimentoAnimal.Size = new Size(117, 15);
             labelDataNascimentoAnimal.TabIndex = 1;
             labelDataNascimentoAnimal.Text = "Data de Nascimento:";
+            labelDataNascimentoAnimal.Click += labelDataNascimentoAnimal_Click;
             // 
             // labelDonoNIF
             // 
@@ -354,6 +368,7 @@
             labelDonoNIF.Size = new Size(77, 15);
             labelDonoNIF.TabIndex = 0;
             labelDonoNIF.Text = "NIF do Dono:";
+            labelDonoNIF.Click += labelDonoNIF_Click;
             // 
             // RegistoCliente
             // 

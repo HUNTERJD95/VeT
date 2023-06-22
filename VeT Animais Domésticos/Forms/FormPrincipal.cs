@@ -28,9 +28,9 @@ namespace VeT_Animais_Domésticos.Forms
 
         private void buttonAnimais_Click(object sender, EventArgs e)
         {
-            // Abre formConsultarAnimais e fecha o corrente
-            FormConsultarAnimais formConsultarAnimais = new FormConsultarAnimais();
-            formConsultarAnimais.Show();
+            // Abre o form Animais e fecha o corrente
+            FormAnimais FormAnimais = new FormAnimais();
+            FormAnimais.Show();
             this.Hide();
 
         }

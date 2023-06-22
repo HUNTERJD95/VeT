@@ -1,6 +1,6 @@
 ﻿namespace VeT_Animais_Domésticos.Forms
 {
-    partial class FormModificarCliente
+    partial class FormAdicionarAnimal
     {
         /// <summary>
         /// Required designer variable.

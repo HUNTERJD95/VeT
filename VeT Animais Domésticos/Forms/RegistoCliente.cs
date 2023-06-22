@@ -158,7 +158,7 @@ namespace VeT_Animais_Domésticos.Forms
                 return;
             }
 
-        
+
 
             double pesoAnimal;
             if (!double.TryParse(peso, out pesoAnimal))
@@ -186,8 +186,69 @@ namespace VeT_Animais_Domésticos.Forms
             textBoxRacaAnimal.Clear();
             textBoxSexoAnimal.Clear();
             textBoxPesoAnimal.Clear();
-        
-       
+
+
+        }
+
+        private void textBoxFiliacaoPai_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxFiliacaoMae_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxPesoAnimal_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxSexoAnimal_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxRacaAnimal_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxTipoAnimal_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void textBoxDataNascimentoAnimal_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void labelFiliacaoPai_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void labelFiliacaoMae_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void labelPesoAnimal_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void labelSexoAnimal_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void labelRaçaAnimal_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void labelTipoAnimal_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void labelDataNascimentoAnimal_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void labelDonoNIF_Click(object sender, EventArgs e)
+        {
         }
     }
 }

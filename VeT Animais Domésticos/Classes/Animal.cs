@@ -33,28 +33,35 @@ namespace VeT_Animais_Domésticos.Classes
         }
 
         // Inserir Animal na BD
-        public static void InserirAnimal(string donoNIF, string dataNascimento, string tipoAnimal, string raca, string sexo, double peso)
-        {
-            using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
+       
+            public static void InserirAnimal(string donoNIF, string dataNascimento, string tipoAnimal, string raca, string sexo, double peso)
             {
-                string query = "INSERT INTO Animais (dono_NIF, data_nascimento, tipo_animal, raca, sexo, peso) VALUES (@DonoNIF, @DataNascimento, @TipoAnimal, @Raca, @Sexo, @Peso)";
+                if (string.IsNullOrEmpty(donoNIF))
+                {
+                    donoNIF = "1"; // Associar animais sem donos ao cliente com código 1
+                }
+
+                using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
+                {
+                    string query = "INSERT INTO Animais (dono_NIF, data_nascimento, tipo_animal, raca, sexo, peso) VALUES (@donoNIF, @data_nascimento, @tipo_animal, @raca, @sexo, @peso)";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
-                    cmd.Parameters.AddWithValue("@DonoNIF", donoNIF); // Corrigido para @DonoNIF
-                    cmd.Parameters.AddWithValue("@DataNascimento", dataNascimento);
-                    cmd.Parameters.AddWithValue("@TipoAnimal", tipoAnimal);
-                    cmd.Parameters.AddWithValue("@Raca", raca);
-                    cmd.Parameters.AddWithValue("@Sexo", sexo);
-                    cmd.Parameters.AddWithValue("@Peso", peso);
+                    cmd.Parameters.AddWithValue("@donoNIF", donoNIF);
+                    cmd.Parameters.AddWithValue("@data_nascimento", dataNascimento);
+                    cmd.Parameters.AddWithValue("@tipo_animal", tipoAnimal);
+                    cmd.Parameters.AddWithValue("@raca", raca);
+                    cmd.Parameters.AddWithValue("@sexo", sexo);
+                    cmd.Parameters.AddWithValue("@peso", peso);
 
                     con.Open();
                     cmd.ExecuteNonQuery();
                 }
             }
-        }
+            }
+        
 
         // Atualizar Animal na BD
-        public static void AtualizarAnimal(int id, DateTime dataNascimento, string tipoAnimal, string raca, string sexo, double peso)
+        public static void AtualizarAnimal(int id, string dataNascimento, string tipoAnimal, string raca, string sexo, double peso)
         {
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {

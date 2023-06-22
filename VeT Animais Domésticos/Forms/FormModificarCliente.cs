@@ -11,10 +11,10 @@ using VeT_Animais_Domésticos.Classes;
 
 namespace VeT_Animais_Domésticos.Forms
 {
-    public partial class FormModificarCliente : Form
+    public partial class FormAdicionarAnimal : Form
     {
         private int id;
-        public FormModificarCliente(int clienteId)
+        public FormAdicionarAnimal(int clienteId)
         {
             InitializeComponent();
             id = clienteId;
@@ -70,7 +70,7 @@ namespace VeT_Animais_Domésticos.Forms
             
         }
 
-        public FormModificarCliente(int clienteId, string nomeCliente)
+        public FormAdicionarAnimal(int clienteId, string nomeCliente)
         {
             InitializeComponent();
             id = clienteId;

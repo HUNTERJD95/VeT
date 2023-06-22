@@ -8,7 +8,6 @@ C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésti
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT Animais Domésticos.csproj.AssemblyReference.cache
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.FormConsultarClientes.resources
-C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.FormModificarCliente.resources
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.FormPrincipal.resources
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.RegistoCliente.resources
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Properties.Resources.resources
@@ -26,4 +25,8 @@ C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésti
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\VeT Animais Domésticos.pdb
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT Animais Domésticos.genruntimeconfig.cache
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\ref\VeT Animais Domésticos.dll
-C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.FormConsultarAnimais.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.ConsultarAnimais.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.FormAnimais.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.AdicionarAnimal.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.FormAdicionarAnimal.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.ModificarAnimal.resources

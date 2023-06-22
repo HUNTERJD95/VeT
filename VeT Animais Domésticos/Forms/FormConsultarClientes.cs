@@ -65,7 +65,7 @@ namespace VeT_Animais_Domésticos.Forms
                 int clienteId = Convert.ToInt32(dataGridViewClientes.SelectedRows[0].Cells["Id"].Value);
 
                 // Abrir o formulário "FormModificarClientes" e passar o ID do cliente como parâmetro
-                using (FormModificarCliente formModificarCliente = new FormModificarCliente(clienteId))
+                using (FormAdicionarAnimal formModificarCliente = new FormAdicionarAnimal(clienteId))
                 {
                     // Exibir o formulário como uma janela modal
                     DialogResult result = formModificarCliente.ShowDialog();
