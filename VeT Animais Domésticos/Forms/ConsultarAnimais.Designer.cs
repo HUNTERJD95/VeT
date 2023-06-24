@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             buttonPesquisarComDono = new Button();
             buttonPesquisarSemDono = new Button();
             labelNIFDono = new Label();
@@ -36,12 +36,14 @@
             dataGridViewAnimais = new DataGridView();
             buttonVoltarConsultarAnimais = new Button();
             buttonModificarAnimal = new Button();
+            buttonEliminarAnimal = new Button();
+            buttonAnimaisInativos = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewAnimais).BeginInit();
             SuspendLayout();
             // 
             // buttonPesquisarComDono
             // 
-            buttonPesquisarComDono.Location = new Point(355, 65);
+            buttonPesquisarComDono.Location = new Point(199, 65);
             buttonPesquisarComDono.Name = "buttonPesquisarComDono";
             buttonPesquisarComDono.Size = new Size(120, 52);
             buttonPesquisarComDono.TabIndex = 0;
@@ -51,18 +53,19 @@
             // 
             // buttonPesquisarSemDono
             // 
-            buttonPesquisarSemDono.Location = new Point(355, 364);
+            buttonPesquisarSemDono.BackColor = Color.CornflowerBlue;
+            buttonPesquisarSemDono.Location = new Point(408, 36);
             buttonPesquisarSemDono.Name = "buttonPesquisarSemDono";
             buttonPesquisarSemDono.Size = new Size(120, 52);
             buttonPesquisarSemDono.TabIndex = 1;
             buttonPesquisarSemDono.Text = "Pesquisar Animal Sem Dono";
-            buttonPesquisarSemDono.UseVisualStyleBackColor = true;
+            buttonPesquisarSemDono.UseVisualStyleBackColor = false;
             buttonPesquisarSemDono.Click += buttonPesquisarSemDono_Click;
             // 
             // labelNIFDono
             // 
             labelNIFDono.AutoSize = true;
-            labelNIFDono.Location = new Point(215, 39);
+            labelNIFDono.Location = new Point(63, 39);
             labelNIFDono.Name = "labelNIFDono";
             labelNIFDono.Size = new Size(77, 15);
             labelNIFDono.TabIndex = 2;
@@ -70,7 +73,7 @@
             // 
             // textBoxNIFDono
             // 
-            textBoxNIFDono.Location = new Point(298, 36);
+            textBoxNIFDono.Location = new Point(146, 36);
             textBoxNIFDono.Name = "textBoxNIFDono";
             textBoxNIFDono.Size = new Size(229, 23);
             textBoxNIFDono.TabIndex = 3;
@@ -80,9 +83,9 @@
             dataGridViewAnimais.AccessibleRole = AccessibleRole.ScrollBar;
             dataGridViewAnimais.AllowUserToResizeColumns = false;
             dataGridViewAnimais.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.Silver;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewAnimais.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = Color.Silver;
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewAnimais.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewAnimais.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewAnimais.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewAnimais.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -101,6 +104,7 @@
             dataGridViewAnimais.StandardTab = true;
             dataGridViewAnimais.TabIndex = 5;
             dataGridViewAnimais.Visible = false;
+            dataGridViewAnimais.CellClick += dataGridViewAnimais_CellClick;
             // 
             // buttonVoltarConsultarAnimais
             // 
@@ -115,7 +119,7 @@
             // buttonModificarAnimal
             // 
             buttonModificarAnimal.BackColor = Color.FromArgb(255, 255, 128);
-            buttonModificarAnimal.Location = new Point(629, 367);
+            buttonModificarAnimal.Location = new Point(545, 39);
             buttonModificarAnimal.Name = "buttonModificarAnimal";
             buttonModificarAnimal.Size = new Size(112, 46);
             buttonModificarAnimal.TabIndex = 7;
@@ -123,11 +127,34 @@
             buttonModificarAnimal.UseVisualStyleBackColor = false;
             buttonModificarAnimal.Click += buttonModificarAnimal_Click;
             // 
+            // buttonEliminarAnimal
+            // 
+            buttonEliminarAnimal.BackColor = Color.OrangeRed;
+            buttonEliminarAnimal.Location = new Point(663, 39);
+            buttonEliminarAnimal.Name = "buttonEliminarAnimal";
+            buttonEliminarAnimal.Size = new Size(112, 46);
+            buttonEliminarAnimal.TabIndex = 8;
+            buttonEliminarAnimal.Text = "Eliminar Animal";
+            buttonEliminarAnimal.UseVisualStyleBackColor = false;
+            buttonEliminarAnimal.Click += buttonEliminarAnimal_Click;
+            // 
+            // buttonAnimaisInativos
+            // 
+            buttonAnimaisInativos.Location = new Point(602, 375);
+            buttonAnimaisInativos.Name = "buttonAnimaisInativos";
+            buttonAnimaisInativos.Size = new Size(112, 50);
+            buttonAnimaisInativos.TabIndex = 9;
+            buttonAnimaisInativos.Text = "Consultar Animais Inativos";
+            buttonAnimaisInativos.UseVisualStyleBackColor = true;
+            buttonAnimaisInativos.Click += buttonAnimaisInativos_Click;
+            // 
             // ConsultarAnimais
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonAnimaisInativos);
+            Controls.Add(buttonEliminarAnimal);
             Controls.Add(buttonModificarAnimal);
             Controls.Add(buttonVoltarConsultarAnimais);
             Controls.Add(dataGridViewAnimais);
@@ -138,6 +165,7 @@
             Name = "ConsultarAnimais";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Consultar Animais";
+            Load += ConsultarAnimais_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewAnimais).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -152,5 +180,7 @@
         private DataGridView dataGridViewAnimais;
         private Button buttonVoltarConsultarAnimais;
         private Button buttonModificarAnimal;
+        private Button buttonEliminarAnimal;
+        private Button buttonAnimaisInativos;
     }
 }

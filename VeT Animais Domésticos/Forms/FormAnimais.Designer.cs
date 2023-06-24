@@ -30,7 +30,6 @@
         {
             buttonAdicionarAnimal = new Button();
             buttonConsultarAnimal = new Button();
-            buttonEliminarAnimal = new Button();
             buttonVoltarAnimais = new Button();
             SuspendLayout();
             // 
@@ -54,15 +53,6 @@
             buttonConsultarAnimal.UseVisualStyleBackColor = true;
             buttonConsultarAnimal.Click += buttonConsultarAnimal_Click;
             // 
-            // buttonEliminarAnimal
-            // 
-            buttonEliminarAnimal.Location = new Point(525, 262);
-            buttonEliminarAnimal.Name = "buttonEliminarAnimal";
-            buttonEliminarAnimal.Size = new Size(112, 46);
-            buttonEliminarAnimal.TabIndex = 4;
-            buttonEliminarAnimal.Text = "Eliminar Animal";
-            buttonEliminarAnimal.UseVisualStyleBackColor = true;
-            // 
             // buttonVoltarAnimais
             // 
             buttonVoltarAnimais.Location = new Point(45, 398);
@@ -79,7 +69,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(buttonVoltarAnimais);
-            Controls.Add(buttonEliminarAnimal);
             Controls.Add(buttonConsultarAnimal);
             Controls.Add(buttonAdicionarAnimal);
             FormBorderStyle = FormBorderStyle.Fixed3D;
@@ -93,7 +82,6 @@
 
         private Button buttonAdicionarAnimal;
         private Button buttonConsultarAnimal;
-        private Button buttonEliminarAnimal;
         private Button buttonVoltarAnimais;
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             buttonVoltarModificarAnimal = new Button();
-            buttonModificarAnimal = new Button();
+            buttonModificarAnimalFinal = new Button();
             textBoxModificarFiliacaoPai = new TextBox();
             textBoxModificarFiliacaoMae = new TextBox();
             textBoxModificarPesoAnimal = new TextBox();
@@ -56,15 +56,17 @@
             buttonVoltarModificarAnimal.TabIndex = 54;
             buttonVoltarModificarAnimal.Text = "Voltar";
             buttonVoltarModificarAnimal.UseVisualStyleBackColor = true;
+            buttonVoltarModificarAnimal.Click += buttonVoltarModificarAnimal_Click;
             // 
-            // buttonModificarAnimal
+            // buttonModificarAnimalFinal
             // 
-            buttonModificarAnimal.Location = new Point(677, 376);
-            buttonModificarAnimal.Name = "buttonModificarAnimal";
-            buttonModificarAnimal.Size = new Size(101, 43);
-            buttonModificarAnimal.TabIndex = 53;
-            buttonModificarAnimal.Text = "Modificar";
-            buttonModificarAnimal.UseVisualStyleBackColor = true;
+            buttonModificarAnimalFinal.Location = new Point(677, 376);
+            buttonModificarAnimalFinal.Name = "buttonModificarAnimalFinal";
+            buttonModificarAnimalFinal.Size = new Size(101, 43);
+            buttonModificarAnimalFinal.TabIndex = 53;
+            buttonModificarAnimalFinal.Text = "Modificar";
+            buttonModificarAnimalFinal.UseVisualStyleBackColor = true;
+            buttonModificarAnimalFinal.Click += buttonModificarAnimalFinal_Click;
             // 
             // textBoxModificarFiliacaoPai
             // 
@@ -200,7 +202,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(buttonVoltarModificarAnimal);
-            Controls.Add(buttonModificarAnimal);
+            Controls.Add(buttonModificarAnimalFinal);
             Controls.Add(textBoxModificarFiliacaoPai);
             Controls.Add(textBoxModificarFiliacaoMae);
             Controls.Add(textBoxModificarPesoAnimal);
@@ -220,14 +222,15 @@
             Name = "ModificarAnimal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Modificar Animal";
+            Load += ModificarAnimal_Load;
             ResumeLayout(false);
             PerformLayout();
         }
-
+        
         #endregion
 
         private Button buttonVoltarModificarAnimal;
-        private Button buttonModificarAnimal;
+        private Button buttonModificarAnimalFinal;
         private TextBox textBoxModificarFiliacaoPai;
         private TextBox textBoxModificarFiliacaoMae;
         private TextBox textBoxModificarPesoAnimal;

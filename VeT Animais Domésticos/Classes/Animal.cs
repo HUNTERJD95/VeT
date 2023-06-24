@@ -58,17 +58,18 @@ namespace VeT_Animais_Domésticos.Classes
                 }
             }
             }
-        
+
 
         // Atualizar Animal na BD
-        public static void AtualizarAnimal(int id, string dataNascimento, string tipoAnimal, string raca, string sexo, double peso)
+        public static void AtualizarAnimal(int id, string donoNIF, string dataNascimento, string tipoAnimal, string raca, string sexo, double peso)
         {
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {
-                string query = "UPDATE Animais SET DataNascimento = @DataNascimento, TipoAnimal = @TipoAnimal, Raca = @Raca, Sexo = @Sexo, Peso = @Peso WHERE Id = @Id";
+                string query = "UPDATE Animais SET dono_NIF = @DonoNIF, data_nascimento = @DataNascimento, tipo_animal = @TipoAnimal, raca = @Raca, sexo = @Sexo, peso = @Peso WHERE Id = @Id";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@Id", id);
+                    cmd.Parameters.AddWithValue("@DonoNIF", donoNIF);
                     cmd.Parameters.AddWithValue("@DataNascimento", dataNascimento);
                     cmd.Parameters.AddWithValue("@TipoAnimal", tipoAnimal);
                     cmd.Parameters.AddWithValue("@Raca", raca);
@@ -96,6 +97,41 @@ namespace VeT_Animais_Domésticos.Classes
                     cmd.ExecuteNonQuery();
                 }
             }
+        }
+
+        public static Animal ObterAnimalPorId(int id)
+        {
+            using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
+            {
+                string query = "SELECT * FROM Animais WHERE Id = @Id";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Id", id);
+
+                    con.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string donoNIF = reader.GetString(reader.GetOrdinal("dono_NIF"));
+                            DateTime dataNascimento = reader.GetDateTime(reader.GetOrdinal("data_nascimento"));
+                            string tipoAnimal = reader.GetString(reader.GetOrdinal("tipo_animal"));
+                            string raca = reader.GetString(reader.GetOrdinal("raca"));
+                            string sexo = reader.GetString(reader.GetOrdinal("sexo"));
+                            double peso = reader.GetDouble(reader.GetOrdinal("peso"));
+
+                            Animal animal = new Animal(donoNIF, dataNascimento, tipoAnimal, raca, sexo, peso);
+                            animal.Id = id;
+                            animal.DataFalecimento = reader.GetDateTime(reader.GetOrdinal("data_falecimento"));
+                            // Preencha outros detalhes do animal que deseja obter
+
+                            return animal;
+                        }
+                    }
+                }
+            }
+
+            return null; // Retornar null se o animal não for encontrado com o ID fornecido
         }
     }
 }
