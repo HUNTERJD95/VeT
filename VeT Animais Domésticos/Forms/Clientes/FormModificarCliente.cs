@@ -69,12 +69,5 @@ namespace VeT_Animais_Domésticos.Forms
            
             
         }
-
-        public FormAdicionarAnimal(int clienteId, string nomeCliente)
-        {
-            InitializeComponent();
-            id = clienteId;
-            NovoNome = nomeCliente;
-        }
     }
 }

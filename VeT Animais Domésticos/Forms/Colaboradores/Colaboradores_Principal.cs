@@ -36,7 +36,7 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
 
         private void buttonConsultarColaboradores_Click(object sender, EventArgs e)
         {
-            // Realiza a consulta ao banco de dados e atualiza a tabela de Clientes
+            // Realiza a consulta ao banco de dados e atualiza a tabela de Colaboradores
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {
                 con.Open();
@@ -62,6 +62,8 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
 
         private void buttonModificarColaboradores_Click(object sender, EventArgs e)
         {
+
+
             // Verificar se um colaborador está selecionado no DataGridView
             if (dataGridViewColaboradores.SelectedRows.Count <= 0)
             {
@@ -93,13 +95,13 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
 
                         MessageBox.Show("Dados do colaborador atualizados com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        this.Hide();
-
-                        // Atualizar os dados do DataGridView
-                        AtualizarDadosColaboradores();
+                        
                     }
                 }
             }
+
+            // Atualizar os dados do DataGridView
+            AtualizarDadosColaboradores();
         }
         private void AtualizarDadosColaboradores()
         {

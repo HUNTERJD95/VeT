@@ -37,7 +37,13 @@
     <Compile Update="Forms\Clientes\RegistoCliente.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\Produtos\AdicionarProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\Produtos\FormProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Produtos\ModificarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

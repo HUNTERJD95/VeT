@@ -35,7 +35,7 @@
             labelFuncaoColaborador = new Label();
             labelTipoColaborador = new Label();
             buttonVoltarRegistoColaborador = new Button();
-            buttonModificarColaborador = new Button();
+            buttonAtualizarColaborador = new Button();
             labelNomeCompletoColaborador = new Label();
             textBoxNovoNomeCompletoColaborador = new TextBox();
             dateNovoNascimentoColaborador = new DateTimePicker();
@@ -109,14 +109,15 @@
             buttonVoltarRegistoColaborador.Text = "Voltar";
             buttonVoltarRegistoColaborador.UseVisualStyleBackColor = true;
             // 
-            // buttonModificarColaborador
+            // buttonAtualizarColaborador
             // 
-            buttonModificarColaborador.Location = new Point(687, 376);
-            buttonModificarColaborador.Name = "buttonModificarColaborador";
-            buttonModificarColaborador.Size = new Size(101, 43);
-            buttonModificarColaborador.TabIndex = 44;
-            buttonModificarColaborador.Text = "Modificar";
-            buttonModificarColaborador.UseVisualStyleBackColor = true;
+            buttonAtualizarColaborador.Location = new Point(687, 376);
+            buttonAtualizarColaborador.Name = "buttonAtualizarColaborador";
+            buttonAtualizarColaborador.Size = new Size(101, 43);
+            buttonAtualizarColaborador.TabIndex = 44;
+            buttonAtualizarColaborador.Text = "Atualizar";
+            buttonAtualizarColaborador.UseVisualStyleBackColor = true;
+            buttonAtualizarColaborador.Click += buttonAtualizarColaborador_Click;
             // 
             // labelNomeCompletoColaborador
             // 
@@ -194,7 +195,7 @@
             Controls.Add(labelFuncaoColaborador);
             Controls.Add(labelTipoColaborador);
             Controls.Add(buttonVoltarRegistoColaborador);
-            Controls.Add(buttonModificarColaborador);
+            Controls.Add(buttonAtualizarColaborador);
             Controls.Add(labelNomeCompletoColaborador);
             Controls.Add(textBoxNovoNomeCompletoColaborador);
             Controls.Add(dateNovoNascimentoColaborador);
@@ -205,6 +206,7 @@
             Controls.Add(labelNIFColaborador);
             Name = "ModificarColaborador";
             Text = "ModificarColaborador";
+            Load += ModificarColaborador_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -218,7 +220,7 @@
         private Label labelFuncaoColaborador;
         private Label labelTipoColaborador;
         private Button buttonVoltarRegistoColaborador;
-        private Button buttonModificarColaborador;
+        private Button buttonAtualizarColaborador;
         private Label labelNomeCompletoColaborador;
         private TextBox textBoxNovoNomeCompletoColaborador;
         private DateTimePicker dateNovoNascimentoColaborador;

@@ -27,7 +27,6 @@
   <ItemGroup>
     <Folder Include="BaseDados\" />
     <Folder Include="Forms\Consultas\" />
-    <Folder Include="Forms\Produtos\" />
   </ItemGroup>
 
   <ItemGroup>

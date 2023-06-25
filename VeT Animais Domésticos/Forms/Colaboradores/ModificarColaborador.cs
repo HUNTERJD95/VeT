@@ -18,7 +18,19 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
         {
             InitializeComponent();
             id = colaboradorId;
+
+
+            comboBoxNovoTipoColaborador.Items.Add("Interno");
+            comboBoxNovoTipoColaborador.Items.Add("Externo");
+
+            comboBoxNovoFuncaoColaborador.Items.Add("Assistente Veterinário");
+            comboBoxNovoFuncaoColaborador.Items.Add("Médico Veterinário");
+
+            comboBoxNovoDisponibilidade.Items.Add("Diurno");
+            comboBoxNovoDisponibilidade.Items.Add("Noturno");
         }
+
+
 
 
         public string novoNome { get; set; }
@@ -29,5 +41,43 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
         public string novoTelemovel { get; set; }
         public string novoDisponibilidade { get; set; }
         public string novoEstado { get; set; }
+
+        private void ModificarColaborador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAtualizarColaborador_Click(object sender, EventArgs e)
+        {
+            // Validar nome
+            if (!Colaborador.VerificarNomeColaborador(textBoxNovoNomeCompletoColaborador.Text))
+            {
+                MessageBox.Show("Nome inválido. Insira pelo menos primeiro e último nome e não insira números", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Validar NIF
+            if (!Colaborador.VerificarNIFColaborador(textBoxNovoNIFColaborador.Text))
+            {
+                MessageBox.Show("NIF inválido. Deve conter 9 caracteres", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Atribuir os novos valores às propriedades correspondentes
+            novoNome = textBoxNovoNomeCompletoColaborador.Text;
+            novoDataNascimento = dateNovoNascimentoColaborador.Value;
+            novoNIF = textBoxNovoNIFColaborador.Text;
+            novoTipo = comboBoxNovoTipoColaborador.Text;
+            novoFuncao = comboBoxNovoFuncaoColaborador.Text;
+            novoTelemovel = textBoxNovoTelemovelColaborador.Text;
+            novoDisponibilidade = comboBoxNovoDisponibilidade.Text;
+           
+
+            // Fazer update na BD
+            Colaborador.AtualizarColaborador(id, novoNome, novoNIF, novoDataNascimento, novoTipo, novoFuncao, novoDisponibilidade, novoTelemovel);
+
+            DialogResult = DialogResult.OK; // Definir o resultado do diálogo como OK
+            this.Hide();
+        }
     }
 }
