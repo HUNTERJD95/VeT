@@ -70,34 +70,6 @@ namespace VeT_Animais_Domésticos.Classes
             }
         }
 
-        // Eliminar Cliente
-        public static bool EliminarCliente(int clienteId)
-        {
-            try
-            {
-                using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
-                {
-                    con.Open();
-                    // Definir a query SQL para eliminar o cliente
-                    string query = "DELETE FROM Clientes WHERE Id = @Id";
-
-                    // Executar a query SQL
-                    using (SqlCommand cmd = new SqlCommand(query, con))
-                    {
-                        cmd.Parameters.AddWithValue("@Id", clienteId);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-                return true; // Retorna true se a eliminação foi bem-sucedida
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Erro ao eliminar o cliente: " + ex.Message);
-                return false; // Retorna false se ocorrer um erro
-            }
-        }
-
-
         // verifica em loop dentro do input se cada caracter é uma letra ou se contém um "espaço"
         public static bool ValidarNome(string nome)
         {

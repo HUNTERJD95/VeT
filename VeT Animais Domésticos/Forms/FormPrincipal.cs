@@ -34,5 +34,13 @@ namespace VeT_Animais_Domésticos.Forms
             this.Hide();
 
         }
+
+        private void buttonColaboradores_Click(object sender, EventArgs e)
+        {
+            // Fecha o form atual e abre o form Colaboradores_Principal
+            Colaboradores.Colaboradores_Principal colaboradores_Principal = new Colaboradores.Colaboradores_Principal();
+            colaboradores_Principal.Show();
+            this.Hide();
+        }
     }
 }

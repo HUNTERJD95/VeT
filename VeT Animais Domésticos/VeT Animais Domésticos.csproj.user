@@ -1,28 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="Forms\AdicionarAnimal.cs">
+    <Compile Update="Forms\Animais\AdicionarAnimal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ConsultarAnimais.cs">
+    <Compile Update="Forms\Animais\ConsultarAnimais.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\FormAnimais.cs">
+    <Compile Update="Forms\Animais\FormAnimais.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\FormConsultarClientes.cs">
+    <Compile Update="Forms\Clientes\FormConsultarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\FormModificarCliente.cs">
+    <Compile Update="Forms\Colaboradores\Adicionar_Colaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Colaboradores\Colaboradores_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Colaboradores\ModificarColaborador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Ficha Medica\FormFichaMedica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Clientes\FormModificarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ModificarAnimal.cs">
+    <Compile Update="Forms\Animais\ModificarAnimal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\RegistoCliente.cs">
+    <Compile Update="Forms\Clientes\RegistoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Produtos\FormProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

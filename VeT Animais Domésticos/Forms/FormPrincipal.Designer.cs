@@ -30,6 +30,7 @@
         {
             buttonClientes = new Button();
             buttonAnimais = new Button();
+            buttonColaboradores = new Button();
             SuspendLayout();
             // 
             // buttonClientes
@@ -52,11 +53,22 @@
             buttonAnimais.UseVisualStyleBackColor = true;
             buttonAnimais.Click += buttonAnimais_Click;
             // 
+            // buttonColaboradores
+            // 
+            buttonColaboradores.Location = new Point(339, 342);
+            buttonColaboradores.Name = "buttonColaboradores";
+            buttonColaboradores.Size = new Size(113, 39);
+            buttonColaboradores.TabIndex = 2;
+            buttonColaboradores.Text = "Colaboradores";
+            buttonColaboradores.UseVisualStyleBackColor = true;
+            buttonColaboradores.Click += buttonColaboradores_Click;
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonColaboradores);
             Controls.Add(buttonAnimais);
             Controls.Add(buttonClientes);
             Name = "FormPrincipal";
@@ -69,5 +81,6 @@
 
         private Button buttonClientes;
         private Button buttonAnimais;
+        private Button buttonColaboradores;
     }
 }

@@ -30,3 +30,7 @@ C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésti
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.AdicionarAnimal.resources
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.FormAdicionarAnimal.resources
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.ModificarAnimal.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.FormFichaMedica.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.Colaboradores.Adicionar_Colaborador.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.Colaboradores.Colaboradores_Principal.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.Colaboradores.ModificarColaborador.resources
