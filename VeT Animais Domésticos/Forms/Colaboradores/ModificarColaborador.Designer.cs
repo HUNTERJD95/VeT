@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarColaborador));
             labelDisponibilidade = new Label();
             comboBoxNovoDisponibilidade = new ComboBox();
             comboBoxNovoFuncaoColaborador = new ComboBox();
             comboBoxNovoTipoColaborador = new ComboBox();
             labelFuncaoColaborador = new Label();
             labelTipoColaborador = new Label();
-            buttonVoltarRegistoColaborador = new Button();
+            buttonVoltarModificarColaborador = new Button();
             buttonAtualizarColaborador = new Button();
             labelNomeCompletoColaborador = new Label();
             textBoxNovoNomeCompletoColaborador = new TextBox();
@@ -49,7 +50,8 @@
             // labelDisponibilidade
             // 
             labelDisponibilidade.AutoSize = true;
-            labelDisponibilidade.Location = new Point(28, 263);
+            labelDisponibilidade.BackColor = Color.Transparent;
+            labelDisponibilidade.Location = new Point(205, 253);
             labelDisponibilidade.Name = "labelDisponibilidade";
             labelDisponibilidade.Size = new Size(134, 15);
             labelDisponibilidade.TabIndex = 51;
@@ -59,7 +61,7 @@
             // 
             comboBoxNovoDisponibilidade.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxNovoDisponibilidade.FormattingEnabled = true;
-            comboBoxNovoDisponibilidade.Location = new Point(170, 260);
+            comboBoxNovoDisponibilidade.Location = new Point(345, 245);
             comboBoxNovoDisponibilidade.Name = "comboBoxNovoDisponibilidade";
             comboBoxNovoDisponibilidade.Size = new Size(200, 23);
             comboBoxNovoDisponibilidade.TabIndex = 50;
@@ -68,7 +70,7 @@
             // 
             comboBoxNovoFuncaoColaborador.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxNovoFuncaoColaborador.FormattingEnabled = true;
-            comboBoxNovoFuncaoColaborador.Location = new Point(170, 219);
+            comboBoxNovoFuncaoColaborador.Location = new Point(345, 200);
             comboBoxNovoFuncaoColaborador.Name = "comboBoxNovoFuncaoColaborador";
             comboBoxNovoFuncaoColaborador.Size = new Size(200, 23);
             comboBoxNovoFuncaoColaborador.TabIndex = 49;
@@ -77,7 +79,7 @@
             // 
             comboBoxNovoTipoColaborador.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxNovoTipoColaborador.FormattingEnabled = true;
-            comboBoxNovoTipoColaborador.Location = new Point(170, 178);
+            comboBoxNovoTipoColaborador.Location = new Point(345, 152);
             comboBoxNovoTipoColaborador.Name = "comboBoxNovoTipoColaborador";
             comboBoxNovoTipoColaborador.Size = new Size(200, 23);
             comboBoxNovoTipoColaborador.TabIndex = 48;
@@ -85,7 +87,8 @@
             // labelFuncaoColaborador
             // 
             labelFuncaoColaborador.AutoSize = true;
-            labelFuncaoColaborador.Location = new Point(113, 222);
+            labelFuncaoColaborador.BackColor = Color.Transparent;
+            labelFuncaoColaborador.Location = new Point(290, 208);
             labelFuncaoColaborador.Name = "labelFuncaoColaborador";
             labelFuncaoColaborador.Size = new Size(49, 15);
             labelFuncaoColaborador.TabIndex = 47;
@@ -94,26 +97,28 @@
             // labelTipoColaborador
             // 
             labelTipoColaborador.AutoSize = true;
-            labelTipoColaborador.Location = new Point(129, 181);
+            labelTipoColaborador.BackColor = Color.Transparent;
+            labelTipoColaborador.Location = new Point(306, 155);
             labelTipoColaborador.Name = "labelTipoColaborador";
             labelTipoColaborador.Size = new Size(33, 15);
             labelTipoColaborador.TabIndex = 46;
             labelTipoColaborador.Text = "Tipo:";
             // 
-            // buttonVoltarRegistoColaborador
+            // buttonVoltarModificarColaborador
             // 
-            buttonVoltarRegistoColaborador.Location = new Point(12, 376);
-            buttonVoltarRegistoColaborador.Name = "buttonVoltarRegistoColaborador";
-            buttonVoltarRegistoColaborador.Size = new Size(123, 43);
-            buttonVoltarRegistoColaborador.TabIndex = 45;
-            buttonVoltarRegistoColaborador.Text = "Voltar";
-            buttonVoltarRegistoColaborador.UseVisualStyleBackColor = true;
+            buttonVoltarModificarColaborador.Location = new Point(12, 395);
+            buttonVoltarModificarColaborador.Name = "buttonVoltarModificarColaborador";
+            buttonVoltarModificarColaborador.Size = new Size(123, 43);
+            buttonVoltarModificarColaborador.TabIndex = 45;
+            buttonVoltarModificarColaborador.Text = "Voltar";
+            buttonVoltarModificarColaborador.UseVisualStyleBackColor = true;
+            buttonVoltarModificarColaborador.Click += buttonVoltarModificarColaborador_Click;
             // 
             // buttonAtualizarColaborador
             // 
-            buttonAtualizarColaborador.Location = new Point(687, 376);
+            buttonAtualizarColaborador.Location = new Point(663, 395);
             buttonAtualizarColaborador.Name = "buttonAtualizarColaborador";
-            buttonAtualizarColaborador.Size = new Size(101, 43);
+            buttonAtualizarColaborador.Size = new Size(125, 43);
             buttonAtualizarColaborador.TabIndex = 44;
             buttonAtualizarColaborador.Text = "Atualizar";
             buttonAtualizarColaborador.UseVisualStyleBackColor = true;
@@ -122,7 +127,8 @@
             // labelNomeCompletoColaborador
             // 
             labelNomeCompletoColaborador.AutoSize = true;
-            labelNomeCompletoColaborador.Location = new Point(63, 34);
+            labelNomeCompletoColaborador.BackColor = Color.Transparent;
+            labelNomeCompletoColaborador.Location = new Point(240, 29);
             labelNomeCompletoColaborador.Name = "labelNomeCompletoColaborador";
             labelNomeCompletoColaborador.Size = new Size(99, 15);
             labelNomeCompletoColaborador.TabIndex = 36;
@@ -130,21 +136,21 @@
             // 
             // textBoxNovoNomeCompletoColaborador
             // 
-            textBoxNovoNomeCompletoColaborador.Location = new Point(168, 31);
+            textBoxNovoNomeCompletoColaborador.Location = new Point(345, 26);
             textBoxNovoNomeCompletoColaborador.Name = "textBoxNovoNomeCompletoColaborador";
             textBoxNovoNomeCompletoColaborador.Size = new Size(453, 23);
             textBoxNovoNomeCompletoColaborador.TabIndex = 37;
             // 
             // dateNovoNascimentoColaborador
             // 
-            dateNovoNascimentoColaborador.Location = new Point(170, 128);
+            dateNovoNascimentoColaborador.Location = new Point(345, 110);
             dateNovoNascimentoColaborador.Name = "dateNovoNascimentoColaborador";
             dateNovoNascimentoColaborador.Size = new Size(200, 23);
             dateNovoNascimentoColaborador.TabIndex = 42;
             // 
             // textBoxNovoTelemovelColaborador
             // 
-            textBoxNovoTelemovelColaborador.Location = new Point(168, 309);
+            textBoxNovoTelemovelColaborador.Location = new Point(345, 291);
             textBoxNovoTelemovelColaborador.Name = "textBoxNovoTelemovelColaborador";
             textBoxNovoTelemovelColaborador.Size = new Size(202, 23);
             textBoxNovoTelemovelColaborador.TabIndex = 43;
@@ -152,7 +158,8 @@
             // labelDataNascimentoColaborador
             // 
             labelDataNascimentoColaborador.AutoSize = true;
-            labelDataNascimentoColaborador.Location = new Point(63, 128);
+            labelDataNascimentoColaborador.BackColor = Color.Transparent;
+            labelDataNascimentoColaborador.Location = new Point(238, 116);
             labelDataNascimentoColaborador.Name = "labelDataNascimentoColaborador";
             labelDataNascimentoColaborador.Size = new Size(101, 15);
             labelDataNascimentoColaborador.TabIndex = 38;
@@ -160,7 +167,7 @@
             // 
             // textBoxNovoNIFColaborador
             // 
-            textBoxNovoNIFColaborador.Location = new Point(170, 76);
+            textBoxNovoNIFColaborador.Location = new Point(345, 71);
             textBoxNovoNIFColaborador.Name = "textBoxNovoNIFColaborador";
             textBoxNovoNIFColaborador.Size = new Size(200, 23);
             textBoxNovoNIFColaborador.TabIndex = 41;
@@ -168,7 +175,8 @@
             // labelTelemovelColaborador
             // 
             labelTelemovelColaborador.AutoSize = true;
-            labelTelemovelColaborador.Location = new Point(99, 317);
+            labelTelemovelColaborador.BackColor = Color.Transparent;
+            labelTelemovelColaborador.Location = new Point(276, 294);
             labelTelemovelColaborador.Name = "labelTelemovelColaborador";
             labelTelemovelColaborador.Size = new Size(63, 15);
             labelTelemovelColaborador.TabIndex = 40;
@@ -177,7 +185,8 @@
             // labelNIFColaborador
             // 
             labelNIFColaborador.AutoSize = true;
-            labelNIFColaborador.Location = new Point(136, 79);
+            labelNIFColaborador.BackColor = Color.Transparent;
+            labelNIFColaborador.Location = new Point(311, 74);
             labelNIFColaborador.Name = "labelNIFColaborador";
             labelNIFColaborador.Size = new Size(28, 15);
             labelNIFColaborador.TabIndex = 39;
@@ -187,6 +196,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(labelDisponibilidade);
             Controls.Add(comboBoxNovoDisponibilidade);
@@ -194,7 +205,7 @@
             Controls.Add(comboBoxNovoTipoColaborador);
             Controls.Add(labelFuncaoColaborador);
             Controls.Add(labelTipoColaborador);
-            Controls.Add(buttonVoltarRegistoColaborador);
+            Controls.Add(buttonVoltarModificarColaborador);
             Controls.Add(buttonAtualizarColaborador);
             Controls.Add(labelNomeCompletoColaborador);
             Controls.Add(textBoxNovoNomeCompletoColaborador);
@@ -204,8 +215,11 @@
             Controls.Add(textBoxNovoNIFColaborador);
             Controls.Add(labelTelemovelColaborador);
             Controls.Add(labelNIFColaborador);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "ModificarColaborador";
-            Text = "ModificarColaborador";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Modificar Colaborador";
             Load += ModificarColaborador_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -219,7 +233,7 @@
         private ComboBox comboBoxNovoTipoColaborador;
         private Label labelFuncaoColaborador;
         private Label labelTipoColaborador;
-        private Button buttonVoltarRegistoColaborador;
+        private Button buttonVoltarModificarColaborador;
         private Button buttonAtualizarColaborador;
         private Label labelNomeCompletoColaborador;
         private TextBox textBoxNovoNomeCompletoColaborador;

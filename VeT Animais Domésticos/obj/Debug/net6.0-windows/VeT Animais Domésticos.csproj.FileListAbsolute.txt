@@ -39,3 +39,6 @@ C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésti
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.Produtos.ModificarProduto.resources
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.Ato_MedicosPrincipal.resources
 C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.Consultas.AgendarConsulta.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.Atos_Medicos.AdicionarAtoMedico.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\obj\Debug\net6.0-windows\VeT_Animais_Domésticos.Forms.Atos_Medicos.AlterarAtoMedico.resources
+C:\Users\cs_ba\source\repos\testeIP\VeT Animais Domésticos\VeT Animais Domésticos\bin\Debug\net6.0-windows\VeT Animais Domésticos.dll.config

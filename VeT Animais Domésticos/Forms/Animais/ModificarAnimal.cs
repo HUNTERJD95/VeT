@@ -6,10 +6,10 @@ namespace VeT_Animais_Domésticos.Forms
 {
     public partial class ModificarAnimal : Form
     {
-        public int AnimalId { get; set; }
+        public Animal animal;
 
         public string NovodonoNIF { get; set; }
-        public string NovaDataNascimento {get; set;}
+        public string NovaDataNascimento { get; set; }
         public string NovoTipo { get; set; }
         public string NovaRaca { get; set; }
         public string NovoSexo { get; set; }
@@ -21,26 +21,35 @@ namespace VeT_Animais_Domésticos.Forms
         public ModificarAnimal()
         {
             InitializeComponent();
+
+            // Botão voltar
+            buttonVoltarModificarAnimal.FlatStyle = FlatStyle.Flat;
+            buttonVoltarModificarAnimal.FlatAppearance.BorderSize = 2;
+            buttonVoltarModificarAnimal.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão modificar
+            buttonModificarAnimalFinal.FlatStyle = FlatStyle.Flat;
+            buttonModificarAnimalFinal.FlatAppearance.BorderSize = 2;
+            buttonModificarAnimalFinal.FlatAppearance.BorderColor = Color.Blue;
         }
 
         public ModificarAnimal(int id) : this()
         {
-            AnimalId = id;
-
             // Recuperar os detalhes do animal do banco de dados usando o ID
-            Animal animal = Animal.ObterAnimalPorId(id);
+            animal = Animal.ObterAnimalPorId(id);
 
+
+        }
+
+        private void ModificarAnimal_Load(object sender, EventArgs e)
+        {
             // Preencher os campos do formulário com os detalhes do animal
             textBoxDono.Text = animal.DonoNIF.ToString();
             textBoxModificarRacaAnimal.Text = animal.Raca;
             textBoxModificarSexoAnimal.Text = animal.Sexo;
             textBoxModificarPesoAnimal.Text = animal.Peso.ToString();
             textBoxModificarDataNascimentoAnimal.Text = animal.DataNascimento.ToString();
-        }
-
-        private void ModificarAnimal_Load(object sender, EventArgs e)
-        {
-
+            textBoxModificarTipoAnimal.Text = animal.TipoAnimal;
         }
 
 
@@ -57,8 +66,8 @@ namespace VeT_Animais_Domésticos.Forms
             // Atualize o animal no banco de dados com os novos valores
             if (double.TryParse(textBoxModificarPesoAnimal.Text, out double novoPeso))
             {
-                
-                Animal.AtualizarAnimal(AnimalId, textBoxDono.Text, textBoxModificarDataNascimentoAnimal.Text, textBoxModificarTipoAnimal.Text, textBoxModificarRacaAnimal.Text, textBoxModificarSexoAnimal.Text, novoPeso);
+
+                Animal.AtualizarAnimal(animal.Id, textBoxDono.Text, textBoxModificarDataNascimentoAnimal.Text, textBoxModificarTipoAnimal.Text, textBoxModificarRacaAnimal.Text, textBoxModificarSexoAnimal.Text, novoPeso);
 
                 // Atribua os novos valores às propriedades correspondentes
                 NovodonoNIF = textBoxDono.Text;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarAnimal));
             buttonVoltarModificarAnimal = new Button();
             buttonModificarAnimalFinal = new Button();
             textBoxModificarFiliacaoPai = new TextBox();
@@ -50,7 +51,7 @@
             // 
             // buttonVoltarModificarAnimal
             // 
-            buttonVoltarModificarAnimal.Location = new Point(22, 376);
+            buttonVoltarModificarAnimal.Location = new Point(22, 386);
             buttonVoltarModificarAnimal.Name = "buttonVoltarModificarAnimal";
             buttonVoltarModificarAnimal.Size = new Size(101, 43);
             buttonVoltarModificarAnimal.TabIndex = 54;
@@ -60,7 +61,7 @@
             // 
             // buttonModificarAnimalFinal
             // 
-            buttonModificarAnimalFinal.Location = new Point(677, 376);
+            buttonModificarAnimalFinal.Location = new Point(678, 386);
             buttonModificarAnimalFinal.Name = "buttonModificarAnimalFinal";
             buttonModificarAnimalFinal.Size = new Size(101, 43);
             buttonModificarAnimalFinal.TabIndex = 53;
@@ -70,56 +71,56 @@
             // 
             // textBoxModificarFiliacaoPai
             // 
-            textBoxModificarFiliacaoPai.Location = new Point(145, 274);
+            textBoxModificarFiliacaoPai.Location = new Point(155, 289);
             textBoxModificarFiliacaoPai.Name = "textBoxModificarFiliacaoPai";
             textBoxModificarFiliacaoPai.Size = new Size(436, 23);
             textBoxModificarFiliacaoPai.TabIndex = 52;
             // 
             // textBoxModificarFiliacaoMae
             // 
-            textBoxModificarFiliacaoMae.Location = new Point(145, 234);
+            textBoxModificarFiliacaoMae.Location = new Point(155, 249);
             textBoxModificarFiliacaoMae.Name = "textBoxModificarFiliacaoMae";
             textBoxModificarFiliacaoMae.Size = new Size(436, 23);
             textBoxModificarFiliacaoMae.TabIndex = 51;
             // 
             // textBoxModificarPesoAnimal
             // 
-            textBoxModificarPesoAnimal.Location = new Point(145, 198);
+            textBoxModificarPesoAnimal.Location = new Point(155, 213);
             textBoxModificarPesoAnimal.Name = "textBoxModificarPesoAnimal";
             textBoxModificarPesoAnimal.Size = new Size(436, 23);
             textBoxModificarPesoAnimal.TabIndex = 50;
             // 
             // textBoxModificarSexoAnimal
             // 
-            textBoxModificarSexoAnimal.Location = new Point(145, 163);
+            textBoxModificarSexoAnimal.Location = new Point(155, 178);
             textBoxModificarSexoAnimal.Name = "textBoxModificarSexoAnimal";
             textBoxModificarSexoAnimal.Size = new Size(436, 23);
             textBoxModificarSexoAnimal.TabIndex = 49;
             // 
             // textBoxModificarRacaAnimal
             // 
-            textBoxModificarRacaAnimal.Location = new Point(145, 131);
+            textBoxModificarRacaAnimal.Location = new Point(155, 146);
             textBoxModificarRacaAnimal.Name = "textBoxModificarRacaAnimal";
             textBoxModificarRacaAnimal.Size = new Size(436, 23);
             textBoxModificarRacaAnimal.TabIndex = 48;
             // 
             // textBoxModificarTipoAnimal
             // 
-            textBoxModificarTipoAnimal.Location = new Point(145, 96);
+            textBoxModificarTipoAnimal.Location = new Point(155, 111);
             textBoxModificarTipoAnimal.Name = "textBoxModificarTipoAnimal";
             textBoxModificarTipoAnimal.Size = new Size(436, 23);
             textBoxModificarTipoAnimal.TabIndex = 47;
             // 
             // textBoxModificarDataNascimentoAnimal
             // 
-            textBoxModificarDataNascimentoAnimal.Location = new Point(145, 64);
+            textBoxModificarDataNascimentoAnimal.Location = new Point(155, 79);
             textBoxModificarDataNascimentoAnimal.Name = "textBoxModificarDataNascimentoAnimal";
             textBoxModificarDataNascimentoAnimal.Size = new Size(436, 23);
             textBoxModificarDataNascimentoAnimal.TabIndex = 46;
             // 
             // textBoxDono
             // 
-            textBoxDono.Location = new Point(145, 32);
+            textBoxDono.Location = new Point(155, 47);
             textBoxDono.Name = "textBoxDono";
             textBoxDono.Size = new Size(436, 23);
             textBoxDono.TabIndex = 45;
@@ -127,7 +128,8 @@
             // labelFiliacaoPai
             // 
             labelFiliacaoPai.AutoSize = true;
-            labelFiliacaoPai.Location = new Point(65, 282);
+            labelFiliacaoPai.BackColor = Color.Transparent;
+            labelFiliacaoPai.Location = new Point(75, 297);
             labelFiliacaoPai.Name = "labelFiliacaoPai";
             labelFiliacaoPai.Size = new Size(74, 15);
             labelFiliacaoPai.TabIndex = 44;
@@ -136,7 +138,8 @@
             // labelFiliacaoMae
             // 
             labelFiliacaoMae.AutoSize = true;
-            labelFiliacaoMae.Location = new Point(58, 237);
+            labelFiliacaoMae.BackColor = Color.Transparent;
+            labelFiliacaoMae.Location = new Point(68, 252);
             labelFiliacaoMae.Name = "labelFiliacaoMae";
             labelFiliacaoMae.Size = new Size(81, 15);
             labelFiliacaoMae.TabIndex = 43;
@@ -145,7 +148,8 @@
             // labelPesoAnimal
             // 
             labelPesoAnimal.AutoSize = true;
-            labelPesoAnimal.Location = new Point(100, 201);
+            labelPesoAnimal.BackColor = Color.Transparent;
+            labelPesoAnimal.Location = new Point(110, 216);
             labelPesoAnimal.Name = "labelPesoAnimal";
             labelPesoAnimal.Size = new Size(35, 15);
             labelPesoAnimal.TabIndex = 42;
@@ -154,7 +158,8 @@
             // labelSexoAnimal
             // 
             labelSexoAnimal.AutoSize = true;
-            labelSexoAnimal.Location = new Point(100, 171);
+            labelSexoAnimal.BackColor = Color.Transparent;
+            labelSexoAnimal.Location = new Point(110, 186);
             labelSexoAnimal.Name = "labelSexoAnimal";
             labelSexoAnimal.Size = new Size(35, 15);
             labelSexoAnimal.TabIndex = 41;
@@ -163,7 +168,8 @@
             // labelRaçaAnimal
             // 
             labelRaçaAnimal.AutoSize = true;
-            labelRaçaAnimal.Location = new Point(100, 134);
+            labelRaçaAnimal.BackColor = Color.Transparent;
+            labelRaçaAnimal.Location = new Point(110, 149);
             labelRaçaAnimal.Name = "labelRaçaAnimal";
             labelRaçaAnimal.Size = new Size(35, 15);
             labelRaçaAnimal.TabIndex = 40;
@@ -172,7 +178,8 @@
             // labelTipoAnimal
             // 
             labelTipoAnimal.AutoSize = true;
-            labelTipoAnimal.Location = new Point(49, 99);
+            labelTipoAnimal.BackColor = Color.Transparent;
+            labelTipoAnimal.Location = new Point(59, 114);
             labelTipoAnimal.Name = "labelTipoAnimal";
             labelTipoAnimal.Size = new Size(90, 15);
             labelTipoAnimal.TabIndex = 39;
@@ -181,7 +188,8 @@
             // labelDataNascimentoAnimal
             // 
             labelDataNascimentoAnimal.AutoSize = true;
-            labelDataNascimentoAnimal.Location = new Point(22, 67);
+            labelDataNascimentoAnimal.BackColor = Color.Transparent;
+            labelDataNascimentoAnimal.Location = new Point(32, 82);
             labelDataNascimentoAnimal.Name = "labelDataNascimentoAnimal";
             labelDataNascimentoAnimal.Size = new Size(117, 15);
             labelDataNascimentoAnimal.TabIndex = 38;
@@ -190,7 +198,8 @@
             // labelDonoNIF
             // 
             labelDonoNIF.AutoSize = true;
-            labelDonoNIF.Location = new Point(62, 35);
+            labelDonoNIF.BackColor = Color.Transparent;
+            labelDonoNIF.Location = new Point(72, 50);
             labelDonoNIF.Name = "labelDonoNIF";
             labelDonoNIF.Size = new Size(77, 15);
             labelDonoNIF.TabIndex = 37;
@@ -200,6 +209,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(buttonVoltarModificarAnimal);
             Controls.Add(buttonModificarAnimalFinal);
@@ -219,6 +230,9 @@
             Controls.Add(labelTipoAnimal);
             Controls.Add(labelDataNascimentoAnimal);
             Controls.Add(labelDonoNIF);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "ModificarAnimal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Modificar Animal";
@@ -226,7 +240,7 @@
             ResumeLayout(false);
             PerformLayout();
         }
-        
+
         #endregion
 
         private Button buttonVoltarModificarAnimal;

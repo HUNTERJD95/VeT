@@ -20,6 +20,16 @@ namespace VeT_Animais_Domésticos.Forms
         {
             InitializeComponent();
             this.idAnimal = idAnimal;
+
+            // Botão guardar
+            buttonGuardarFichaMedica.FlatStyle = FlatStyle.Flat;
+            buttonGuardarFichaMedica.FlatAppearance.BorderSize = 2;
+            buttonGuardarFichaMedica.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão voltar
+            buttonVoltarFichaMedica.FlatStyle = FlatStyle.Flat;
+            buttonVoltarFichaMedica.FlatAppearance.BorderSize = 2;
+            buttonVoltarFichaMedica.FlatAppearance.BorderColor = Color.Blue;
         }
 
         private void FormFichaMedica_Load(object sender, EventArgs e)
@@ -82,7 +92,7 @@ namespace VeT_Animais_Domésticos.Forms
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             ColaboradorItem selectedItem = (ColaboradorItem)comboBoxNomeColaborador.SelectedItem;
-               
+
             if (selectedItem == null)
             {
                 // mostrar erro? message box?
@@ -90,8 +100,16 @@ namespace VeT_Animais_Domésticos.Forms
             }
 
             int idColaborador = selectedItem.Id;
-            
+
             // usar este id para guardar o valor da dropdown na BD
+        }
+
+        private void buttonVoltarFichaMedica_Click(object sender, EventArgs e)
+        {
+            // Abre o form ConsultarAnimais
+            ConsultarAnimais ConsultarAnimais = new ConsultarAnimais();
+            ConsultarAnimais.Show();
+            this.Hide();
         }
     }
 }

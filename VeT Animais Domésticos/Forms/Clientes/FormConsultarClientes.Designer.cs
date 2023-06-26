@@ -44,42 +44,46 @@
             // 
             // buttonAdicionarCliente
             // 
+            buttonAdicionarCliente.BackColor = Color.White;
             buttonAdicionarCliente.Location = new Point(89, 291);
             buttonAdicionarCliente.Name = "buttonAdicionarCliente";
             buttonAdicionarCliente.Size = new Size(112, 46);
             buttonAdicionarCliente.TabIndex = 0;
             buttonAdicionarCliente.Text = "Adicionar Cliente";
-            buttonAdicionarCliente.UseVisualStyleBackColor = true;
+            buttonAdicionarCliente.UseVisualStyleBackColor = false;
             buttonAdicionarCliente.Click += buttonAdicionarCliente_Click;
             // 
             // buttonConsultarClientes
             // 
+            buttonConsultarClientes.BackColor = Color.White;
             buttonConsultarClientes.Location = new Point(234, 291);
             buttonConsultarClientes.Name = "buttonConsultarClientes";
             buttonConsultarClientes.Size = new Size(132, 46);
             buttonConsultarClientes.TabIndex = 1;
             buttonConsultarClientes.Text = "Consultar Clientes";
-            buttonConsultarClientes.UseVisualStyleBackColor = true;
+            buttonConsultarClientes.UseVisualStyleBackColor = false;
             buttonConsultarClientes.Click += buttonConsultarClientes_Click;
             // 
             // buttonModificarClientes
             // 
+            buttonModificarClientes.BackColor = Color.White;
             buttonModificarClientes.Location = new Point(396, 291);
             buttonModificarClientes.Name = "buttonModificarClientes";
             buttonModificarClientes.Size = new Size(114, 46);
             buttonModificarClientes.TabIndex = 2;
             buttonModificarClientes.Text = "Modificar Cliente";
-            buttonModificarClientes.UseVisualStyleBackColor = true;
+            buttonModificarClientes.UseVisualStyleBackColor = false;
             buttonModificarClientes.Click += buttonModificarClientes_Click;
             // 
             // buttonEliminarCliente
             // 
+            buttonEliminarCliente.BackColor = Color.White;
             buttonEliminarCliente.Location = new Point(551, 293);
             buttonEliminarCliente.Name = "buttonEliminarCliente";
             buttonEliminarCliente.Size = new Size(117, 44);
             buttonEliminarCliente.TabIndex = 3;
             buttonEliminarCliente.Text = "Eliminar Cliente";
-            buttonEliminarCliente.UseVisualStyleBackColor = true;
+            buttonEliminarCliente.UseVisualStyleBackColor = false;
             buttonEliminarCliente.Click += buttonEliminarCliente_Click;
             // 
             // dataGridViewClientes
@@ -112,12 +116,13 @@
             // 
             // buttonVoltarConsultar
             // 
+            buttonVoltarConsultar.BackColor = Color.White;
             buttonVoltarConsultar.Location = new Point(12, 397);
             buttonVoltarConsultar.Name = "buttonVoltarConsultar";
             buttonVoltarConsultar.Size = new Size(97, 41);
             buttonVoltarConsultar.TabIndex = 5;
             buttonVoltarConsultar.Text = "Voltar";
-            buttonVoltarConsultar.UseVisualStyleBackColor = true;
+            buttonVoltarConsultar.UseVisualStyleBackColor = false;
             buttonVoltarConsultar.Click += buttonVoltarConsultar_Click;
             // 
             // pictureBoxClientes
@@ -132,18 +137,20 @@
             // 
             // buttonClientesInativos
             // 
-            buttonClientesInativos.Location = new Point(655, 397);
+            buttonClientesInativos.BackColor = Color.White;
+            buttonClientesInativos.Location = new Point(643, 387);
             buttonClientesInativos.Name = "buttonClientesInativos";
-            buttonClientesInativos.Size = new Size(122, 41);
+            buttonClientesInativos.Size = new Size(134, 51);
             buttonClientesInativos.TabIndex = 7;
             buttonClientesInativos.Text = "Mostrar Clientes Inativos";
-            buttonClientesInativos.UseVisualStyleBackColor = true;
+            buttonClientesInativos.UseVisualStyleBackColor = false;
             buttonClientesInativos.Click += buttonClientesInativos_Click;
             // 
             // FormConsultarClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(128, 255, 255);
             ClientSize = new Size(800, 450);
             Controls.Add(buttonClientesInativos);
             Controls.Add(pictureBoxClientes);
@@ -153,6 +160,9 @@
             Controls.Add(buttonModificarClientes);
             Controls.Add(buttonConsultarClientes);
             Controls.Add(buttonAdicionarCliente);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormConsultarClientes";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Clientes";

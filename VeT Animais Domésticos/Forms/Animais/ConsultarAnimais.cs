@@ -48,7 +48,7 @@ namespace VeT_Animais_Domésticos.Forms
         private void buttonPesquisarComDono_Click(object sender, EventArgs e)
         {
             // Se não tiver sido introduzido um NIF, escreve mensagem de erro
-            if (textBoxNIFDono.Text == "")
+            if (textBoxNIFDono.Text.Length < 9 && textBoxNIFDono.Text != "1")
             {
                 MessageBox.Show("Introduza o NIF do Dono", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -129,10 +129,7 @@ namespace VeT_Animais_Domésticos.Forms
                 int animalId = Convert.ToInt32(dataGridViewAnimais.SelectedRows[0].Cells["ID"].Value);
 
                 // Crie uma instância do formulário "ModificarAnimal"
-                ModificarAnimal modificarAnimalForm = new ModificarAnimal();
-
-                // Configure o ID do animal na propriedade AnimalId
-                modificarAnimalForm.AnimalId = animalId;
+                ModificarAnimal modificarAnimalForm = new ModificarAnimal(animalId);
 
                 // Abra o formulário "ModificarAnimal" como janela modal
                 modificarAnimalForm.ShowDialog();
@@ -259,10 +256,26 @@ namespace VeT_Animais_Domésticos.Forms
 
         private void buttonFichaMedica_Click(object sender, EventArgs e)
         {
+            // Verifique se há uma linha selecionada no DataGridView
+            if (dataGridViewAnimais.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um animal para ver a ficha médica.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Obtenha o ID do animal selecionado na primeira coluna do DataGridView
             int animalId = Convert.ToInt32(dataGridViewAnimais.SelectedRows[0].Cells["ID"].Value);
+
             this.Hide();
             FormFichaMedica formFichaMedica = new FormFichaMedica(animalId);
             formFichaMedica.Show();
+        }
+
+        private void buttonAdicionarAnimal_Click(object sender, EventArgs e)
+        {
+            AdicionarAnimal adicionarAnimal = new AdicionarAnimal();
+            adicionarAnimal.Show();
+            this.Hide();
         }
     }
 }

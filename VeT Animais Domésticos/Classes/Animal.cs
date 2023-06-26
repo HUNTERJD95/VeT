@@ -14,8 +14,8 @@ namespace VeT_Animais_Domésticos.Classes
         public string Raca { get; set; }
         public string Sexo { get; set; }
         public double Peso { get; set; }
-        public string FiliaçãoMãe { get; set; }
-        public string FiliaçãoPai { get; set; }
+        public string? FiliaçãoMãe { get; set; }
+        public string? FiliaçãoPai { get; set; }
         public bool Ativo { get; set; }
 
         private static int proximoNumeroRegistro = 1;
@@ -116,7 +116,6 @@ namespace VeT_Animais_Domésticos.Classes
                         while (reader.Read())
                         {
                             int id = reader.GetInt32(reader.GetOrdinal("Id"));
-                            //DateTime dataNascimento = reader.GetDateTime(reader.GetOrdinal("data_nascimento"));
                             string dataNascimentoStr = reader.GetString(reader.GetOrdinal("data_nascimento"));
                             DateTime dataNascimento = DateTime.Parse(dataNascimentoStr);
                             string tipoAnimal = reader.GetString(reader.GetOrdinal("tipo_animal"));
@@ -135,7 +134,7 @@ namespace VeT_Animais_Domésticos.Classes
             return animais;
         }
 
-        public static Animal ObterAnimalPorId(int id)
+        public static Animal? ObterAnimalPorId(int id)
         {
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {
@@ -150,7 +149,8 @@ namespace VeT_Animais_Domésticos.Classes
                         if (reader.Read())
                         {
                             string donoNIF = reader.GetString(reader.GetOrdinal("dono_NIF"));
-                            DateTime dataNascimento = reader.GetDateTime(reader.GetOrdinal("data_nascimento"));
+                            string dataNascimentoString = reader.GetString(reader.GetOrdinal("data_nascimento"));
+                            DateTime dataNascimento = DateTime.Parse(dataNascimentoString);
                             string tipoAnimal = reader.GetString(reader.GetOrdinal("tipo_animal"));
                             string raca = reader.GetString(reader.GetOrdinal("raca"));
                             string sexo = reader.GetString(reader.GetOrdinal("sexo"));
@@ -158,7 +158,15 @@ namespace VeT_Animais_Domésticos.Classes
 
                             Animal animal = new Animal(donoNIF, dataNascimento, tipoAnimal, raca, sexo, peso);
                             animal.Id = id;
-                            animal.DataFalecimento = reader.GetDateTime(reader.GetOrdinal("data_falecimento"));
+
+                            int dataFalecimentoOrdinal = reader.GetOrdinal("data_falecimento");
+                            string dataFalecimentoString = !reader.IsDBNull(dataFalecimentoOrdinal) ? reader.GetString(dataFalecimentoOrdinal) : null;
+
+                            if (dataFalecimentoString != null)
+                            {
+                                animal.DataFalecimento = DateTime.Parse(dataFalecimentoString);
+                            }
+                            // animal.DataFalecimento = reader.GetDateTime(reader.GetOrdinal("data_falecimento"));
                             // Preencha outros detalhes do animal que deseja obter
 
                             return animal;

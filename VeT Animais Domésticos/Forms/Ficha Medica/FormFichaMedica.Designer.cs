@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFichaMedica));
             dataGridViewFichaMedica = new DataGridView();
             labelDataAtoMedico = new Label();
             label2 = new Label();
@@ -49,6 +50,7 @@
             textBoxPrescricaoAtoMedico = new TextBox();
             labelPrescricaoMedica = new Label();
             buttonGuardarFichaMedica = new Button();
+            buttonVoltarFichaMedica = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewFichaMedica).BeginInit();
             SuspendLayout();
             // 
@@ -237,18 +239,31 @@
             // buttonGuardarFichaMedica
             // 
             buttonGuardarFichaMedica.BackColor = Color.Lime;
-            buttonGuardarFichaMedica.Location = new Point(624, 397);
+            buttonGuardarFichaMedica.Location = new Point(698, 397);
             buttonGuardarFichaMedica.Name = "buttonGuardarFichaMedica";
             buttonGuardarFichaMedica.Size = new Size(90, 41);
             buttonGuardarFichaMedica.TabIndex = 26;
             buttonGuardarFichaMedica.Text = "Guardar";
             buttonGuardarFichaMedica.UseVisualStyleBackColor = false;
             // 
+            // buttonVoltarFichaMedica
+            // 
+            buttonVoltarFichaMedica.Location = new Point(12, 408);
+            buttonVoltarFichaMedica.Name = "buttonVoltarFichaMedica";
+            buttonVoltarFichaMedica.Size = new Size(83, 30);
+            buttonVoltarFichaMedica.TabIndex = 27;
+            buttonVoltarFichaMedica.Text = "Voltar";
+            buttonVoltarFichaMedica.UseVisualStyleBackColor = true;
+            buttonVoltarFichaMedica.Click += buttonVoltarFichaMedica_Click;
+            // 
             // FormFichaMedica
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonVoltarFichaMedica);
             Controls.Add(buttonGuardarFichaMedica);
             Controls.Add(labelPrescricaoMedica);
             Controls.Add(textBoxPrescricaoAtoMedico);
@@ -269,6 +284,9 @@
             Controls.Add(label2);
             Controls.Add(labelDataAtoMedico);
             Controls.Add(dataGridViewFichaMedica);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormFichaMedica";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ficha Médica";
@@ -300,5 +318,6 @@
         private TextBox textBoxPrescricaoAtoMedico;
         private Label labelPrescricaoMedica;
         private Button buttonGuardarFichaMedica;
+        private Button buttonVoltarFichaMedica;
     }
 }

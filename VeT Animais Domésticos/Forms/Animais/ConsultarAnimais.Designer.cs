@@ -39,12 +39,13 @@
             buttonEliminarAnimal = new Button();
             buttonAnimaisInativos = new Button();
             buttonConsultarFichaMedica = new Button();
+            buttonAdicionarAnimal = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewAnimais).BeginInit();
             SuspendLayout();
             // 
             // buttonPesquisarComDono
             // 
-            buttonPesquisarComDono.Location = new Point(199, 65);
+            buttonPesquisarComDono.Location = new Point(104, 65);
             buttonPesquisarComDono.Name = "buttonPesquisarComDono";
             buttonPesquisarComDono.Size = new Size(120, 52);
             buttonPesquisarComDono.TabIndex = 0;
@@ -55,7 +56,7 @@
             // buttonPesquisarSemDono
             // 
             buttonPesquisarSemDono.BackColor = Color.CornflowerBlue;
-            buttonPesquisarSemDono.Location = new Point(408, 36);
+            buttonPesquisarSemDono.Location = new Point(356, 33);
             buttonPesquisarSemDono.Name = "buttonPesquisarSemDono";
             buttonPesquisarSemDono.Size = new Size(120, 52);
             buttonPesquisarSemDono.TabIndex = 1;
@@ -66,7 +67,7 @@
             // labelNIFDono
             // 
             labelNIFDono.AutoSize = true;
-            labelNIFDono.Location = new Point(63, 39);
+            labelNIFDono.Location = new Point(21, 39);
             labelNIFDono.Name = "labelNIFDono";
             labelNIFDono.Size = new Size(77, 15);
             labelNIFDono.TabIndex = 2;
@@ -74,7 +75,7 @@
             // 
             // textBoxNIFDono
             // 
-            textBoxNIFDono.Location = new Point(146, 36);
+            textBoxNIFDono.Location = new Point(104, 36);
             textBoxNIFDono.Name = "textBoxNIFDono";
             textBoxNIFDono.Size = new Size(229, 23);
             textBoxNIFDono.TabIndex = 3;
@@ -95,7 +96,7 @@
             dataGridViewAnimais.BorderStyle = BorderStyle.Fixed3D;
             dataGridViewAnimais.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewAnimais.ColumnHeadersVisible = false;
-            dataGridViewAnimais.Location = new Point(63, 123);
+            dataGridViewAnimais.Location = new Point(12, 123);
             dataGridViewAnimais.Name = "dataGridViewAnimais";
             dataGridViewAnimais.ReadOnly = true;
             dataGridViewAnimais.RowTemplate.Height = 25;
@@ -123,7 +124,7 @@
             // buttonModificarAnimal
             // 
             buttonModificarAnimal.BackColor = Color.FromArgb(255, 255, 128);
-            buttonModificarAnimal.Location = new Point(545, 39);
+            buttonModificarAnimal.Location = new Point(482, 36);
             buttonModificarAnimal.Name = "buttonModificarAnimal";
             buttonModificarAnimal.Size = new Size(112, 46);
             buttonModificarAnimal.TabIndex = 7;
@@ -134,7 +135,7 @@
             // buttonEliminarAnimal
             // 
             buttonEliminarAnimal.BackColor = Color.OrangeRed;
-            buttonEliminarAnimal.Location = new Point(663, 39);
+            buttonEliminarAnimal.Location = new Point(600, 36);
             buttonEliminarAnimal.Name = "buttonEliminarAnimal";
             buttonEliminarAnimal.Size = new Size(112, 46);
             buttonEliminarAnimal.TabIndex = 8;
@@ -144,7 +145,7 @@
             // 
             // buttonAnimaisInativos
             // 
-            buttonAnimaisInativos.Location = new Point(602, 375);
+            buttonAnimaisInativos.Location = new Point(647, 370);
             buttonAnimaisInativos.Name = "buttonAnimaisInativos";
             buttonAnimaisInativos.Size = new Size(112, 50);
             buttonAnimaisInativos.TabIndex = 9;
@@ -155,7 +156,7 @@
             // buttonConsultarFichaMedica
             // 
             buttonConsultarFichaMedica.BackColor = Color.FromArgb(0, 192, 0);
-            buttonConsultarFichaMedica.Location = new Point(356, 348);
+            buttonConsultarFichaMedica.Location = new Point(526, 370);
             buttonConsultarFichaMedica.Name = "buttonConsultarFichaMedica";
             buttonConsultarFichaMedica.Size = new Size(106, 50);
             buttonConsultarFichaMedica.TabIndex = 10;
@@ -163,11 +164,22 @@
             buttonConsultarFichaMedica.UseVisualStyleBackColor = false;
             buttonConsultarFichaMedica.Click += buttonFichaMedica_Click;
             // 
+            // buttonAdicionarAnimal
+            // 
+            buttonAdicionarAnimal.Location = new Point(287, 370);
+            buttonAdicionarAnimal.Name = "buttonAdicionarAnimal";
+            buttonAdicionarAnimal.Size = new Size(112, 46);
+            buttonAdicionarAnimal.TabIndex = 11;
+            buttonAdicionarAnimal.Text = "Adicionar Animal";
+            buttonAdicionarAnimal.UseVisualStyleBackColor = true;
+            buttonAdicionarAnimal.Click += buttonAdicionarAnimal_Click;
+            // 
             // ConsultarAnimais
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonAdicionarAnimal);
             Controls.Add(buttonConsultarFichaMedica);
             Controls.Add(buttonAnimaisInativos);
             Controls.Add(buttonEliminarAnimal);
@@ -199,5 +211,6 @@
         private Button buttonEliminarAnimal;
         private Button buttonAnimaisInativos;
         private Button buttonConsultarFichaMedica;
+        private Button buttonAdicionarAnimal;
     }
 }

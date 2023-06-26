@@ -20,6 +20,37 @@ namespace VeT_Animais_Domésticos.Forms.Produtos
         {
 
             InitializeComponent();
+
+            // Botão Produtos
+            buttonAdicionarProduto.FlatStyle = FlatStyle.Flat;
+            buttonAdicionarProduto.FlatAppearance.BorderSize = 2;
+            buttonAdicionarProduto.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão Consultar Produtos
+            buttonConsultarProdutos.FlatStyle = FlatStyle.Flat;
+            buttonConsultarProdutos.FlatAppearance.BorderSize = 2;
+            buttonConsultarProdutos.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão Modificar Produtos
+            buttonModificarProdutos.FlatStyle = FlatStyle.Flat;
+            buttonModificarProdutos.FlatAppearance.BorderSize = 2;
+            buttonModificarProdutos.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão Eliminar Produtos
+            buttonEliminarProdutos.FlatStyle = FlatStyle.Flat;
+            buttonEliminarProdutos.FlatAppearance.BorderSize = 2;
+            buttonEliminarProdutos.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão Voltar
+            buttonVoltarProdutos.FlatStyle = FlatStyle.Flat;
+            buttonVoltarProdutos.FlatAppearance.BorderSize = 2;
+            buttonVoltarProdutos.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão Produtos Inativos
+            buttonProdutosInativos.FlatStyle = FlatStyle.Flat;
+            buttonProdutosInativos.FlatAppearance.BorderSize = 2;
+            buttonProdutosInativos.FlatAppearance.BorderColor = Color.Blue;
+
         }
 
         private void buttonConsultarProdutos_Click(object sender, EventArgs e)
@@ -120,7 +151,7 @@ namespace VeT_Animais_Domésticos.Forms.Produtos
             formPrincipal.Show();
         }
 
-        private void buttonEliminarColaboradores_Click(object sender, EventArgs e)
+        private void buttonEliminarProdutos_Click(object sender, EventArgs e)
         {
             // Verificar se um produto está selecionado no DataGridView
             if (dataGridViewProdutos.SelectedRows.Count <= 0)
@@ -202,7 +233,7 @@ namespace VeT_Animais_Domésticos.Forms.Produtos
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {
                 con.Open();
-                string query = "SELECT * FROM Produtos WHERE estado != '0'";
+                string query = "SELECT cod_produto, tipo_produto, descricao_produto, quantidade_armazem, preco_unitario FROM Produtos WHERE estado != '0'";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -220,6 +251,11 @@ namespace VeT_Animais_Domésticos.Forms.Produtos
             dataGridViewProdutos.Visible = true;
 
             dataGridViewProdutos.Refresh();
+        }
+
+        private void dataGridViewProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //
         }
     }
 }

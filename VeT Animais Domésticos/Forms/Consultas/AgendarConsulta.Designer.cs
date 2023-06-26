@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgendarConsulta));
             labelProcurarPorNIFDono = new Label();
             textBoxPesquisarNIFDono = new TextBox();
-            listBoxAnimaisPesquisados = new ListBox();
             buttonConfirmarNIFDono = new Button();
             labelColaboradorConsulta = new Label();
             labelTelemovelConsulta = new Label();
@@ -41,11 +42,14 @@
             textBoxTelemovelAgendarConsulta = new TextBox();
             buttonConfirmarAgendarConsulta = new Button();
             dateTimePickerHoraConsultaAgendarConsulta = new DateTimePicker();
+            dataGridViewAgendarConsulta = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAgendarConsulta).BeginInit();
             SuspendLayout();
             // 
             // labelProcurarPorNIFDono
             // 
             labelProcurarPorNIFDono.AutoSize = true;
+            labelProcurarPorNIFDono.BackColor = Color.Transparent;
             labelProcurarPorNIFDono.Location = new Point(12, 45);
             labelProcurarPorNIFDono.Name = "labelProcurarPorNIFDono";
             labelProcurarPorNIFDono.Size = new Size(118, 15);
@@ -58,19 +62,6 @@
             textBoxPesquisarNIFDono.Name = "textBoxPesquisarNIFDono";
             textBoxPesquisarNIFDono.Size = new Size(166, 23);
             textBoxPesquisarNIFDono.TabIndex = 1;
-            // 
-            // listBoxAnimaisPesquisados
-            // 
-            listBoxAnimaisPesquisados.FormattingEnabled = true;
-            listBoxAnimaisPesquisados.HorizontalScrollbar = true;
-            listBoxAnimaisPesquisados.ItemHeight = 15;
-            listBoxAnimaisPesquisados.Location = new Point(12, 113);
-            listBoxAnimaisPesquisados.MultiColumn = true;
-            listBoxAnimaisPesquisados.Name = "listBoxAnimaisPesquisados";
-            listBoxAnimaisPesquisados.ScrollAlwaysVisible = true;
-            listBoxAnimaisPesquisados.Size = new Size(776, 109);
-            listBoxAnimaisPesquisados.TabIndex = 2;
-            listBoxAnimaisPesquisados.Visible = false;
             // 
             // buttonConfirmarNIFDono
             // 
@@ -85,38 +76,46 @@
             // labelColaboradorConsulta
             // 
             labelColaboradorConsulta.AutoSize = true;
+            labelColaboradorConsulta.BackColor = Color.Transparent;
             labelColaboradorConsulta.Location = new Point(27, 254);
             labelColaboradorConsulta.Name = "labelColaboradorConsulta";
             labelColaboradorConsulta.Size = new Size(76, 15);
             labelColaboradorConsulta.TabIndex = 4;
             labelColaboradorConsulta.Text = "Colaborador:";
+            labelColaboradorConsulta.Visible = false;
             // 
             // labelTelemovelConsulta
             // 
             labelTelemovelConsulta.AutoSize = true;
+            labelTelemovelConsulta.BackColor = Color.Transparent;
             labelTelemovelConsulta.Location = new Point(40, 287);
             labelTelemovelConsulta.Name = "labelTelemovelConsulta";
             labelTelemovelConsulta.Size = new Size(63, 15);
             labelTelemovelConsulta.TabIndex = 5;
             labelTelemovelConsulta.Text = "Telemóvel:";
+            labelTelemovelConsulta.Visible = false;
             // 
             // labelDataConsultaAgendarConsulta
             // 
             labelDataConsultaAgendarConsulta.AutoSize = true;
+            labelDataConsultaAgendarConsulta.BackColor = Color.Transparent;
             labelDataConsultaAgendarConsulta.Location = new Point(19, 324);
             labelDataConsultaAgendarConsulta.Name = "labelDataConsultaAgendarConsulta";
             labelDataConsultaAgendarConsulta.Size = new Size(84, 15);
             labelDataConsultaAgendarConsulta.TabIndex = 6;
             labelDataConsultaAgendarConsulta.Text = "Data Consulta:";
+            labelDataConsultaAgendarConsulta.Visible = false;
             // 
             // labelHoraConsultaAgendarConsulta
             // 
             labelHoraConsultaAgendarConsulta.AutoSize = true;
+            labelHoraConsultaAgendarConsulta.BackColor = Color.Transparent;
             labelHoraConsultaAgendarConsulta.Location = new Point(17, 359);
             labelHoraConsultaAgendarConsulta.Name = "labelHoraConsultaAgendarConsulta";
             labelHoraConsultaAgendarConsulta.Size = new Size(86, 15);
             labelHoraConsultaAgendarConsulta.TabIndex = 7;
             labelHoraConsultaAgendarConsulta.Text = "Hora Consulta:";
+            labelHoraConsultaAgendarConsulta.Visible = false;
             // 
             // comboBoxColaboradorAgendarConsulta
             // 
@@ -125,6 +124,7 @@
             comboBoxColaboradorAgendarConsulta.Name = "comboBoxColaboradorAgendarConsulta";
             comboBoxColaboradorAgendarConsulta.Size = new Size(149, 23);
             comboBoxColaboradorAgendarConsulta.TabIndex = 8;
+            comboBoxColaboradorAgendarConsulta.Visible = false;
             // 
             // dateTimePickerDataConsultaAgendarConsulta
             // 
@@ -133,6 +133,7 @@
             dateTimePickerDataConsultaAgendarConsulta.Name = "dateTimePickerDataConsultaAgendarConsulta";
             dateTimePickerDataConsultaAgendarConsulta.Size = new Size(200, 23);
             dateTimePickerDataConsultaAgendarConsulta.TabIndex = 9;
+            dateTimePickerDataConsultaAgendarConsulta.Visible = false;
             // 
             // textBoxTelemovelAgendarConsulta
             // 
@@ -140,6 +141,7 @@
             textBoxTelemovelAgendarConsulta.Name = "textBoxTelemovelAgendarConsulta";
             textBoxTelemovelAgendarConsulta.Size = new Size(149, 23);
             textBoxTelemovelAgendarConsulta.TabIndex = 10;
+            textBoxTelemovelAgendarConsulta.Visible = false;
             // 
             // buttonConfirmarAgendarConsulta
             // 
@@ -149,6 +151,7 @@
             buttonConfirmarAgendarConsulta.TabIndex = 11;
             buttonConfirmarAgendarConsulta.Text = "Confirmar";
             buttonConfirmarAgendarConsulta.UseVisualStyleBackColor = true;
+            buttonConfirmarAgendarConsulta.Visible = false;
             buttonConfirmarAgendarConsulta.Click += buttonConfirmarAgendarConsulta_Click;
             // 
             // dateTimePickerHoraConsultaAgendarConsulta
@@ -159,12 +162,46 @@
             dateTimePickerHoraConsultaAgendarConsulta.ShowUpDown = true;
             dateTimePickerHoraConsultaAgendarConsulta.Size = new Size(200, 23);
             dateTimePickerHoraConsultaAgendarConsulta.TabIndex = 12;
+            dateTimePickerHoraConsultaAgendarConsulta.Visible = false;
+            // 
+            // dataGridViewAgendarConsulta
+            // 
+            dataGridViewAgendarConsulta.AccessibleRole = AccessibleRole.ScrollBar;
+            dataGridViewAgendarConsulta.AllowUserToAddRows = false;
+            dataGridViewAgendarConsulta.AllowUserToDeleteRows = false;
+            dataGridViewAgendarConsulta.AllowUserToResizeColumns = false;
+            dataGridViewAgendarConsulta.AllowUserToResizeRows = false;
+            dataGridViewCellStyle2.BackColor = Color.Silver;
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewAgendarConsulta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewAgendarConsulta.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridViewAgendarConsulta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewAgendarConsulta.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewAgendarConsulta.BorderStyle = BorderStyle.Fixed3D;
+            dataGridViewAgendarConsulta.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewAgendarConsulta.ColumnHeadersVisible = false;
+            dataGridViewAgendarConsulta.Location = new Point(27, 83);
+            dataGridViewAgendarConsulta.Name = "dataGridViewAgendarConsulta";
+            dataGridViewAgendarConsulta.ReadOnly = true;
+            dataGridViewAgendarConsulta.RowTemplate.Height = 25;
+            dataGridViewAgendarConsulta.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewAgendarConsulta.ShowCellErrors = false;
+            dataGridViewAgendarConsulta.ShowCellToolTips = false;
+            dataGridViewAgendarConsulta.ShowEditingIcon = false;
+            dataGridViewAgendarConsulta.ShowRowErrors = false;
+            dataGridViewAgendarConsulta.Size = new Size(743, 146);
+            dataGridViewAgendarConsulta.StandardTab = true;
+            dataGridViewAgendarConsulta.TabIndex = 13;
+            dataGridViewAgendarConsulta.Visible = false;
             // 
             // AgendarConsulta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridViewAgendarConsulta);
             Controls.Add(dateTimePickerHoraConsultaAgendarConsulta);
             Controls.Add(buttonConfirmarAgendarConsulta);
             Controls.Add(textBoxTelemovelAgendarConsulta);
@@ -175,12 +212,16 @@
             Controls.Add(labelTelemovelConsulta);
             Controls.Add(labelColaboradorConsulta);
             Controls.Add(buttonConfirmarNIFDono);
-            Controls.Add(listBoxAnimaisPesquisados);
             Controls.Add(textBoxPesquisarNIFDono);
             Controls.Add(labelProcurarPorNIFDono);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "AgendarConsulta";
-            Text = "AgendarConsulta";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Agendar Consulta";
             Load += AgendarConsulta_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAgendarConsulta).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -189,7 +230,6 @@
 
         private Label labelProcurarPorNIFDono;
         private TextBox textBoxPesquisarNIFDono;
-        private ListBox listBoxAnimaisPesquisados;
         private Button buttonConfirmarNIFDono;
         private Label labelColaboradorConsulta;
         private Label labelTelemovelConsulta;
@@ -200,5 +240,6 @@
         private TextBox textBoxTelemovelAgendarConsulta;
         private Button buttonConfirmarAgendarConsulta;
         private DateTimePicker dateTimePickerHoraConsultaAgendarConsulta;
+        private DataGridView dataGridViewAgendarConsulta;
     }
 }

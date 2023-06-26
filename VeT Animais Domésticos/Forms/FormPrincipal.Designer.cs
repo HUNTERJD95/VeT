@@ -28,16 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             buttonClientes = new Button();
             buttonAnimais = new Button();
             buttonColaboradores = new Button();
             buttonProdutos = new Button();
             buttonConsultas = new Button();
+            buttonAtosMedicos = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // buttonClientes
             // 
-            buttonClientes.Location = new Point(87, 342);
+            buttonClientes.Location = new Point(211, 152);
             buttonClientes.Name = "buttonClientes";
             buttonClientes.Size = new Size(86, 39);
             buttonClientes.TabIndex = 0;
@@ -47,7 +50,7 @@
             // 
             // buttonAnimais
             // 
-            buttonAnimais.Location = new Point(220, 342);
+            buttonAnimais.Location = new Point(355, 152);
             buttonAnimais.Name = "buttonAnimais";
             buttonAnimais.Size = new Size(86, 39);
             buttonAnimais.TabIndex = 1;
@@ -57,9 +60,9 @@
             // 
             // buttonColaboradores
             // 
-            buttonColaboradores.Location = new Point(339, 342);
+            buttonColaboradores.Location = new Point(345, 261);
             buttonColaboradores.Name = "buttonColaboradores";
-            buttonColaboradores.Size = new Size(113, 39);
+            buttonColaboradores.Size = new Size(106, 39);
             buttonColaboradores.TabIndex = 2;
             buttonColaboradores.Text = "Colaboradores";
             buttonColaboradores.UseVisualStyleBackColor = true;
@@ -67,7 +70,7 @@
             // 
             // buttonProdutos
             // 
-            buttonProdutos.Location = new Point(480, 342);
+            buttonProdutos.Location = new Point(496, 261);
             buttonProdutos.Name = "buttonProdutos";
             buttonProdutos.Size = new Size(113, 39);
             buttonProdutos.TabIndex = 3;
@@ -77,7 +80,7 @@
             // 
             // buttonConsultas
             // 
-            buttonConsultas.Location = new Point(618, 342);
+            buttonConsultas.Location = new Point(496, 152);
             buttonConsultas.Name = "buttonConsultas";
             buttonConsultas.Size = new Size(113, 39);
             buttonConsultas.TabIndex = 4;
@@ -85,20 +88,50 @@
             buttonConsultas.UseVisualStyleBackColor = true;
             buttonConsultas.Click += buttonConsultas_Click;
             // 
+            // buttonAtosMedicos
+            // 
+            buttonAtosMedicos.Location = new Point(197, 261);
+            buttonAtosMedicos.Name = "buttonAtosMedicos";
+            buttonAtosMedicos.Size = new Size(113, 39);
+            buttonAtosMedicos.TabIndex = 5;
+            buttonAtosMedicos.Text = "Atos Médicos";
+            buttonAtosMedicos.UseVisualStyleBackColor = true;
+            buttonAtosMedicos.Click += buttonAtosMedicos_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Tahoma", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(222, 45);
+            label1.Name = "label1";
+            label1.Size = new Size(348, 35);
+            label1.TabIndex = 6;
+            label1.Text = "VeT Clínica Veterinária";
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoValidate = AutoValidate.EnablePreventFocusChange;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
+            Controls.Add(buttonAtosMedicos);
             Controls.Add(buttonConsultas);
             Controls.Add(buttonProdutos);
             Controls.Add(buttonColaboradores);
             Controls.Add(buttonAnimais);
             Controls.Add(buttonClientes);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "VeT Animais Domésticos";
+            Load += FormPrincipal_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -108,5 +141,7 @@
         private Button buttonColaboradores;
         private Button buttonProdutos;
         private Button buttonConsultas;
+        private Button buttonAtosMedicos;
+        private Label label1;
     }
 }

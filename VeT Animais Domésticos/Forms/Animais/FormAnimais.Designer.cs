@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            buttonAdicionarAnimal = new Button();
             buttonConsultarAnimal = new Button();
             buttonVoltarAnimais = new Button();
+            buttonAdicionarAnimal = new Button();
             SuspendLayout();
-            // 
-            // buttonAdicionarAnimal
-            // 
-            buttonAdicionarAnimal.Location = new Point(172, 262);
-            buttonAdicionarAnimal.Name = "buttonAdicionarAnimal";
-            buttonAdicionarAnimal.Size = new Size(112, 46);
-            buttonAdicionarAnimal.TabIndex = 1;
-            buttonAdicionarAnimal.Text = "Adicionar Animal";
-            buttonAdicionarAnimal.UseVisualStyleBackColor = true;
-            buttonAdicionarAnimal.Click += buttonAdicionarAnimal_Click;
             // 
             // buttonConsultarAnimal
             // 
@@ -63,6 +53,16 @@
             buttonVoltarAnimais.UseVisualStyleBackColor = true;
             buttonVoltarAnimais.Click += buttonVoltarAnimais_Click;
             // 
+            // buttonAdicionarAnimal
+            // 
+            buttonAdicionarAnimal.Location = new Point(172, 262);
+            buttonAdicionarAnimal.Name = "buttonAdicionarAnimal";
+            buttonAdicionarAnimal.Size = new Size(112, 46);
+            buttonAdicionarAnimal.TabIndex = 1;
+            buttonAdicionarAnimal.Text = "Adicionar Animal";
+            buttonAdicionarAnimal.UseVisualStyleBackColor = true;
+            buttonAdicionarAnimal.Click += buttonAdicionarAnimal_Click;
+            // 
             // FormAnimais
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -79,9 +79,8 @@
         }
 
         #endregion
-
-        private Button buttonAdicionarAnimal;
         private Button buttonConsultarAnimal;
         private Button buttonVoltarAnimais;
+        private Button buttonAdicionarAnimal;
     }
 }

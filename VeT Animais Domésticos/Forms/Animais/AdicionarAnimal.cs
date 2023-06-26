@@ -35,8 +35,6 @@ namespace VeT_Animais_Domésticos.Forms
                 return;
             }
 
-
-
             double pesoAnimal;
             if (!double.TryParse(peso, out pesoAnimal))
             {
@@ -51,18 +49,42 @@ namespace VeT_Animais_Domésticos.Forms
                 return;
             }
 
+            // Se textBoxRacaAnimal conter numeros ou estiver vazio, não aceitar
+            if (textBoxRacaAnimal.Text.Any(char.IsDigit) || textBoxRacaAnimal.Text == "")
+            {
+                MessageBox.Show("O campo raça não pode conter números e não deve estar vazio!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Se textBoxSexoAnimal conter numeros ou estiver vazio, não aceitar
+            if (textBoxSexoAnimal.Text.Any(char.IsDigit) || textBoxSexoAnimal.Text == "")
+            {
+                MessageBox.Show("O campo sexo não pode conter números e não deve estar vazio!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Se textBoxTipoAnimal conter numeros ou estiver vazio, não aceitar
+            if (textBoxTipoAnimal.Text.Any(char.IsDigit) || textBoxTipoAnimal.Text == "")
+            {
+                MessageBox.Show("O campo tipo não pode conter números e não deve estar vazio!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Se textBoxDataNascimentoAnimal conter letras ou estiver vazio, não aceitar
+            if (textBoxDataNascimentoAnimal.Text.Any(char.IsLetter) || textBoxDataNascimentoAnimal.Text == "")
+            {
+                MessageBox.Show("O campo data de nascimento não pode conter letras e não deve estar vazio!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // Inserir o novo animal na base de dados
             Animal.InserirAnimal(donoNIF, dataNascimento, tipoAnimal, raca, sexo, pesoAnimal);
 
             MessageBox.Show("Animal registrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            // Limpar os campos do formulário após o registro
-            textBoxDono.Clear();
-            textBoxDataNascimentoAnimal.Clear();
-            textBoxTipoAnimal.Clear();
-            textBoxRacaAnimal.Clear();
-            textBoxSexoAnimal.Clear();
-            textBoxPesoAnimal.Clear();
+           this.Close();
+           ConsultarAnimais consultarAnimais = new ConsultarAnimais();
+           consultarAnimais.Show();
 
 
         }

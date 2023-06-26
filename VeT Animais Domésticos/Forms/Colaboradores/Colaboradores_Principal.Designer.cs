@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Colaboradores_Principal));
             buttonColaboradoresInativos = new Button();
             buttonVoltarConsultar = new Button();
             dataGridViewColaboradores = new DataGridView();
@@ -64,9 +65,9 @@
             dataGridViewColaboradores.AccessibleRole = AccessibleRole.ScrollBar;
             dataGridViewColaboradores.AllowUserToResizeColumns = false;
             dataGridViewColaboradores.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.Silver;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewColaboradores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = Color.Silver;
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewColaboradores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewColaboradores.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewColaboradores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewColaboradores.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -130,6 +131,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(buttonColaboradoresInativos);
             Controls.Add(buttonVoltarConsultar);
@@ -138,6 +141,8 @@
             Controls.Add(buttonModificarColaboradores);
             Controls.Add(buttonConsultarColaboradores);
             Controls.Add(buttonAdicionarColaborador);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Colaboradores_Principal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Colaboradores";

@@ -11,6 +11,37 @@ namespace VeT_Animais_Domésticos.Forms
         public FormConsultarClientes()
         {
             InitializeComponent();
+
+            // Botão adicionar cliente
+            buttonAdicionarCliente.FlatStyle = FlatStyle.Flat;
+            buttonAdicionarCliente.FlatAppearance.BorderSize = 2;
+            buttonAdicionarCliente.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão consultar clientes
+            buttonConsultarClientes.FlatStyle = FlatStyle.Flat;
+            buttonConsultarClientes.FlatAppearance.BorderSize = 2;
+            buttonConsultarClientes.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão modificar clientes
+            buttonModificarClientes.FlatStyle = FlatStyle.Flat;
+            buttonModificarClientes.FlatAppearance.BorderSize = 2;
+            buttonModificarClientes.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão eliminar clientes
+            buttonEliminarCliente.FlatStyle = FlatStyle.Flat;
+            buttonEliminarCliente.FlatAppearance.BorderSize = 2;
+            buttonEliminarCliente.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão voltar
+            buttonVoltarConsultar.FlatStyle = FlatStyle.Flat;
+            buttonVoltarConsultar.FlatAppearance.BorderSize = 2;
+            buttonVoltarConsultar.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão clientes inativos
+            buttonClientesInativos.FlatStyle = FlatStyle.Flat;
+            buttonClientesInativos.FlatAppearance.BorderSize = 2;
+            buttonClientesInativos.FlatAppearance.BorderColor = Color.Blue;
+
         }
 
         private void buttonAdicionarCliente_Click(object sender, EventArgs e)
@@ -30,7 +61,7 @@ namespace VeT_Animais_Domésticos.Forms
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {
                 con.Open();
-                string query = "SELECT * FROM Clientes WHERE Estado_Cliente != 0";
+                string query = "SELECT Id, Nome, DataNascimento, NIF, Telemovel, Data_Registo FROM Clientes WHERE Estado_Cliente != 0";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -204,7 +235,7 @@ namespace VeT_Animais_Domésticos.Forms
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {
                 con.Open();
-                string query = "SELECT * FROM Clientes WHERE Estado_Cliente = 0";
+                string query = "SELECT Id, Nome, NIF, Telemovel, Data_Exclusao FROM Clientes WHERE Estado_Cliente = 0";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {

@@ -10,13 +10,13 @@ namespace VeT_Animais_Domésticos.Classes
     {
         public int Id { get; set; }
         public DateTime DataAtoMedico { get; set; }
-        public string TipoConsulta { get; set; }
-        public string NomeColaborador { get; set; }
-        public string Diagnostico { get; set; }
-        public string AtoMedico { get; set; }
+        public string? TipoConsulta { get; set; }
+        public string? NomeColaborador { get; set; }
+        public string? Diagnostico { get; set; }
+        public string? AtoMedico { get; set; }
         public double Peso { get; set; }
-        public string Observacoes { get; set; }
-        public string PrescricaoMedica { get; set; }
+        public string? Observacoes { get; set; }
+        public string? PrescricaoMedica { get; set; }
         public DateTime ProximaVisita { get; set; }
     }
 }

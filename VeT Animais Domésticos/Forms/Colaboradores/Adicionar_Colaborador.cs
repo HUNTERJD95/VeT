@@ -25,9 +25,20 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
 
             comboBoxDisponibilidade.Items.Add("Diurno");
             comboBoxDisponibilidade.Items.Add("Noturno");
+
+
+            // Botão voltar
+            buttonVoltarRegistoColaborador.FlatStyle = FlatStyle.Flat;
+            buttonVoltarRegistoColaborador.FlatAppearance.BorderSize = 2;
+            buttonVoltarRegistoColaborador.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão registar
+            buttonRegistarAdicionarColaborador.FlatStyle = FlatStyle.Flat;
+            buttonRegistarAdicionarColaborador.FlatAppearance.BorderSize = 2;
+            buttonRegistarAdicionarColaborador.FlatAppearance.BorderColor = Color.Blue;
         }
 
-      
+
 
 
         private void buttonVoltarRegistoColaborador_Click(object sender, EventArgs e)
@@ -90,6 +101,8 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
             {
                 MessageBox.Show("Ocorreu um erro ao registrar o colaborador.", "Erro de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            this.Hide();
 
 
         }

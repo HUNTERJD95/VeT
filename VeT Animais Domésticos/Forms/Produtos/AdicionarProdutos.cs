@@ -20,6 +20,16 @@ namespace VeT_Animais_Domésticos.Forms.Produtos
             comboBoxTipoProduto.Items.Add("Fármaco");
             comboBoxTipoProduto.Items.Add("Alimentar");
             comboBoxTipoProduto.Items.Add("Suplementar");
+
+            // Botão registar produto
+            buttonRegistarProduto.FlatAppearance.BorderSize = 2;
+            buttonRegistarProduto.FlatStyle = FlatStyle.Flat;
+            buttonRegistarProduto.ForeColor = Color.Blue;
+            
+            // Botão voltar
+            buttonVoltarProdutos.FlatAppearance.BorderSize = 2;
+            buttonVoltarProdutos.FlatStyle = FlatStyle.Flat;
+            buttonVoltarProdutos.ForeColor = Color.Blue;
         }
 
         private void buttonRegistarProduto_Click(object sender, EventArgs e)
@@ -77,6 +87,13 @@ namespace VeT_Animais_Domésticos.Forms.Produtos
             {
                 MessageBox.Show("Ocorreu um erro ao registrar o produto.", "Erro de Registro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+            this.Hide();
+        }
+
+        private void buttonVoltarProdutos_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

@@ -18,6 +18,11 @@ namespace VeT_Animais_Domésticos.Forms
         {
             InitializeComponent();
             id = clienteId;
+
+            // Botão atualizar
+            buttonAtualizar.FlatStyle = FlatStyle.Flat;
+            buttonAtualizar.FlatAppearance.BorderSize = 2;
+            buttonAtualizar.FlatAppearance.BorderColor = Color.Blue;
         }
 
         public string NovoNome { get; set; }
@@ -65,9 +70,9 @@ namespace VeT_Animais_Domésticos.Forms
 
         private void textBoxAtualizarNomeCompleto_TextChanged(object sender, EventArgs e)
         {
-            
-           
-            
+
+
+
         }
     }
 }

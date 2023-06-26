@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdicionarProdutos));
             comboBoxTipoProduto = new ComboBox();
             labelTipoProduto = new Label();
             labelDescricaoProduto = new Label();
@@ -44,7 +45,7 @@
             // comboBoxTipoProduto
             // 
             comboBoxTipoProduto.FormattingEnabled = true;
-            comboBoxTipoProduto.Location = new Point(199, 95);
+            comboBoxTipoProduto.Location = new Point(261, 83);
             comboBoxTipoProduto.Name = "comboBoxTipoProduto";
             comboBoxTipoProduto.Size = new Size(121, 23);
             comboBoxTipoProduto.TabIndex = 0;
@@ -52,7 +53,8 @@
             // labelTipoProduto
             // 
             labelTipoProduto.AutoSize = true;
-            labelTipoProduto.Location = new Point(113, 98);
+            labelTipoProduto.BackColor = Color.Transparent;
+            labelTipoProduto.Location = new Point(176, 86);
             labelTipoProduto.Name = "labelTipoProduto";
             labelTipoProduto.Size = new Size(79, 15);
             labelTipoProduto.TabIndex = 1;
@@ -61,7 +63,8 @@
             // labelDescricaoProduto
             // 
             labelDescricaoProduto.AutoSize = true;
-            labelDescricaoProduto.Location = new Point(131, 148);
+            labelDescricaoProduto.BackColor = Color.Transparent;
+            labelDescricaoProduto.Location = new Point(194, 125);
             labelDescricaoProduto.Name = "labelDescricaoProduto";
             labelDescricaoProduto.Size = new Size(61, 15);
             labelDescricaoProduto.TabIndex = 2;
@@ -69,7 +72,7 @@
             // 
             // textBoxDescricaoProduto
             // 
-            textBoxDescricaoProduto.Location = new Point(199, 145);
+            textBoxDescricaoProduto.Location = new Point(261, 122);
             textBoxDescricaoProduto.Name = "textBoxDescricaoProduto";
             textBoxDescricaoProduto.Size = new Size(527, 23);
             textBoxDescricaoProduto.TabIndex = 3;
@@ -77,7 +80,8 @@
             // labelQuantidadeProduto
             // 
             labelQuantidadeProduto.AutoSize = true;
-            labelQuantidadeProduto.Location = new Point(46, 202);
+            labelQuantidadeProduto.BackColor = Color.Transparent;
+            labelQuantidadeProduto.Location = new Point(109, 163);
             labelQuantidadeProduto.Name = "labelQuantidadeProduto";
             labelQuantidadeProduto.Size = new Size(146, 15);
             labelQuantidadeProduto.TabIndex = 4;
@@ -85,7 +89,7 @@
             // 
             // numericUpDownQuantidade
             // 
-            numericUpDownQuantidade.Location = new Point(199, 202);
+            numericUpDownQuantidade.Location = new Point(262, 161);
             numericUpDownQuantidade.Name = "numericUpDownQuantidade";
             numericUpDownQuantidade.Size = new Size(120, 23);
             numericUpDownQuantidade.TabIndex = 5;
@@ -93,7 +97,8 @@
             // labelPrecoProduto
             // 
             labelPrecoProduto.AutoSize = true;
-            labelPrecoProduto.Location = new Point(107, 275);
+            labelPrecoProduto.BackColor = Color.Transparent;
+            labelPrecoProduto.Location = new Point(420, 163);
             labelPrecoProduto.Name = "labelPrecoProduto";
             labelPrecoProduto.Size = new Size(85, 15);
             labelPrecoProduto.TabIndex = 6;
@@ -101,7 +106,7 @@
             // 
             // textBoxPrecoProduto
             // 
-            textBoxPrecoProduto.Location = new Point(199, 267);
+            textBoxPrecoProduto.Location = new Point(511, 161);
             textBoxPrecoProduto.Name = "textBoxPrecoProduto";
             textBoxPrecoProduto.Size = new Size(100, 23);
             textBoxPrecoProduto.TabIndex = 7;
@@ -114,10 +119,11 @@
             buttonVoltarProdutos.TabIndex = 8;
             buttonVoltarProdutos.Text = "Voltar";
             buttonVoltarProdutos.UseVisualStyleBackColor = true;
+            buttonVoltarProdutos.Click += buttonVoltarProdutos_Click;
             // 
             // buttonRegistarProduto
             // 
-            buttonRegistarProduto.Location = new Point(659, 392);
+            buttonRegistarProduto.Location = new Point(613, 281);
             buttonRegistarProduto.Name = "buttonRegistarProduto";
             buttonRegistarProduto.Size = new Size(118, 46);
             buttonRegistarProduto.TabIndex = 9;
@@ -129,6 +135,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(buttonRegistarProduto);
             Controls.Add(buttonVoltarProdutos);
@@ -140,8 +148,12 @@
             Controls.Add(labelDescricaoProduto);
             Controls.Add(labelTipoProduto);
             Controls.Add(comboBoxTipoProduto);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "AdicionarProdutos";
-            Text = "AdicionarProdutos";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Adicionar Produtos";
             ((System.ComponentModel.ISupportInitialize)numericUpDownQuantidade).EndInit();
             ResumeLayout(false);
             PerformLayout();

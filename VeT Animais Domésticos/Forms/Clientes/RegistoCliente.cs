@@ -24,6 +24,26 @@ namespace VeT_Animais_Domésticos.Forms
             InitializeComponent();
             clientes = new List<Cliente>();
             connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\cs_ba\\source\\repos\\testeIP\\VeT Animais Domésticos\\VeT Animais Domésticos\\BaseDados\\BaseDados.mdf\";Integrated Security=True";
+
+            // Botão voltar
+            buttonVoltarRegistoCliente.FlatStyle = FlatStyle.Flat;
+            buttonVoltarRegistoCliente.FlatAppearance.BorderSize = 2;
+            buttonVoltarRegistoCliente.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão registar
+            buttonRegistar.FlatStyle = FlatStyle.Flat;
+            buttonRegistar.FlatAppearance.BorderSize = 2;
+            buttonRegistar.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão voltar animal
+            buttonVoltarRegistoAnimal.FlatStyle = FlatStyle.Flat;
+            buttonVoltarRegistoAnimal.FlatAppearance.BorderSize = 2;
+            buttonVoltarRegistoAnimal.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão registar animal
+            buttonRegistarAnimal.FlatStyle = FlatStyle.Flat;
+            buttonRegistarAnimal.FlatAppearance.BorderSize = 2;
+            buttonRegistarAnimal.FlatAppearance.BorderColor = Color.Blue;
         }
 
         private void buttonRegistar_Click(object sender, EventArgs e)
@@ -99,7 +119,7 @@ namespace VeT_Animais_Domésticos.Forms
                         cliente.NumeroCliente = numeroCliente;
                         return numeroCliente;
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                         // Tratar exceção
                         return 0;
@@ -160,8 +180,7 @@ namespace VeT_Animais_Domésticos.Forms
 
 
 
-            double pesoAnimal;
-            if (!double.TryParse(peso, out pesoAnimal))
+            if (!double.TryParse(peso, out double pesoAnimal))
             {
                 MessageBox.Show("Peso inválido!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -186,6 +205,10 @@ namespace VeT_Animais_Domésticos.Forms
             textBoxRacaAnimal.Clear();
             textBoxSexoAnimal.Clear();
             textBoxPesoAnimal.Clear();
+
+            this.Close();
+            RegistoCliente registoCliente = new RegistoCliente();
+            registoCliente.Show();
 
 
         }

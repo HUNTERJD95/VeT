@@ -32,7 +32,7 @@ namespace VeT_Animais_Domésticos.Classes
         {
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {
-                string query = "INSERT INTO Atos_Medicos (nome, descricao, custo, data_registo, estado) VALUES (@Tipo, @Descricao, @QuantidadeEmArmazem, @PrecoUnitario, @Estado)";
+                string query = "INSERT INTO Atos_Medicos (id, nome, descricao, custo, data_registo, estado) VALUES (@Id, @Nome, @Descricao, @Custo, @Data_Registo, @Estado)";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@Id", id);
@@ -49,18 +49,17 @@ namespace VeT_Animais_Domésticos.Classes
         }
 
         // Atualizar Ato_medico na BD
-        public static void AtualizarAtoMedico(int id, string nome, string descricao, float custo, DateTime data_registo, string estado)
+        public static void AtualizarAtoMedico(int id, string nome, string descricao, float custo)
         {
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {
-                string query = "UPDATE Atos_Medicos SET nome = @Nome, descricao = @Descricao, custo = @Custo, data_registo = @Data_registo, estado = @Estado WHERE id = @Id";
+                string query = "UPDATE Atos_Medicos SET nome = @Nome, descricao = @Descricao, custo = @Custo WHERE id = @Id";
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
+                    cmd.Parameters.AddWithValue("@Id", id);
                     cmd.Parameters.AddWithValue("@Nome", nome);
                     cmd.Parameters.AddWithValue("@Descricao", descricao);
                     cmd.Parameters.AddWithValue("@Custo", custo);
-                    cmd.Parameters.AddWithValue("@Data_Registo", data_registo);
-                    cmd.Parameters.AddWithValue("@Estado", estado);
 
                     con.Open();
                     cmd.ExecuteNonQuery();
@@ -97,6 +96,24 @@ namespace VeT_Animais_Domésticos.Classes
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@Descricao", id);
+
+                    con.Open();
+                    int count = (int)cmd.ExecuteScalar();
+
+                    return count > 0;
+                }
+            }
+        }
+
+        // Função VerificarDescricaoAtoMedico
+        public static bool VerificarDescricaoAtoMedico(string descricao)
+        {
+            using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
+            {
+                string query = "SELECT COUNT(*) FROM Atos_Medicos WHERE descricao = @Descricao";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Descricao", descricao);
 
                     con.Open();
                     int count = (int)cmd.ExecuteScalar();

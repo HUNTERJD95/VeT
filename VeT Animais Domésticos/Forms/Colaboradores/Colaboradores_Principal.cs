@@ -17,6 +17,37 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
         public Colaboradores_Principal()
         {
             InitializeComponent();
+
+            // Botão adicionar colaborador
+            buttonAdicionarColaborador.FlatStyle = FlatStyle.Flat;
+            buttonAdicionarColaborador.FlatAppearance.BorderSize = 2;
+            buttonAdicionarColaborador.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão consultar colaboradores
+            buttonConsultarColaboradores.FlatStyle = FlatStyle.Flat;
+            buttonConsultarColaboradores.FlatAppearance.BorderSize = 2;
+            buttonConsultarColaboradores.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão modificar colaboradores
+            buttonModificarColaboradores.FlatStyle = FlatStyle.Flat;
+            buttonModificarColaboradores.FlatAppearance.BorderSize = 2;
+            buttonModificarColaboradores.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão eliminar colaboradores
+            buttonEliminarColaboradores.FlatStyle = FlatStyle.Flat;
+            buttonEliminarColaboradores.FlatAppearance.BorderSize = 2;
+            buttonEliminarColaboradores.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão voltar
+            buttonVoltarConsultar.FlatStyle = FlatStyle.Flat;
+            buttonVoltarConsultar.FlatAppearance.BorderSize = 2;
+            buttonVoltarConsultar.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão Colaboradores Inativos
+            buttonColaboradoresInativos.FlatStyle = FlatStyle.Flat;
+            buttonColaboradoresInativos.FlatAppearance.BorderSize = 2;
+            buttonColaboradoresInativos.FlatAppearance.BorderColor = Color.Blue;
+
         }
 
         private void buttonVoltarConsultar_Click(object sender, EventArgs e)
@@ -40,7 +71,7 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {
                 con.Open();
-                string query = "SELECT * FROM Colaboradores WHERE estado != 0";
+                string query = "SELECT id, nome, data_nascimento, tipo_colaborador, funcao, data_inicio_colaboracao, telemovel, disponibilidade_horario FROM Colaboradores WHERE estado != 0";
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
@@ -62,8 +93,6 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
 
         private void buttonModificarColaboradores_Click(object sender, EventArgs e)
         {
-
-
             // Verificar se um colaborador está selecionado no DataGridView
             if (dataGridViewColaboradores.SelectedRows.Count <= 0)
             {
@@ -89,13 +118,6 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
                         string novoFuncao = modificarColaborador.novoFuncao;
                         string novoTelemovel = modificarColaborador.novoTelemovel;
                         string novoDisponibilidade = modificarColaborador.novoDisponibilidade;
-
-                        // Atualizar os dados do colaborador no banco de dados
-                        Colaborador.AtualizarColaborador(colaboradorId, novoNome, novoNIF, novaDataNascimento, "", "", "", novoTelemovel);
-
-                        MessageBox.Show("Dados do colaborador atualizados com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        
                     }
                 }
             }

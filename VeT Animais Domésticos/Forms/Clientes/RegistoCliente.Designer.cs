@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistoCliente));
             tabControlRegistoClienteAnimal = new TabControl();
             tabPageCliente = new TabPage();
             buttonVoltarRegistoCliente = new Button();
@@ -66,6 +67,7 @@
             // 
             // tabControlRegistoClienteAnimal
             // 
+            tabControlRegistoClienteAnimal.Appearance = TabAppearance.FlatButtons;
             tabControlRegistoClienteAnimal.Controls.Add(tabPageCliente);
             tabControlRegistoClienteAnimal.Controls.Add(tabPageAnimal);
             tabControlRegistoClienteAnimal.Location = new Point(0, 3);
@@ -76,6 +78,9 @@
             // 
             // tabPageCliente
             // 
+            tabPageCliente.BackColor = Color.Transparent;
+            tabPageCliente.BackgroundImage = (Image)resources.GetObject("tabPageCliente.BackgroundImage");
+            tabPageCliente.BackgroundImageLayout = ImageLayout.Stretch;
             tabPageCliente.Controls.Add(buttonVoltarRegistoCliente);
             tabPageCliente.Controls.Add(buttonRegistar);
             tabPageCliente.Controls.Add(labelNomeCompleto);
@@ -86,38 +91,39 @@
             tabPageCliente.Controls.Add(textBoxNIF);
             tabPageCliente.Controls.Add(labelTelemovel);
             tabPageCliente.Controls.Add(labelNIF);
-            tabPageCliente.Location = new Point(4, 24);
+            tabPageCliente.Location = new Point(4, 27);
             tabPageCliente.Name = "tabPageCliente";
             tabPageCliente.Padding = new Padding(3);
-            tabPageCliente.Size = new Size(789, 419);
+            tabPageCliente.Size = new Size(789, 416);
             tabPageCliente.TabIndex = 0;
             tabPageCliente.Text = "Cliente";
-            tabPageCliente.UseVisualStyleBackColor = true;
             // 
             // buttonVoltarRegistoCliente
             // 
+            buttonVoltarRegistoCliente.BackColor = Color.White;
             buttonVoltarRegistoCliente.Location = new Point(8, 370);
             buttonVoltarRegistoCliente.Name = "buttonVoltarRegistoCliente";
             buttonVoltarRegistoCliente.Size = new Size(123, 43);
             buttonVoltarRegistoCliente.TabIndex = 17;
             buttonVoltarRegistoCliente.Text = "Voltar";
-            buttonVoltarRegistoCliente.UseVisualStyleBackColor = true;
+            buttonVoltarRegistoCliente.UseVisualStyleBackColor = false;
             buttonVoltarRegistoCliente.Click += buttonVoltarRegistoCliente_Click;
             // 
             // buttonRegistar
             // 
+            buttonRegistar.BackColor = Color.White;
             buttonRegistar.Location = new Point(682, 368);
             buttonRegistar.Name = "buttonRegistar";
             buttonRegistar.Size = new Size(101, 43);
             buttonRegistar.TabIndex = 16;
             buttonRegistar.Text = "Registar";
-            buttonRegistar.UseVisualStyleBackColor = true;
+            buttonRegistar.UseVisualStyleBackColor = false;
             buttonRegistar.Click += buttonRegistar_Click;
             // 
             // labelNomeCompleto
             // 
             labelNomeCompleto.AutoSize = true;
-            labelNomeCompleto.Location = new Point(58, 66);
+            labelNomeCompleto.Location = new Point(99, 71);
             labelNomeCompleto.Name = "labelNomeCompleto";
             labelNomeCompleto.Size = new Size(99, 15);
             labelNomeCompleto.TabIndex = 8;
@@ -125,21 +131,21 @@
             // 
             // textBoxNomeCompleto
             // 
-            textBoxNomeCompleto.Location = new Point(163, 63);
+            textBoxNomeCompleto.Location = new Point(204, 63);
             textBoxNomeCompleto.Name = "textBoxNomeCompleto";
             textBoxNomeCompleto.Size = new Size(453, 23);
             textBoxNomeCompleto.TabIndex = 9;
             // 
             // dateNascimento
             // 
-            dateNascimento.Location = new Point(165, 160);
+            dateNascimento.Location = new Point(204, 142);
             dateNascimento.Name = "dateNascimento";
             dateNascimento.Size = new Size(200, 23);
             dateNascimento.TabIndex = 14;
             // 
             // textBoxTelemovel
             // 
-            textBoxTelemovel.Location = new Point(163, 216);
+            textBoxTelemovel.Location = new Point(204, 181);
             textBoxTelemovel.Name = "textBoxTelemovel";
             textBoxTelemovel.Size = new Size(202, 23);
             textBoxTelemovel.TabIndex = 15;
@@ -147,7 +153,7 @@
             // labelDataNascimento
             // 
             labelDataNascimento.AutoSize = true;
-            labelDataNascimento.Location = new Point(58, 160);
+            labelDataNascimento.Location = new Point(99, 148);
             labelDataNascimento.Name = "labelDataNascimento";
             labelDataNascimento.Size = new Size(101, 15);
             labelDataNascimento.TabIndex = 10;
@@ -155,7 +161,7 @@
             // 
             // textBoxNIF
             // 
-            textBoxNIF.Location = new Point(165, 108);
+            textBoxNIF.Location = new Point(204, 103);
             textBoxNIF.Name = "textBoxNIF";
             textBoxNIF.Size = new Size(200, 23);
             textBoxNIF.TabIndex = 13;
@@ -163,7 +169,7 @@
             // labelTelemovel
             // 
             labelTelemovel.AutoSize = true;
-            labelTelemovel.Location = new Point(94, 219);
+            labelTelemovel.Location = new Point(135, 184);
             labelTelemovel.Name = "labelTelemovel";
             labelTelemovel.Size = new Size(63, 15);
             labelTelemovel.TabIndex = 12;
@@ -172,7 +178,7 @@
             // labelNIF
             // 
             labelNIF.AutoSize = true;
-            labelNIF.Location = new Point(131, 111);
+            labelNIF.Location = new Point(170, 111);
             labelNIF.Name = "labelNIF";
             labelNIF.Size = new Size(28, 15);
             labelNIF.TabIndex = 11;
@@ -180,6 +186,8 @@
             // 
             // tabPageAnimal
             // 
+            tabPageAnimal.BackgroundImage = (Image)resources.GetObject("tabPageAnimal.BackgroundImage");
+            tabPageAnimal.BackgroundImageLayout = ImageLayout.Stretch;
             tabPageAnimal.Controls.Add(buttonVoltarRegistoAnimal);
             tabPageAnimal.Controls.Add(buttonRegistarAnimal);
             tabPageAnimal.Controls.Add(textBoxFiliacaoPai);
@@ -198,10 +206,10 @@
             tabPageAnimal.Controls.Add(labelTipoAnimal);
             tabPageAnimal.Controls.Add(labelDataNascimentoAnimal);
             tabPageAnimal.Controls.Add(labelDonoNIF);
-            tabPageAnimal.Location = new Point(4, 24);
+            tabPageAnimal.Location = new Point(4, 27);
             tabPageAnimal.Name = "tabPageAnimal";
             tabPageAnimal.Padding = new Padding(3);
-            tabPageAnimal.Size = new Size(789, 419);
+            tabPageAnimal.Size = new Size(789, 416);
             tabPageAnimal.TabIndex = 1;
             tabPageAnimal.Text = "Animal";
             tabPageAnimal.UseVisualStyleBackColor = true;
@@ -293,6 +301,7 @@
             // labelFiliacaoPai
             // 
             labelFiliacaoPai.AutoSize = true;
+            labelFiliacaoPai.BackColor = Color.Transparent;
             labelFiliacaoPai.Location = new Point(60, 274);
             labelFiliacaoPai.Name = "labelFiliacaoPai";
             labelFiliacaoPai.Size = new Size(74, 15);
@@ -303,6 +312,7 @@
             // labelFiliacaoMae
             // 
             labelFiliacaoMae.AutoSize = true;
+            labelFiliacaoMae.BackColor = Color.Transparent;
             labelFiliacaoMae.Location = new Point(53, 229);
             labelFiliacaoMae.Name = "labelFiliacaoMae";
             labelFiliacaoMae.Size = new Size(81, 15);
@@ -313,6 +323,7 @@
             // labelPesoAnimal
             // 
             labelPesoAnimal.AutoSize = true;
+            labelPesoAnimal.BackColor = Color.Transparent;
             labelPesoAnimal.Location = new Point(95, 193);
             labelPesoAnimal.Name = "labelPesoAnimal";
             labelPesoAnimal.Size = new Size(35, 15);
@@ -323,6 +334,7 @@
             // labelSexoAnimal
             // 
             labelSexoAnimal.AutoSize = true;
+            labelSexoAnimal.BackColor = Color.Transparent;
             labelSexoAnimal.Location = new Point(95, 163);
             labelSexoAnimal.Name = "labelSexoAnimal";
             labelSexoAnimal.Size = new Size(35, 15);
@@ -333,6 +345,7 @@
             // labelRaçaAnimal
             // 
             labelRaçaAnimal.AutoSize = true;
+            labelRaçaAnimal.BackColor = Color.Transparent;
             labelRaçaAnimal.Location = new Point(95, 126);
             labelRaçaAnimal.Name = "labelRaçaAnimal";
             labelRaçaAnimal.Size = new Size(35, 15);
@@ -343,6 +356,7 @@
             // labelTipoAnimal
             // 
             labelTipoAnimal.AutoSize = true;
+            labelTipoAnimal.BackColor = Color.Transparent;
             labelTipoAnimal.Location = new Point(44, 91);
             labelTipoAnimal.Name = "labelTipoAnimal";
             labelTipoAnimal.Size = new Size(90, 15);
@@ -353,6 +367,7 @@
             // labelDataNascimentoAnimal
             // 
             labelDataNascimentoAnimal.AutoSize = true;
+            labelDataNascimentoAnimal.BackColor = Color.Transparent;
             labelDataNascimentoAnimal.Location = new Point(17, 59);
             labelDataNascimentoAnimal.Name = "labelDataNascimentoAnimal";
             labelDataNascimentoAnimal.Size = new Size(117, 15);
@@ -363,6 +378,7 @@
             // labelDonoNIF
             // 
             labelDonoNIF.AutoSize = true;
+            labelDonoNIF.BackColor = Color.Transparent;
             labelDonoNIF.Location = new Point(57, 27);
             labelDonoNIF.Name = "labelDonoNIF";
             labelDonoNIF.Size = new Size(77, 15);
@@ -375,8 +391,12 @@
             AcceptButton = buttonRegistar;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(tabControlRegistoClienteAnimal);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "RegistoCliente";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ficha Cliente";

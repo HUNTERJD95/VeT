@@ -28,6 +28,16 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
 
             comboBoxNovoDisponibilidade.Items.Add("Diurno");
             comboBoxNovoDisponibilidade.Items.Add("Noturno");
+
+            // Botão voltar
+            buttonVoltarModificarColaborador.FlatStyle = FlatStyle.Flat;
+            buttonVoltarModificarColaborador.FlatAppearance.BorderSize = 2;
+            buttonVoltarModificarColaborador.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão atualizar
+            buttonAtualizarColaborador.FlatStyle = FlatStyle.Flat;
+            buttonAtualizarColaborador.FlatAppearance.BorderSize = 2;
+            buttonAtualizarColaborador.FlatAppearance.BorderColor = Color.Blue;
         }
 
 
@@ -71,12 +81,18 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
             novoFuncao = comboBoxNovoFuncaoColaborador.Text;
             novoTelemovel = textBoxNovoTelemovelColaborador.Text;
             novoDisponibilidade = comboBoxNovoDisponibilidade.Text;
-           
+
 
             // Fazer update na BD
             Colaborador.AtualizarColaborador(id, novoNome, novoNIF, novoDataNascimento, novoTipo, novoFuncao, novoDisponibilidade, novoTelemovel);
+            MessageBox.Show("Dados do colaborador atualizados com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             DialogResult = DialogResult.OK; // Definir o resultado do diálogo como OK
+            this.Hide();
+        }
+
+        private void buttonVoltarModificarColaborador_Click(object sender, EventArgs e)
+        {
             this.Hide();
         }
     }

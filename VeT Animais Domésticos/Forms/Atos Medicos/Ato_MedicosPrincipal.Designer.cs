@@ -29,33 +29,36 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            buttonColaboradoresInativos = new Button();
-            buttonVoltarConsultar = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ato_MedicosPrincipal));
+            buttonAtosMedicosInativos = new Button();
+            buttonVoltarAtosMedicos = new Button();
             dataGridViewAtosMedicos = new DataGridView();
-            buttonEliminarColaboradores = new Button();
-            buttonModificarColaboradores = new Button();
-            buttonConsultarColaboradores = new Button();
+            buttonEliminarAtoMedico = new Button();
+            buttonAlterarAtosMedicos = new Button();
+            buttonConsultarAtosMedicos = new Button();
             buttonAdicionarAtoMedico = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewAtosMedicos).BeginInit();
             SuspendLayout();
             // 
-            // buttonColaboradoresInativos
+            // buttonAtosMedicosInativos
             // 
-            buttonColaboradoresInativos.Location = new Point(635, 384);
-            buttonColaboradoresInativos.Name = "buttonColaboradoresInativos";
-            buttonColaboradoresInativos.Size = new Size(142, 54);
-            buttonColaboradoresInativos.TabIndex = 22;
-            buttonColaboradoresInativos.Text = "Mostrar Colaboradores Inativos";
-            buttonColaboradoresInativos.UseVisualStyleBackColor = true;
+            buttonAtosMedicosInativos.Location = new Point(635, 384);
+            buttonAtosMedicosInativos.Name = "buttonAtosMedicosInativos";
+            buttonAtosMedicosInativos.Size = new Size(142, 54);
+            buttonAtosMedicosInativos.TabIndex = 22;
+            buttonAtosMedicosInativos.Text = "Mostrar Atos Médicos Inativos";
+            buttonAtosMedicosInativos.UseVisualStyleBackColor = true;
+            buttonAtosMedicosInativos.Click += buttonAtosMedicosInativos_Click;
             // 
-            // buttonVoltarConsultar
+            // buttonVoltarAtosMedicos
             // 
-            buttonVoltarConsultar.Location = new Point(12, 397);
-            buttonVoltarConsultar.Name = "buttonVoltarConsultar";
-            buttonVoltarConsultar.Size = new Size(97, 41);
-            buttonVoltarConsultar.TabIndex = 21;
-            buttonVoltarConsultar.Text = "Voltar";
-            buttonVoltarConsultar.UseVisualStyleBackColor = true;
+            buttonVoltarAtosMedicos.Location = new Point(12, 397);
+            buttonVoltarAtosMedicos.Name = "buttonVoltarAtosMedicos";
+            buttonVoltarAtosMedicos.Size = new Size(97, 41);
+            buttonVoltarAtosMedicos.TabIndex = 21;
+            buttonVoltarAtosMedicos.Text = "Voltar";
+            buttonVoltarAtosMedicos.UseVisualStyleBackColor = true;
+            buttonVoltarAtosMedicos.Click += buttonVoltarAtosMedicos_Click;
             // 
             // dataGridViewAtosMedicos
             // 
@@ -84,32 +87,35 @@
             dataGridViewAtosMedicos.TabIndex = 20;
             dataGridViewAtosMedicos.Visible = false;
             // 
-            // buttonEliminarColaboradores
+            // buttonEliminarAtoMedico
             // 
-            buttonEliminarColaboradores.Location = new Point(551, 293);
-            buttonEliminarColaboradores.Name = "buttonEliminarColaboradores";
-            buttonEliminarColaboradores.Size = new Size(117, 44);
-            buttonEliminarColaboradores.TabIndex = 19;
-            buttonEliminarColaboradores.Text = "Eliminar Colaborador";
-            buttonEliminarColaboradores.UseVisualStyleBackColor = true;
+            buttonEliminarAtoMedico.Location = new Point(551, 293);
+            buttonEliminarAtoMedico.Name = "buttonEliminarAtoMedico";
+            buttonEliminarAtoMedico.Size = new Size(117, 44);
+            buttonEliminarAtoMedico.TabIndex = 19;
+            buttonEliminarAtoMedico.Text = "Eliminar Ato Médico";
+            buttonEliminarAtoMedico.UseVisualStyleBackColor = true;
+            buttonEliminarAtoMedico.Click += buttonEliminarAtoMedico_Click;
             // 
-            // buttonModificarColaboradores
+            // buttonAlterarAtosMedicos
             // 
-            buttonModificarColaboradores.Location = new Point(396, 291);
-            buttonModificarColaboradores.Name = "buttonModificarColaboradores";
-            buttonModificarColaboradores.Size = new Size(114, 46);
-            buttonModificarColaboradores.TabIndex = 18;
-            buttonModificarColaboradores.Text = "Modificar Colaborador";
-            buttonModificarColaboradores.UseVisualStyleBackColor = true;
+            buttonAlterarAtosMedicos.Location = new Point(396, 291);
+            buttonAlterarAtosMedicos.Name = "buttonAlterarAtosMedicos";
+            buttonAlterarAtosMedicos.Size = new Size(114, 46);
+            buttonAlterarAtosMedicos.TabIndex = 18;
+            buttonAlterarAtosMedicos.Text = "Alterar Ato Médico";
+            buttonAlterarAtosMedicos.UseVisualStyleBackColor = true;
+            buttonAlterarAtosMedicos.Click += buttonAlterarAtosMedicos_Click;
             // 
-            // buttonConsultarColaboradores
+            // buttonConsultarAtosMedicos
             // 
-            buttonConsultarColaboradores.Location = new Point(234, 291);
-            buttonConsultarColaboradores.Name = "buttonConsultarColaboradores";
-            buttonConsultarColaboradores.Size = new Size(132, 46);
-            buttonConsultarColaboradores.TabIndex = 17;
-            buttonConsultarColaboradores.Text = "Consultar Colaboradores";
-            buttonConsultarColaboradores.UseVisualStyleBackColor = true;
+            buttonConsultarAtosMedicos.Location = new Point(234, 291);
+            buttonConsultarAtosMedicos.Name = "buttonConsultarAtosMedicos";
+            buttonConsultarAtosMedicos.Size = new Size(132, 46);
+            buttonConsultarAtosMedicos.TabIndex = 17;
+            buttonConsultarAtosMedicos.Text = "Consultar Atos Médicos";
+            buttonConsultarAtosMedicos.UseVisualStyleBackColor = true;
+            buttonConsultarAtosMedicos.Click += buttonConsultarAtosMedicos_Click;
             // 
             // buttonAdicionarAtoMedico
             // 
@@ -119,33 +125,40 @@
             buttonAdicionarAtoMedico.TabIndex = 16;
             buttonAdicionarAtoMedico.Text = "Adicionar Ato Médico";
             buttonAdicionarAtoMedico.UseVisualStyleBackColor = true;
+            buttonAdicionarAtoMedico.Click += buttonAdicionarAtoMedico_Click;
             // 
             // Ato_MedicosPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
-            Controls.Add(buttonColaboradoresInativos);
-            Controls.Add(buttonVoltarConsultar);
+            Controls.Add(buttonAtosMedicosInativos);
+            Controls.Add(buttonVoltarAtosMedicos);
             Controls.Add(dataGridViewAtosMedicos);
-            Controls.Add(buttonEliminarColaboradores);
-            Controls.Add(buttonModificarColaboradores);
-            Controls.Add(buttonConsultarColaboradores);
+            Controls.Add(buttonEliminarAtoMedico);
+            Controls.Add(buttonAlterarAtosMedicos);
+            Controls.Add(buttonConsultarAtosMedicos);
             Controls.Add(buttonAdicionarAtoMedico);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Ato_MedicosPrincipal";
-            Text = "Ato_MedicosPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Atos Médicos";
             ((System.ComponentModel.ISupportInitialize)dataGridViewAtosMedicos).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button buttonColaboradoresInativos;
-        private Button buttonVoltarConsultar;
+        private Button buttonAtosMedicosInativos;
+        private Button buttonVoltarAtosMedicos;
         private DataGridView dataGridViewAtosMedicos;
-        private Button buttonEliminarColaboradores;
-        private Button buttonModificarColaboradores;
-        private Button buttonConsultarColaboradores;
+        private Button buttonEliminarAtoMedico;
+        private Button buttonAlterarAtosMedicos;
+        private Button buttonConsultarAtosMedicos;
         private Button buttonAdicionarAtoMedico;
     }
 }

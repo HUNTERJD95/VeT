@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProdutos));
             buttonProdutosInativos = new Button();
             buttonVoltarProdutos = new Button();
             dataGridViewProdutos = new DataGridView();
-            buttonEliminarColaboradores = new Button();
+            buttonEliminarProdutos = new Button();
             buttonModificarProdutos = new Button();
             buttonConsultarProdutos = new Button();
             buttonAdicionarProduto = new Button();
@@ -62,11 +63,13 @@
             // dataGridViewProdutos
             // 
             dataGridViewProdutos.AccessibleRole = AccessibleRole.ScrollBar;
+            dataGridViewProdutos.AllowUserToAddRows = false;
+            dataGridViewProdutos.AllowUserToDeleteRows = false;
             dataGridViewProdutos.AllowUserToResizeColumns = false;
             dataGridViewProdutos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.Silver;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = SystemColors.ActiveBorder;
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewProdutos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewProdutos.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewProdutos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewProdutos.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -85,16 +88,17 @@
             dataGridViewProdutos.StandardTab = true;
             dataGridViewProdutos.TabIndex = 20;
             dataGridViewProdutos.Visible = false;
+            dataGridViewProdutos.CellContentClick += dataGridViewProdutos_CellContentClick;
             // 
-            // buttonEliminarColaboradores
+            // buttonEliminarProdutos
             // 
-            buttonEliminarColaboradores.Location = new Point(551, 293);
-            buttonEliminarColaboradores.Name = "buttonEliminarColaboradores";
-            buttonEliminarColaboradores.Size = new Size(117, 44);
-            buttonEliminarColaboradores.TabIndex = 19;
-            buttonEliminarColaboradores.Text = "Eliminar Produtos";
-            buttonEliminarColaboradores.UseVisualStyleBackColor = true;
-            buttonEliminarColaboradores.Click += buttonEliminarColaboradores_Click;
+            buttonEliminarProdutos.Location = new Point(551, 293);
+            buttonEliminarProdutos.Name = "buttonEliminarProdutos";
+            buttonEliminarProdutos.Size = new Size(117, 44);
+            buttonEliminarProdutos.TabIndex = 19;
+            buttonEliminarProdutos.Text = "Eliminar Produtos";
+            buttonEliminarProdutos.UseVisualStyleBackColor = true;
+            buttonEliminarProdutos.Click += buttonEliminarProdutos_Click;
             // 
             // buttonModificarProdutos
             // 
@@ -130,15 +134,20 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(buttonProdutosInativos);
             Controls.Add(buttonVoltarProdutos);
             Controls.Add(dataGridViewProdutos);
-            Controls.Add(buttonEliminarColaboradores);
+            Controls.Add(buttonEliminarProdutos);
             Controls.Add(buttonModificarProdutos);
             Controls.Add(buttonConsultarProdutos);
             Controls.Add(buttonAdicionarProduto);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "FormProdutos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormProdutos";
             ((System.ComponentModel.ISupportInitialize)dataGridViewProdutos).EndInit();
             ResumeLayout(false);
@@ -149,7 +158,7 @@
         private Button buttonProdutosInativos;
         private Button buttonVoltarProdutos;
         private DataGridView dataGridViewProdutos;
-        private Button buttonEliminarColaboradores;
+        private Button buttonEliminarProdutos;
         private Button buttonModificarProdutos;
         private Button buttonConsultarProdutos;
         private Button buttonAdicionarProduto;

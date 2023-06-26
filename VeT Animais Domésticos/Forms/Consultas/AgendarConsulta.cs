@@ -13,25 +13,38 @@ namespace VeT_Animais_Domésticos.Forms.Consultas
         public AgendarConsulta()
         {
             InitializeComponent();
+
+            // Botão confirmar NIF dono
+            buttonConfirmarNIFDono.FlatStyle = FlatStyle.Flat;
+            buttonConfirmarNIFDono.FlatAppearance.BorderSize = 2;
+            buttonConfirmarNIFDono.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão confirmar agendar consulta
+            buttonConfirmarAgendarConsulta.FlatStyle = FlatStyle.Flat;
+            buttonConfirmarAgendarConsulta.FlatAppearance.BorderSize = 2;
+            buttonConfirmarAgendarConsulta.FlatAppearance.BorderColor = Color.Blue;
         }
 
         private void buttonConfirmarNIFDono_Click(object sender, EventArgs e)
         {
-            listBoxAnimaisPesquisados.Items.Clear();
+            dataGridViewAgendarConsulta.DataSource = null;
+            dataGridViewAgendarConsulta.Rows.Clear();
 
             this.animais = Animal.ObterAnimaisPorNIFDono(textBoxPesquisarNIFDono.Text);
 
-            foreach (Animal animal in animais)
-            {
-                listBoxAnimaisPesquisados.Items.Add(animal.ToString());
-            }
-
-            listBoxAnimaisPesquisados.Show();
+            dataGridViewAgendarConsulta.DataSource = animais;
         }
 
         private void buttonConfirmarAgendarConsulta_Click(object sender, EventArgs e)
         {
-            int selectedIndex = listBoxAnimaisPesquisados.SelectedIndex;
+            // Verifique se um animal foi selecionado na DataGridView
+            if (dataGridViewAgendarConsulta.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Selecione um animal para agendar a consulta.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            int selectedIndex = dataGridViewAgendarConsulta.SelectedRows[0].Index;
             Animal selectedAnimal = animais[selectedIndex];
             int idSelectedAnimal = selectedAnimal.Id;
             string telemovel = textBoxTelemovelAgendarConsulta.Text;
@@ -66,8 +79,7 @@ namespace VeT_Animais_Domésticos.Forms.Consultas
 
             int idColaborador = ((ColaboradorItem)comboBoxColaboradorAgendarConsulta.SelectedItem).Id;
 
-
-            
+            // Resto do código...
         }
 
         private void AgendarConsulta_Load(object sender, EventArgs e)

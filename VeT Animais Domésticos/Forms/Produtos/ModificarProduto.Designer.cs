@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarProduto));
             buttonAtualizarProduto = new Button();
             buttonVoltarProdutos = new Button();
             textBoxNovoPrecoProduto = new TextBox();
@@ -43,7 +44,7 @@
             // 
             // buttonAtualizarProduto
             // 
-            buttonAtualizarProduto.Location = new Point(665, 351);
+            buttonAtualizarProduto.Location = new Point(670, 392);
             buttonAtualizarProduto.Name = "buttonAtualizarProduto";
             buttonAtualizarProduto.Size = new Size(118, 46);
             buttonAtualizarProduto.TabIndex = 19;
@@ -53,7 +54,7 @@
             // 
             // buttonVoltarProdutos
             // 
-            buttonVoltarProdutos.Location = new Point(18, 364);
+            buttonVoltarProdutos.Location = new Point(12, 405);
             buttonVoltarProdutos.Name = "buttonVoltarProdutos";
             buttonVoltarProdutos.Size = new Size(87, 33);
             buttonVoltarProdutos.TabIndex = 18;
@@ -63,7 +64,7 @@
             // 
             // textBoxNovoPrecoProduto
             // 
-            textBoxNovoPrecoProduto.Location = new Point(205, 226);
+            textBoxNovoPrecoProduto.Location = new Point(271, 201);
             textBoxNovoPrecoProduto.Name = "textBoxNovoPrecoProduto";
             textBoxNovoPrecoProduto.Size = new Size(100, 23);
             textBoxNovoPrecoProduto.TabIndex = 17;
@@ -71,7 +72,8 @@
             // labelPrecoProduto
             // 
             labelPrecoProduto.AutoSize = true;
-            labelPrecoProduto.Location = new Point(113, 234);
+            labelPrecoProduto.BackColor = Color.Transparent;
+            labelPrecoProduto.Location = new Point(180, 209);
             labelPrecoProduto.Name = "labelPrecoProduto";
             labelPrecoProduto.Size = new Size(85, 15);
             labelPrecoProduto.TabIndex = 16;
@@ -79,7 +81,7 @@
             // 
             // numericUpDownNovoQuantidade
             // 
-            numericUpDownNovoQuantidade.Location = new Point(205, 161);
+            numericUpDownNovoQuantidade.Location = new Point(271, 155);
             numericUpDownNovoQuantidade.Name = "numericUpDownNovoQuantidade";
             numericUpDownNovoQuantidade.Size = new Size(120, 23);
             numericUpDownNovoQuantidade.TabIndex = 15;
@@ -87,7 +89,8 @@
             // labelQuantidadeProduto
             // 
             labelQuantidadeProduto.AutoSize = true;
-            labelQuantidadeProduto.Location = new Point(52, 161);
+            labelQuantidadeProduto.BackColor = Color.Transparent;
+            labelQuantidadeProduto.Location = new Point(119, 163);
             labelQuantidadeProduto.Name = "labelQuantidadeProduto";
             labelQuantidadeProduto.Size = new Size(146, 15);
             labelQuantidadeProduto.TabIndex = 14;
@@ -95,7 +98,7 @@
             // 
             // textBoxNovoDescricaoProduto
             // 
-            textBoxNovoDescricaoProduto.Location = new Point(205, 104);
+            textBoxNovoDescricaoProduto.Location = new Point(271, 117);
             textBoxNovoDescricaoProduto.Name = "textBoxNovoDescricaoProduto";
             textBoxNovoDescricaoProduto.Size = new Size(527, 23);
             textBoxNovoDescricaoProduto.TabIndex = 13;
@@ -103,7 +106,8 @@
             // labelDescricaoProduto
             // 
             labelDescricaoProduto.AutoSize = true;
-            labelDescricaoProduto.Location = new Point(137, 107);
+            labelDescricaoProduto.BackColor = Color.Transparent;
+            labelDescricaoProduto.Location = new Point(204, 120);
             labelDescricaoProduto.Name = "labelDescricaoProduto";
             labelDescricaoProduto.Size = new Size(61, 15);
             labelDescricaoProduto.TabIndex = 12;
@@ -112,7 +116,10 @@
             // labelTipoProduto
             // 
             labelTipoProduto.AutoSize = true;
-            labelTipoProduto.Location = new Point(119, 57);
+            labelTipoProduto.BackColor = Color.Transparent;
+            labelTipoProduto.FlatStyle = FlatStyle.Flat;
+            labelTipoProduto.ForeColor = SystemColors.ControlText;
+            labelTipoProduto.Location = new Point(186, 76);
             labelTipoProduto.Name = "labelTipoProduto";
             labelTipoProduto.Size = new Size(79, 15);
             labelTipoProduto.TabIndex = 11;
@@ -121,7 +128,7 @@
             // comboBoxNovoTipoProduto
             // 
             comboBoxNovoTipoProduto.FormattingEnabled = true;
-            comboBoxNovoTipoProduto.Location = new Point(205, 54);
+            comboBoxNovoTipoProduto.Location = new Point(271, 76);
             comboBoxNovoTipoProduto.Name = "comboBoxNovoTipoProduto";
             comboBoxNovoTipoProduto.Size = new Size(121, 23);
             comboBoxNovoTipoProduto.TabIndex = 10;
@@ -130,6 +137,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(buttonAtualizarProduto);
             Controls.Add(buttonVoltarProdutos);
@@ -141,7 +150,10 @@
             Controls.Add(labelDescricaoProduto);
             Controls.Add(labelTipoProduto);
             Controls.Add(comboBoxNovoTipoProduto);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "ModificarProduto";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Modificar Produto";
             ((System.ComponentModel.ISupportInitialize)numericUpDownNovoQuantidade).EndInit();
             ResumeLayout(false);
