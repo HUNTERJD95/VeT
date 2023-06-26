@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VeT_Animais_Domésticos.Forms.Consultas;
 using VeT_Animais_Domésticos.Forms.Produtos;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -49,6 +50,14 @@ namespace VeT_Animais_Domésticos.Forms
             // Fecha o form atual e abre o FormProdutos
             FormProdutos formProdutos = new FormProdutos();
             formProdutos.Show();
+            this.Hide();
+        }
+
+        private void buttonConsultas_Click(object sender, EventArgs e)
+        {
+            // Fecha o form atual e abre o form AgendarConsulta
+            AgendarConsulta agendarConsulta = new AgendarConsulta();
+            agendarConsulta.Show();
             this.Hide();
         }
     }

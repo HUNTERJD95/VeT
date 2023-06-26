@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             buttonPesquisarComDono = new Button();
             buttonPesquisarSemDono = new Button();
             labelNIFDono = new Label();
@@ -38,7 +38,7 @@
             buttonModificarAnimal = new Button();
             buttonEliminarAnimal = new Button();
             buttonAnimaisInativos = new Button();
-            buttonFichaMedica = new Button();
+            buttonConsultarFichaMedica = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewAnimais).BeginInit();
             SuspendLayout();
             // 
@@ -86,9 +86,9 @@
             dataGridViewAnimais.AllowUserToDeleteRows = false;
             dataGridViewAnimais.AllowUserToResizeColumns = false;
             dataGridViewAnimais.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = Color.Silver;
-            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewAnimais.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = Color.Silver;
+            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewAnimais.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             dataGridViewAnimais.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewAnimais.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewAnimais.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -152,22 +152,23 @@
             buttonAnimaisInativos.UseVisualStyleBackColor = true;
             buttonAnimaisInativos.Click += buttonAnimaisInativos_Click;
             // 
-            // buttonFichaMedica
+            // buttonConsultarFichaMedica
             // 
-            buttonFichaMedica.Location = new Point(351, 348);
-            buttonFichaMedica.Name = "buttonFichaMedica";
-            buttonFichaMedica.Size = new Size(106, 50);
-            buttonFichaMedica.TabIndex = 10;
-            buttonFichaMedica.Text = "Consultar Ficha Médica";
-            buttonFichaMedica.UseVisualStyleBackColor = true;
-            buttonFichaMedica.Click += buttonFichaMedica_Click;
+            buttonConsultarFichaMedica.BackColor = Color.FromArgb(0, 192, 0);
+            buttonConsultarFichaMedica.Location = new Point(356, 348);
+            buttonConsultarFichaMedica.Name = "buttonConsultarFichaMedica";
+            buttonConsultarFichaMedica.Size = new Size(106, 50);
+            buttonConsultarFichaMedica.TabIndex = 10;
+            buttonConsultarFichaMedica.Text = "Consultar Ficha Médica";
+            buttonConsultarFichaMedica.UseVisualStyleBackColor = false;
+            buttonConsultarFichaMedica.Click += buttonFichaMedica_Click;
             // 
             // ConsultarAnimais
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(buttonFichaMedica);
+            Controls.Add(buttonConsultarFichaMedica);
             Controls.Add(buttonAnimaisInativos);
             Controls.Add(buttonEliminarAnimal);
             Controls.Add(buttonModificarAnimal);
@@ -197,6 +198,6 @@
         private Button buttonModificarAnimal;
         private Button buttonEliminarAnimal;
         private Button buttonAnimaisInativos;
-        private Button buttonFichaMedica;
+        private Button buttonConsultarFichaMedica;
     }
 }

@@ -259,9 +259,9 @@ namespace VeT_Animais_Domésticos.Forms
 
         private void buttonFichaMedica_Click(object sender, EventArgs e)
         {
-            // 
+            int animalId = Convert.ToInt32(dataGridViewAnimais.SelectedRows[0].Cells["ID"].Value);
             this.Hide();
-            FormFichaMedica formFichaMedica = new FormFichaMedica();
+            FormFichaMedica formFichaMedica = new FormFichaMedica(animalId);
             formFichaMedica.Show();
         }
     }

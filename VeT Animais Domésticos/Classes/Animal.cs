@@ -99,6 +99,42 @@ namespace VeT_Animais_Domésticos.Classes
             }
         }
 
+        public static List<Animal> ObterAnimaisPorNIFDono(string donoNIF)
+        {
+            List<Animal> animais = new List<Animal>();
+
+            using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
+            {
+                string query = "SELECT * FROM Animais WHERE dono_NIF = @donoNIF";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@donoNIF", donoNIF);
+
+                    con.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int id = reader.GetInt32(reader.GetOrdinal("Id"));
+                            //DateTime dataNascimento = reader.GetDateTime(reader.GetOrdinal("data_nascimento"));
+                            string dataNascimentoStr = reader.GetString(reader.GetOrdinal("data_nascimento"));
+                            DateTime dataNascimento = DateTime.Parse(dataNascimentoStr);
+                            string tipoAnimal = reader.GetString(reader.GetOrdinal("tipo_animal"));
+                            string raca = reader.GetString(reader.GetOrdinal("raca"));
+                            string sexo = reader.GetString(reader.GetOrdinal("sexo"));
+                            double peso = reader.GetDouble(reader.GetOrdinal("peso"));
+
+                            Animal animal = new Animal(donoNIF, dataNascimento, tipoAnimal, raca, sexo, peso);
+                            animal.Id = id;
+                            animais.Add(animal);
+                        }
+                    }
+                }
+            }
+
+            return animais;
+        }
+
         public static Animal ObterAnimalPorId(int id)
         {
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
@@ -132,6 +168,11 @@ namespace VeT_Animais_Domésticos.Classes
             }
 
             return null; // Retornar null se o animal não for encontrado com o ID fornecido
+        }
+
+        public override string ToString()
+        {
+            return $"ID: {Id}, DonoNIF: {DonoNIF}, DataNascimento: {DataNascimento}, DataFalecimento: {DataFalecimento}, DataUltimaConsulta: {DataUltimaConsulta}, TipoAnimal: {TipoAnimal}, Raca: {Raca}, Sexo: {Sexo}, Peso: {Peso}, Ativo: {Ativo}";
         }
     }
 }

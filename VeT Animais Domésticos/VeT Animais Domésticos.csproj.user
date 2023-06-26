@@ -25,6 +25,9 @@
     <Compile Update="Forms\Colaboradores\ModificarColaborador.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\Consultas\AgendarConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Forms\Ficha Medica\FormFichaMedica.cs">
       <SubType>Form</SubType>
     </Compile>

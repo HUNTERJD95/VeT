@@ -9,7 +9,6 @@ namespace VeT_Animais_Domésticos.Classes
     public class FichaMedica
     {
         public int Id { get; set; }
-        public string NomeAnimal { get; set; }
         public DateTime DataAtoMedico { get; set; }
         public string TipoConsulta { get; set; }
         public string NomeColaborador { get; set; }
