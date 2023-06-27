@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgendarConsulta));
             labelProcurarPorNIFDono = new Label();
             textBoxPesquisarNIFDono = new TextBox();
@@ -43,6 +43,7 @@
             buttonConfirmarAgendarConsulta = new Button();
             dateTimePickerHoraConsultaAgendarConsulta = new DateTimePicker();
             dataGridViewAgendarConsulta = new DataGridView();
+            buttonListaConsultas = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewAgendarConsulta).BeginInit();
             SuspendLayout();
             // 
@@ -81,7 +82,7 @@
             labelColaboradorConsulta.Name = "labelColaboradorConsulta";
             labelColaboradorConsulta.Size = new Size(76, 15);
             labelColaboradorConsulta.TabIndex = 4;
-            labelColaboradorConsulta.Text = "Colaborador:";
+            labelColaboradorConsulta.Text = "IdColaborador:";
             labelColaboradorConsulta.Visible = false;
             // 
             // labelTelemovelConsulta
@@ -145,7 +146,7 @@
             // 
             // buttonConfirmarAgendarConsulta
             // 
-            buttonConfirmarAgendarConsulta.Location = new Point(657, 370);
+            buttonConfirmarAgendarConsulta.Location = new Point(342, 323);
             buttonConfirmarAgendarConsulta.Name = "buttonConfirmarAgendarConsulta";
             buttonConfirmarAgendarConsulta.Size = new Size(93, 51);
             buttonConfirmarAgendarConsulta.TabIndex = 11;
@@ -171,9 +172,9 @@
             dataGridViewAgendarConsulta.AllowUserToDeleteRows = false;
             dataGridViewAgendarConsulta.AllowUserToResizeColumns = false;
             dataGridViewAgendarConsulta.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = Color.Silver;
-            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewAgendarConsulta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = Color.Silver;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewAgendarConsulta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewAgendarConsulta.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewAgendarConsulta.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewAgendarConsulta.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -194,6 +195,16 @@
             dataGridViewAgendarConsulta.TabIndex = 13;
             dataGridViewAgendarConsulta.Visible = false;
             // 
+            // buttonListaConsultas
+            // 
+            buttonListaConsultas.Location = new Point(654, 342);
+            buttonListaConsultas.Name = "buttonListaConsultas";
+            buttonListaConsultas.Size = new Size(116, 75);
+            buttonListaConsultas.TabIndex = 14;
+            buttonListaConsultas.Text = "Listar Consultas Para o Dia";
+            buttonListaConsultas.UseVisualStyleBackColor = true;
+            buttonListaConsultas.Click += buttonListaConsultas_Click;
+            // 
             // AgendarConsulta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -201,6 +212,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonListaConsultas);
             Controls.Add(dataGridViewAgendarConsulta);
             Controls.Add(dateTimePickerHoraConsultaAgendarConsulta);
             Controls.Add(buttonConfirmarAgendarConsulta);
@@ -241,5 +253,6 @@
         private Button buttonConfirmarAgendarConsulta;
         private DateTimePicker dateTimePickerHoraConsultaAgendarConsulta;
         private DataGridView dataGridViewAgendarConsulta;
+        private Button buttonListaConsultas;
     }
 }

@@ -30,7 +30,7 @@ namespace VeT_Animais_Domésticos.Classes
             Telemovel = telemovel;
         }
 
-        // Inserir Colaborador na BD
+        // Inserir IdColaborador na BD
         public static void InserirColaborador(string nome, string nif, DateTime dataNascimento, string tipoColaborador, string funcaoColaborador, string disponibilidadeColaborador, string telemovel)
         {
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
@@ -52,7 +52,7 @@ namespace VeT_Animais_Domésticos.Classes
             }
         }
 
-        // Atualizar Colaborador na BD
+        // Atualizar IdColaborador na BD
         public static void AtualizarColaborador(int Id, string nome, string nif, DateTime dataNascimento, string tipoColaborador, string funcaoColaborador, string disponibilidadeColaborador, string telemovel)
         {
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
@@ -75,7 +75,7 @@ namespace VeT_Animais_Domésticos.Classes
             }
         }
 
-        // Eliminar Colaborador da BD
+        // Eliminar IdColaborador da BD
         public static void EliminarColaborador(int Id)
         {
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))

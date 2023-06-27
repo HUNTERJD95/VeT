@@ -219,7 +219,7 @@
             MinimizeBox = false;
             Name = "ModificarColaborador";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Modificar Colaborador";
+            Text = "Modificar IdColaborador";
             Load += ModificarColaborador_Load;
             ResumeLayout(false);
             PerformLayout();

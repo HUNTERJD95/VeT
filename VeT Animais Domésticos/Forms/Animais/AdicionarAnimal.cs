@@ -16,6 +16,16 @@ namespace VeT_Animais_Domésticos.Forms
         public AdicionarAnimal()
         {
             InitializeComponent();
+
+            // Botão voltar
+            buttonVoltarRegistoAnimal.FlatAppearance.BorderSize = 0;
+            buttonVoltarRegistoAnimal.FlatStyle = FlatStyle.Flat;
+            buttonVoltarRegistoAnimal.TabStop = false;
+
+            // Botão registar
+            buttonRegistarAnimal.FlatAppearance.BorderSize = 0;
+            buttonRegistarAnimal.FlatStyle = FlatStyle.Flat;
+            buttonRegistarAnimal.TabStop = false;
         }
 
         private void buttonRegistarAnimal_Click(object sender, EventArgs e)
@@ -82,9 +92,9 @@ namespace VeT_Animais_Domésticos.Forms
 
             MessageBox.Show("Animal registrado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-           this.Close();
-           ConsultarAnimais consultarAnimais = new ConsultarAnimais();
-           consultarAnimais.Show();
+            this.Close();
+            ConsultarAnimais consultarAnimais = new ConsultarAnimais();
+            consultarAnimais.Show();
 
 
         }
@@ -92,8 +102,8 @@ namespace VeT_Animais_Domésticos.Forms
         private void buttonVoltarRegistoAnimal_Click(object sender, EventArgs e)
         {
             // Fecha o form e abre o form animais
-            FormAnimais FormAnimais = new FormAnimais();
-            FormAnimais.Show();
+            ConsultarAnimais consultarAnimais = new ConsultarAnimais();
+            consultarAnimais.Show();
             this.Hide();
         }
 

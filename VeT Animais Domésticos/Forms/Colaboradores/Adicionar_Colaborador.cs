@@ -94,7 +94,7 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
 
             if (numeroColaborador > 0)
             {
-                MessageBox.Show($"Colaborador registrado com sucesso. Número de colaborador: {numeroColaborador}.",
+                MessageBox.Show($"IdColaborador registrado com sucesso. Número de colaborador: {numeroColaborador}.",
                     "Registro Concluído", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else

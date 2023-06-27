@@ -93,7 +93,7 @@
             buttonEliminarColaboradores.Name = "buttonEliminarColaboradores";
             buttonEliminarColaboradores.Size = new Size(117, 44);
             buttonEliminarColaboradores.TabIndex = 11;
-            buttonEliminarColaboradores.Text = "Eliminar Colaborador";
+            buttonEliminarColaboradores.Text = "Eliminar IdColaborador";
             buttonEliminarColaboradores.UseVisualStyleBackColor = true;
             buttonEliminarColaboradores.Click += buttonEliminarColaboradores_Click;
             // 
@@ -103,7 +103,7 @@
             buttonModificarColaboradores.Name = "buttonModificarColaboradores";
             buttonModificarColaboradores.Size = new Size(114, 46);
             buttonModificarColaboradores.TabIndex = 10;
-            buttonModificarColaboradores.Text = "Modificar Colaborador";
+            buttonModificarColaboradores.Text = "Modificar IdColaborador";
             buttonModificarColaboradores.UseVisualStyleBackColor = true;
             buttonModificarColaboradores.Click += buttonModificarColaboradores_Click;
             // 
@@ -123,7 +123,7 @@
             buttonAdicionarColaborador.Name = "buttonAdicionarColaborador";
             buttonAdicionarColaborador.Size = new Size(112, 46);
             buttonAdicionarColaborador.TabIndex = 8;
-            buttonAdicionarColaborador.Text = "Adicionar Colaborador";
+            buttonAdicionarColaborador.Text = "Adicionar IdColaborador";
             buttonAdicionarColaborador.UseVisualStyleBackColor = true;
             buttonAdicionarColaborador.Click += buttonAdicionarColaborador_Click;
             // 

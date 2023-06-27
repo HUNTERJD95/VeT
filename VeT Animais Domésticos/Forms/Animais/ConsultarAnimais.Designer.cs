@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarAnimais));
             buttonPesquisarComDono = new Button();
             buttonPesquisarSemDono = new Button();
             labelNIFDono = new Label();
@@ -87,9 +88,9 @@
             dataGridViewAnimais.AllowUserToDeleteRows = false;
             dataGridViewAnimais.AllowUserToResizeColumns = false;
             dataGridViewAnimais.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = Color.Silver;
-            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewAnimais.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = Color.Silver;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewAnimais.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewAnimais.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewAnimais.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewAnimais.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -178,6 +179,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(buttonAdicionarAnimal);
             Controls.Add(buttonConsultarFichaMedica);
@@ -190,6 +193,9 @@
             Controls.Add(labelNIFDono);
             Controls.Add(buttonPesquisarSemDono);
             Controls.Add(buttonPesquisarComDono);
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "ConsultarAnimais";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Consultar Animais";

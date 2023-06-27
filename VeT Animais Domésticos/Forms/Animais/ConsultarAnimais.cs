@@ -17,6 +17,47 @@ namespace VeT_Animais_Domésticos.Forms
         public ConsultarAnimais()
         {
             InitializeComponent();
+
+            // Botão de pesquisar sem dono
+            buttonPesquisarSemDono.FlatStyle = FlatStyle.Flat;
+            buttonPesquisarSemDono.FlatAppearance.BorderSize = 2;
+            buttonPesquisarSemDono.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão de pesquisar com dono
+            buttonPesquisarComDono.FlatStyle = FlatStyle.Flat;
+            buttonPesquisarComDono.FlatAppearance.BorderSize = 2;
+            buttonPesquisarComDono.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão de voltar
+            buttonVoltarConsultarAnimais.FlatStyle = FlatStyle.Flat;
+            buttonVoltarConsultarAnimais.FlatAppearance.BorderSize = 2;
+            buttonVoltarConsultarAnimais.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão de modificar
+            buttonModificarAnimal.FlatStyle = FlatStyle.Flat;
+            buttonModificarAnimal.FlatAppearance.BorderSize = 2;
+            buttonModificarAnimal.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão de eliminar
+            buttonEliminarAnimal.FlatStyle = FlatStyle.Flat;
+            buttonEliminarAnimal.FlatAppearance.BorderSize = 2;
+            buttonEliminarAnimal.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão adicionar animal
+            buttonAdicionarAnimal.FlatStyle = FlatStyle.Flat;
+            buttonAdicionarAnimal.FlatAppearance.BorderSize = 2;
+            buttonAdicionarAnimal.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão de consultar ficha medica
+            buttonConsultarFichaMedica.FlatStyle = FlatStyle.Flat;
+            buttonConsultarFichaMedica.FlatAppearance.BorderSize = 2;
+            buttonConsultarFichaMedica.FlatAppearance.BorderColor = Color.Blue;
+
+            // Botão animais inativos
+            buttonAnimaisInativos.FlatStyle = FlatStyle.Flat;
+            buttonAnimaisInativos.FlatAppearance.BorderSize = 2;
+            buttonAnimaisInativos.FlatAppearance.BorderColor = Color.Blue;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -107,16 +148,15 @@ namespace VeT_Animais_Domésticos.Forms
         private void buttonVoltarConsultarAnimais_Click(object sender, EventArgs e)
         {
             // Abre o form FormAnimais e fecha o corrente
-            FormAnimais formAnimais = new FormAnimais();
-            formAnimais.Show();
+            ConsultarAnimais consultarAnimais = new ConsultarAnimais();
+            consultarAnimais.Show();
             this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Fecha o form e abre o FormAnimais
-            FormAnimais formAnimais = new FormAnimais();
-            formAnimais.Show();
+            FormPrincipal formPrincipal = new FormPrincipal();
+            formPrincipal.Show();
             this.Hide();
         }
 

@@ -220,7 +220,7 @@
             MinimizeBox = false;
             Name = "Adicionar_Colaborador";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Adicionar Colaborador";
+            Text = "Adicionar IdColaborador";
             ResumeLayout(false);
             PerformLayout();
         }

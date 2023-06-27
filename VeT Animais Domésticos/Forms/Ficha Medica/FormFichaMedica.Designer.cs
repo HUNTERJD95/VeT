@@ -109,7 +109,7 @@
             label3.Name = "label3";
             label3.Size = new Size(129, 15);
             label3.TabIndex = 9;
-            label3.Text = "Nome do Colaborador:";
+            label3.Text = "Nome do IdColaborador:";
             // 
             // label4
             // 
