@@ -44,6 +44,7 @@
             dateTimePickerHoraConsultaAgendarConsulta = new DateTimePicker();
             dataGridViewAgendarConsulta = new DataGridView();
             buttonListaConsultas = new Button();
+            buttonVoltarAgendarConsulta = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewAgendarConsulta).BeginInit();
             SuspendLayout();
             // 
@@ -205,6 +206,16 @@
             buttonListaConsultas.UseVisualStyleBackColor = true;
             buttonListaConsultas.Click += buttonListaConsultas_Click;
             // 
+            // buttonVoltarAgendarConsulta
+            // 
+            buttonVoltarAgendarConsulta.Location = new Point(12, 405);
+            buttonVoltarAgendarConsulta.Name = "buttonVoltarAgendarConsulta";
+            buttonVoltarAgendarConsulta.Size = new Size(89, 33);
+            buttonVoltarAgendarConsulta.TabIndex = 15;
+            buttonVoltarAgendarConsulta.Text = "Voltar";
+            buttonVoltarAgendarConsulta.UseVisualStyleBackColor = true;
+            buttonVoltarAgendarConsulta.Click += buttonVoltarAgendarConsulta_Click;
+            // 
             // AgendarConsulta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -212,6 +223,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonVoltarAgendarConsulta);
             Controls.Add(buttonListaConsultas);
             Controls.Add(dataGridViewAgendarConsulta);
             Controls.Add(dateTimePickerHoraConsultaAgendarConsulta);
@@ -254,5 +266,6 @@
         private DateTimePicker dateTimePickerHoraConsultaAgendarConsulta;
         private DataGridView dataGridViewAgendarConsulta;
         private Button buttonListaConsultas;
+        private Button buttonVoltarAgendarConsulta;
     }
 }

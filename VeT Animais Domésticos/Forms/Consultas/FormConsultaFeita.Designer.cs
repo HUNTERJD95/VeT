@@ -152,12 +152,13 @@
             // 
             // comboBoxAtoMedico
             // 
+            comboBoxAtoMedico.DisplayMember = "descricaoAtoMedico";
             comboBoxAtoMedico.FormattingEnabled = true;
-            comboBoxAtoMedico.Items.AddRange(new object[] { "Consulta", "Pequena Cirurgia", "Vacinação", "Mudança de penso", "Grande Cirurgia" });
             comboBoxAtoMedico.Location = new Point(135, 240);
             comboBoxAtoMedico.Name = "comboBoxAtoMedico";
             comboBoxAtoMedico.Size = new Size(121, 23);
             comboBoxAtoMedico.TabIndex = 19;
+            comboBoxAtoMedico.ValueMember = "codigoAtoMedico";
             comboBoxAtoMedico.SelectedIndexChanged += comboBoxAtoMedico_SelectedIndexChanged;
             // 
             // dateTimePickerAtoMedico
@@ -169,22 +170,26 @@
             // 
             // comboBoxTipoConsulta
             // 
+            comboBoxTipoConsulta.DisplayMember = "id";
             comboBoxTipoConsulta.FormattingEnabled = true;
             comboBoxTipoConsulta.Items.AddRange(new object[] { "Consulta Rápida", "Banho", "Vacinação", "Mudança de penso", "Desparatização", "Tosquia do Pêlo" });
             comboBoxTipoConsulta.Location = new Point(134, 81);
             comboBoxTipoConsulta.Name = "comboBoxTipoConsulta";
             comboBoxTipoConsulta.Size = new Size(203, 23);
             comboBoxTipoConsulta.TabIndex = 21;
+            comboBoxTipoConsulta.ValueMember = "id";
             // 
             // comboBoxNomeColaborador
             // 
             comboBoxNomeColaborador.AutoCompleteMode = AutoCompleteMode.Suggest;
             comboBoxNomeColaborador.AutoCompleteSource = AutoCompleteSource.ListItems;
+            comboBoxNomeColaborador.DisplayMember = "name";
             comboBoxNomeColaborador.FormattingEnabled = true;
             comboBoxNomeColaborador.Location = new Point(134, 134);
             comboBoxNomeColaborador.Name = "comboBoxNomeColaborador";
             comboBoxNomeColaborador.Size = new Size(203, 23);
             comboBoxNomeColaborador.TabIndex = 22;
+            comboBoxNomeColaborador.ValueMember = "id";
             comboBoxNomeColaborador.SelectedIndexChanged += comboBox3_SelectedIndexChanged;
             // 
             // textBoxPrescricaoAtoMedico
@@ -213,6 +218,7 @@
             buttonGuardarFichaMedica.TabIndex = 26;
             buttonGuardarFichaMedica.Text = "Guardar";
             buttonGuardarFichaMedica.UseVisualStyleBackColor = false;
+            buttonGuardarFichaMedica.Click += buttonGuardarFichaMedica_Click;
             // 
             // buttonVoltarFichaMedica
             // 
@@ -226,12 +232,13 @@
             // 
             // comboBoxDiagnosticoFichaMedica
             // 
+            comboBoxDiagnosticoFichaMedica.DisplayMember = "descricaoDiagnostico";
             comboBoxDiagnosticoFichaMedica.FormattingEnabled = true;
-            comboBoxDiagnosticoFichaMedica.Items.AddRange(new object[] { "Febre", "Obsesso", "Fratura", "Parasitas", "Diarreia" });
             comboBoxDiagnosticoFichaMedica.Location = new Point(134, 184);
             comboBoxDiagnosticoFichaMedica.Name = "comboBoxDiagnosticoFichaMedica";
             comboBoxDiagnosticoFichaMedica.Size = new Size(203, 23);
             comboBoxDiagnosticoFichaMedica.TabIndex = 30;
+            comboBoxDiagnosticoFichaMedica.ValueMember = "codigoDiagnostico";
             comboBoxDiagnosticoFichaMedica.SelectedIndexChanged += comboBoxDiagnosticoFichaMedica_SelectedIndexChanged;
             // 
             // listBoxDiagnosticoFichaMedica
@@ -242,6 +249,7 @@
             listBoxDiagnosticoFichaMedica.Name = "listBoxDiagnosticoFichaMedica";
             listBoxDiagnosticoFichaMedica.Size = new Size(120, 94);
             listBoxDiagnosticoFichaMedica.TabIndex = 32;
+            listBoxDiagnosticoFichaMedica.DoubleClick += listBoxDiagnosticoFichaMedica_DoubleClick;
             // 
             // listBoxAtosMedicosFichaMedica
             // 
@@ -251,6 +259,7 @@
             listBoxAtosMedicosFichaMedica.Name = "listBoxAtosMedicosFichaMedica";
             listBoxAtosMedicosFichaMedica.Size = new Size(120, 94);
             listBoxAtosMedicosFichaMedica.TabIndex = 33;
+            listBoxAtosMedicosFichaMedica.DoubleClick += listBoxAtosMedicosFichaMedica_DoubleClick;
             // 
             // labelProdutosUtilizados
             // 
@@ -263,12 +272,13 @@
             // 
             // comboBoxProdutosUtilizados
             // 
+            comboBoxProdutosUtilizados.DisplayMember = "descricaoProduto";
             comboBoxProdutosUtilizados.FormattingEnabled = true;
-            comboBoxProdutosUtilizados.Items.AddRange(new object[] { "Consulta", "Pequena Cirurgia", "Vacinação", "Mudança de penso", "Grande Cirurgia" });
             comboBoxProdutosUtilizados.Location = new Point(585, 269);
             comboBoxProdutosUtilizados.Name = "comboBoxProdutosUtilizados";
             comboBoxProdutosUtilizados.Size = new Size(203, 23);
             comboBoxProdutosUtilizados.TabIndex = 35;
+            comboBoxProdutosUtilizados.ValueMember = "codigoProduto";
             comboBoxProdutosUtilizados.SelectedIndexChanged += comboBoxProdutosUtilizados_SelectedIndexChanged;
             // 
             // listBoxProdutosUtilizados
@@ -279,8 +289,10 @@
             listBoxProdutosUtilizados.Name = "listBoxProdutosUtilizados";
             listBoxProdutosUtilizados.Size = new Size(120, 94);
             listBoxProdutosUtilizados.TabIndex = 36;
+            listBoxProdutosUtilizados.Click += listBoxProdutosUtilizados_Click;
+            listBoxProdutosUtilizados.DoubleClick += listBoxProdutosUtilizados_DoubleClick;
             // 
-            // FormFichaMedica
+            // FormConsultaFeita
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -315,7 +327,7 @@
             FormBorderStyle = FormBorderStyle.Fixed3D;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "FormFichaMedica";
+            Name = "FormConsultaFeita";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ficha Médica";
             Load += FormFichaMedica_Load;

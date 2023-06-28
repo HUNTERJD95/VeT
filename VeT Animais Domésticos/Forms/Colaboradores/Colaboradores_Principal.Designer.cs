@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Colaboradores_Principal));
             buttonColaboradoresInativos = new Button();
             buttonVoltarConsultar = new Button();
@@ -65,9 +65,9 @@
             dataGridViewColaboradores.AccessibleRole = AccessibleRole.ScrollBar;
             dataGridViewColaboradores.AllowUserToResizeColumns = false;
             dataGridViewColaboradores.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = Color.Silver;
-            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewColaboradores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = Color.Silver;
+            dataGridViewCellStyle1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewColaboradores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewColaboradores.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewColaboradores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewColaboradores.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -93,7 +93,7 @@
             buttonEliminarColaboradores.Name = "buttonEliminarColaboradores";
             buttonEliminarColaboradores.Size = new Size(117, 44);
             buttonEliminarColaboradores.TabIndex = 11;
-            buttonEliminarColaboradores.Text = "Eliminar IdColaborador";
+            buttonEliminarColaboradores.Text = "Eliminar Colaborador";
             buttonEliminarColaboradores.UseVisualStyleBackColor = true;
             buttonEliminarColaboradores.Click += buttonEliminarColaboradores_Click;
             // 
@@ -103,7 +103,7 @@
             buttonModificarColaboradores.Name = "buttonModificarColaboradores";
             buttonModificarColaboradores.Size = new Size(114, 46);
             buttonModificarColaboradores.TabIndex = 10;
-            buttonModificarColaboradores.Text = "Modificar IdColaborador";
+            buttonModificarColaboradores.Text = "Modificar Colaborador";
             buttonModificarColaboradores.UseVisualStyleBackColor = true;
             buttonModificarColaboradores.Click += buttonModificarColaboradores_Click;
             // 
@@ -123,7 +123,7 @@
             buttonAdicionarColaborador.Name = "buttonAdicionarColaborador";
             buttonAdicionarColaborador.Size = new Size(112, 46);
             buttonAdicionarColaborador.TabIndex = 8;
-            buttonAdicionarColaborador.Text = "Adicionar IdColaborador";
+            buttonAdicionarColaborador.Text = "Adicionar Colaborador";
             buttonAdicionarColaborador.UseVisualStyleBackColor = true;
             buttonAdicionarColaborador.Click += buttonAdicionarColaborador_Click;
             // 

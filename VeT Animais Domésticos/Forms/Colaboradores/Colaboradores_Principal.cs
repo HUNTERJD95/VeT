@@ -181,7 +181,7 @@ namespace VeT_Animais_Domésticos.Forms.Colaboradores
                     AtualizarDadosColaboradores();
 
                     // Exibir mensagem de sucesso
-                    MessageBox.Show("IdColaborador excluído/desativado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Colaborador excluído/desativado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

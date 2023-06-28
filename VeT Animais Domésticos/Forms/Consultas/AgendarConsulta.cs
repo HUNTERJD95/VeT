@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using VeT_Animais_Domésticos.Classes;
+using VeT_Animais_Domésticos.Forms.Colaboradores;
 
 namespace VeT_Animais_Domésticos.Forms.Consultas
 {
@@ -34,25 +35,29 @@ namespace VeT_Animais_Domésticos.Forms.Consultas
             {
                 this.animais = Animal.ObterAnimaisPorNIFDono(textBoxPesquisarNIFDono.Text);
 
-                dataGridViewAgendarConsulta.DataSource = animais;
+                if (animais != null && animais.Count > 0)
+                {
+                    dataGridViewAgendarConsulta.DataSource = animais;
+                    dataGridViewAgendarConsulta.Visible = true;
+                    buttonConfirmarAgendarConsulta.Visible = true;
+                    comboBoxColaboradorAgendarConsulta.Visible = true;
+                    labelColaboradorConsulta.Visible = true;
+                    labelDataConsultaAgendarConsulta.Visible = true;
+                    labelHoraConsultaAgendarConsulta.Visible = true;
+                    labelTelemovelConsulta.Visible = true;
+                    dateTimePickerDataConsultaAgendarConsulta.Visible = true;
+                    dateTimePickerHoraConsultaAgendarConsulta.Visible = true;
+                    textBoxTelemovelAgendarConsulta.Visible = true;
+                }
+                else
+                {
+                    MessageBox.Show("Não foram encontrados animais para o NIF fornecido.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch (Exception ex)
             {
-                // Trate a exceção de forma adequada, exibindo uma mensagem de erro ou realizando outras ações necessárias.
                 MessageBox.Show("Ocorreu um erro ao obter os animais do dono: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            dataGridViewAgendarConsulta.Visible = true;
-            buttonConfirmarAgendarConsulta.Visible = true;
-            comboBoxColaboradorAgendarConsulta.Visible = true;
-            labelColaboradorConsulta.Visible = true;
-            labelDataConsultaAgendarConsulta.Visible = true;
-            labelHoraConsultaAgendarConsulta.Visible = true;
-            labelTelemovelConsulta.Visible = true;
-            dateTimePickerDataConsultaAgendarConsulta.Visible = true;
-            dateTimePickerHoraConsultaAgendarConsulta.Visible = true;
-            textBoxTelemovelAgendarConsulta.Visible = true;
-
         }
 
         private void buttonConfirmarAgendarConsulta_Click(object sender, EventArgs e)
@@ -126,7 +131,7 @@ namespace VeT_Animais_Domésticos.Forms.Consultas
         private void AgendarConsulta_Load(object sender, EventArgs e)
         {
             // Execute the query to retrieve the names of collaborators
-            string query = "SELECT id, nome FROM Colaboradores";
+            string query = "SELECT id, nome FROM Colaboradores WHERE estado = '1'";
 
             using (SqlConnection con = new SqlConnection(ConexaoBD.conexao))
             {
@@ -163,6 +168,13 @@ namespace VeT_Animais_Domésticos.Forms.Consultas
             }
 
 
+        }
+
+        private void buttonVoltarAgendarConsulta_Click(object sender, EventArgs e)
+        {
+            FormPrincipal formPrincipal = new FormPrincipal();
+            formPrincipal.ShowDialog();
+            this.Hide();
         }
     }
 }
