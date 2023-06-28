@@ -26,19 +26,26 @@ namespace VeT_Animais_Domésticos.Forms.Consultas
             dataGridViewListarConsulta.DataSource = consultas;
 
 
-            // Obtenha a referência para a coluna "hora_consulta" do DataGridView
+            // Obtem a referência para a coluna "hora_consulta" do DataGridView
             DataGridViewColumn horaConsultaColumn = dataGridViewListarConsulta.Columns["HoraConsulta"];
 
-            // Defina o formato desejado para exibir apenas a hora e o minuto
+            // Define o formato desejado para exibir apenas a hora e o minuto
             horaConsultaColumn.DefaultCellStyle.Format = "H:mm";
 
-            // Obtenha a referência para a coluna "DataConsulta" do DataGridView
+            // Obtem a referência para a coluna "DataConsulta" do DataGridView
             DataGridViewColumn dataConsultaColumn = dataGridViewListarConsulta.Columns["DataConsulta"];
 
-            // Defina o formato desejado para exibir apenas o ano, mês e dia
+            // Define o formato desejado para exibir apenas o ano, mês e dia
             dataConsultaColumn.DefaultCellStyle.Format = "yyyy-MM-dd";
 
             dataGridViewListarConsulta.Refresh();
+        }
+
+        private void buttonVoltarListarConsultas_Click(object sender, EventArgs e)
+        {
+            AgendarConsulta agendarConsulta = new AgendarConsulta();
+            agendarConsulta.Show();
+            this.Hide();
         }
     }
 }

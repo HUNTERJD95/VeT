@@ -49,15 +49,15 @@ namespace VeT_Animais_Domésticos.Forms
             buttonAdicionarAnimal.FlatAppearance.BorderColor = Color.Blue;
 
             // Botão de consultar ficha medica
-            buttonConsultarFichaMedica.FlatStyle = FlatStyle.Flat;
-            buttonConsultarFichaMedica.FlatAppearance.BorderSize = 2;
-            buttonConsultarFichaMedica.FlatAppearance.BorderColor = Color.Blue;
+            buttonRegistarConsultaAnimais.FlatStyle = FlatStyle.Flat;
+            buttonRegistarConsultaAnimais.FlatAppearance.BorderSize = 2;
+            buttonRegistarConsultaAnimais.FlatAppearance.BorderColor = Color.Blue;
 
             // Botão animais inativos
             buttonAnimaisInativos.FlatStyle = FlatStyle.Flat;
             buttonAnimaisInativos.FlatAppearance.BorderSize = 2;
             buttonAnimaisInativos.FlatAppearance.BorderColor = Color.Blue;
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -294,7 +294,7 @@ namespace VeT_Animais_Domésticos.Forms
             }
         }
 
-        private void buttonFichaMedica_Click(object sender, EventArgs e)
+        private void buttonRegistarConsulta_Click(object sender, EventArgs e)
         {
             // Verifique se há uma linha selecionada no DataGridView
             if (dataGridViewAnimais.SelectedRows.Count == 0)
@@ -307,7 +307,7 @@ namespace VeT_Animais_Domésticos.Forms
             int animalId = Convert.ToInt32(dataGridViewAnimais.SelectedRows[0].Cells["ID"].Value);
 
             this.Hide();
-            FormFichaMedica formFichaMedica = new FormFichaMedica(animalId);
+            FormConsultaFeita formFichaMedica = new FormConsultaFeita(animalId);
             formFichaMedica.Show();
         }
 

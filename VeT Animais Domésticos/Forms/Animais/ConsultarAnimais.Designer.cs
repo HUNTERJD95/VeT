@@ -39,7 +39,7 @@
             buttonModificarAnimal = new Button();
             buttonEliminarAnimal = new Button();
             buttonAnimaisInativos = new Button();
-            buttonConsultarFichaMedica = new Button();
+            buttonRegistarConsultaAnimais = new Button();
             buttonAdicionarAnimal = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewAnimais).BeginInit();
             SuspendLayout();
@@ -154,16 +154,16 @@
             buttonAnimaisInativos.UseVisualStyleBackColor = true;
             buttonAnimaisInativos.Click += buttonAnimaisInativos_Click;
             // 
-            // buttonConsultarFichaMedica
+            // buttonRegistarConsultaAnimais
             // 
-            buttonConsultarFichaMedica.BackColor = Color.FromArgb(0, 192, 0);
-            buttonConsultarFichaMedica.Location = new Point(526, 370);
-            buttonConsultarFichaMedica.Name = "buttonConsultarFichaMedica";
-            buttonConsultarFichaMedica.Size = new Size(106, 50);
-            buttonConsultarFichaMedica.TabIndex = 10;
-            buttonConsultarFichaMedica.Text = "Consultar Ficha Médica";
-            buttonConsultarFichaMedica.UseVisualStyleBackColor = false;
-            buttonConsultarFichaMedica.Click += buttonFichaMedica_Click;
+            buttonRegistarConsultaAnimais.BackColor = Color.FromArgb(0, 192, 0);
+            buttonRegistarConsultaAnimais.Location = new Point(526, 370);
+            buttonRegistarConsultaAnimais.Name = "buttonRegistarConsultaAnimais";
+            buttonRegistarConsultaAnimais.Size = new Size(106, 50);
+            buttonRegistarConsultaAnimais.TabIndex = 10;
+            buttonRegistarConsultaAnimais.Text = "Registar Consulta";
+            buttonRegistarConsultaAnimais.UseVisualStyleBackColor = false;
+            buttonRegistarConsultaAnimais.Click += buttonRegistarConsulta_Click;
             // 
             // buttonAdicionarAnimal
             // 
@@ -183,7 +183,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(buttonAdicionarAnimal);
-            Controls.Add(buttonConsultarFichaMedica);
+            Controls.Add(buttonRegistarConsultaAnimais);
             Controls.Add(buttonAnimaisInativos);
             Controls.Add(buttonEliminarAnimal);
             Controls.Add(buttonModificarAnimal);
@@ -216,7 +216,7 @@
         private Button buttonModificarAnimal;
         private Button buttonEliminarAnimal;
         private Button buttonAnimaisInativos;
-        private Button buttonConsultarFichaMedica;
+        private Button buttonRegistarConsultaAnimais;
         private Button buttonAdicionarAnimal;
     }
 }

@@ -82,7 +82,7 @@
             labelColaboradorConsulta.Name = "labelColaboradorConsulta";
             labelColaboradorConsulta.Size = new Size(76, 15);
             labelColaboradorConsulta.TabIndex = 4;
-            labelColaboradorConsulta.Text = "IdColaborador:";
+            labelColaboradorConsulta.Text = "Colaborador:";
             labelColaboradorConsulta.Visible = false;
             // 
             // labelTelemovelConsulta

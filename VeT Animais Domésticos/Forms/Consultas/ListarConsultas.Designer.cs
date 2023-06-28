@@ -31,6 +31,7 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarConsultas));
             dataGridViewListarConsulta = new DataGridView();
+            buttonVoltarListarConsultas = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewListarConsulta).BeginInit();
             SuspendLayout();
             // 
@@ -63,6 +64,16 @@
             dataGridViewListarConsulta.StandardTab = true;
             dataGridViewListarConsulta.TabIndex = 14;
             // 
+            // buttonVoltarListarConsultas
+            // 
+            buttonVoltarListarConsultas.Location = new Point(346, 400);
+            buttonVoltarListarConsultas.Name = "buttonVoltarListarConsultas";
+            buttonVoltarListarConsultas.Size = new Size(88, 38);
+            buttonVoltarListarConsultas.TabIndex = 15;
+            buttonVoltarListarConsultas.Text = "Voltar";
+            buttonVoltarListarConsultas.UseVisualStyleBackColor = true;
+            buttonVoltarListarConsultas.Click += buttonVoltarListarConsultas_Click;
+            // 
             // ListarConsultas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -70,6 +81,7 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonVoltarListarConsultas);
             Controls.Add(dataGridViewListarConsulta);
             MaximizeBox = false;
             MinimizeBox = false;
@@ -84,5 +96,6 @@
         #endregion
 
         private DataGridView dataGridViewListarConsulta;
+        private Button buttonVoltarListarConsultas;
     }
 }

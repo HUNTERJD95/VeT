@@ -101,7 +101,7 @@ namespace VeT_Animais_Domésticos.Forms.Consultas
 
             int idColaborador = ((ColaboradorItem)comboBoxColaboradorAgendarConsulta.SelectedItem).Id;
 
-            
+
             Consulta consulta = new Consulta(idDono, idSelectedAnimal, idColaborador, telemovel, dataConsulta, horaConsulta);
 
             try
@@ -113,8 +113,8 @@ namespace VeT_Animais_Domésticos.Forms.Consultas
                 MessageBox.Show("Consulta agendada com sucesso.", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Restaurar os campos e controlos para os valores iniciais
-              
-              
+
+
             }
             catch (Exception ex)
             {
@@ -162,7 +162,7 @@ namespace VeT_Animais_Domésticos.Forms.Consultas
                 MessageBox.Show("Ocorreu um erro ao listar as consultas: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            
+
         }
     }
 }

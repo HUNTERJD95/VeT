@@ -34,7 +34,7 @@
     <Compile Update="Forms\Consultas\ListarConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\Ficha Medica\FormFichaMedica.cs">
+    <Compile Update="Forms\Consultas\FormConsultaFeita.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\Clientes\FormModificarCliente.cs">
